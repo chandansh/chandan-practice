@@ -1,40 +1,0 @@
-10
-
-dir
-6
-http://usaopengov.googlecode.com/svn/trunk/src/org/usaopengov
-http://usaopengov.googlecode.com/svn
-
-
-
-2009-08-07T05:44:09.848837Z
-4
-benjamin.j.mccann
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-84b52b68-8248-11de-a95a-7be59a9e0318
-
-validator
-dir
-
-data
-dir
-
-action
-dir
-
-util
-dir
-

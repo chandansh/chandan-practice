@@ -1,2 +1,0 @@
-serviceClass: de.vogella.gwt.helloserver.client.service.MyUserService
-path: 4DAA96BAAEF313DD0D6764F5FB66F02E.gwt.rpc
