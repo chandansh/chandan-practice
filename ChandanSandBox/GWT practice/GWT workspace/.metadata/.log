@@ -52,3 +52,58 @@ HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
 
 !ENTRY com.google.appengine.eclipse.core 2 0 2011-11-26 13:34:27.156
 !MESSAGE Could not find Java source for class file /de.vogella.gwt.helloserver/war/WEB-INF/classes/de/vogella/gwt/module/model/Person.class
+!SESSION 2011-11-26 19:31:45.937 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_26
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product -data D:\chandan-repos\ChandanSandBox\GWT practice\GWT workspace -product org.eclipse.epp.package.jee.product
+
+!ENTRY com.google.gdt.eclipse.core 1 0 2011-11-26 19:31:52.734
+!MESSAGE Scheduled rebuild of project GwtTest1 because of plugin update (current version: 2.4.0.r37v201108301710)
+
+!ENTRY com.google.gdt.eclipse.core 1 0 2011-11-26 19:31:52.796
+!MESSAGE Scheduled rebuild of project LoginManager because of plugin update (current version: 2.4.0.r37v201108301710)
+
+!ENTRY com.google.gdt.eclipse.core 1 0 2011-11-26 19:31:52.843
+!MESSAGE Scheduled rebuild of project MathsEditor because of plugin update (current version: 2.4.0.r37v201108301710)
+
+!ENTRY com.google.gdt.eclipse.core 1 0 2011-11-26 19:31:52.875
+!MESSAGE Scheduled rebuild of project StockWatcher because of plugin update (current version: 2.4.0.r37v201108301710)
+
+!ENTRY com.google.gdt.eclipse.core 1 0 2011-11-26 19:31:52.890
+!MESSAGE Scheduled rebuild of project Whiteboard because of plugin update (current version: 2.4.0.r37v201108301710)
+
+!ENTRY com.google.gdt.eclipse.core 1 0 2011-11-26 19:31:52.921
+!MESSAGE Scheduled rebuild of project chandangwt because of plugin update (current version: 2.4.0.r37v201108301710)
+
+!ENTRY com.google.gdt.eclipse.core 1 0 2011-11-26 19:31:52.953
+!MESSAGE Scheduled rebuild of project de.vogella.gwt.helloserver because of plugin update (current version: 2.4.0.r37v201108301710)
+
+!ENTRY com.google.gdt.eclipse.core 1 0 2011-11-26 19:31:52.968
+!MESSAGE Scheduled rebuild of project de.vogella.gwt.uibinder because of plugin update (current version: 2.4.0.r37v201108301710)
+
+!ENTRY org.eclipse.jface 2 0 2011-11-26 19:31:53.906
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-11-26 19:31:53.906
+!MESSAGE A conflict occurred for CTRL+DEL:
+Binding(CTRL+DEL,
+	ParameterizedCommand(Command(org.eclipse.datatools.sqltools.result.removeInstance,Remove Result,
+		,
+		Category(org.eclipse.datatools.sqltools.result.category,SQL Results View,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.core.jobs 2 2 2011-11-26 19:32:44.468
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.Workbench$63

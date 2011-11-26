@@ -26,9 +26,9 @@ public class RegisterAction extends ActionSupport {
 		communityList.add("Java");
 		communityList.add(".Net");
 		communityList.add("SOA");
-		community = new String[] { "Java", ".Net" };
+		community = new String[] { "Java" };
 		mailingList = true;
-		country = "1";
+		country = "3";
 		return "populate";
 
 	}
