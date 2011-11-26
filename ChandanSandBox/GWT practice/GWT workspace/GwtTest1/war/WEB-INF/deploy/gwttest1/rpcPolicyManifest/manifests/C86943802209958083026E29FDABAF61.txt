@@ -1,0 +1,2 @@
+serviceClass: test.client.ShowService
+path: 57E55EC0FFED318EB96C4393281A5CFA.gwt.rpc

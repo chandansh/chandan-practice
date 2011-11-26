@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+  <cron>
+    <url>/admin/generate</url>
+    <description>Rerun validations</description>
+    <schedule>every day 02:00</schedule>
+    <timezone>America/Los_Angeles</timezone>
+  </cron>
+</cronentries>

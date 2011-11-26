@@ -1,0 +1,12 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.colorTableStyle {
+			border: 1px solid #cccccc;
+		}
+	</ui:style>
+
+	<g:FlexTable ui:field="colorTable" cellPadding='0' cellSpacing='0' styleName="{style.colorTableStyle}">
+	</g:FlexTable>
+</ui:UiBinder>
