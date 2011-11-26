@@ -118,22 +118,8 @@
 </reference>
 </references>
 </referenceManager>
-<uiBinderSubtypeToOwner>
-<entry owner="com.incoleg.whiteboard.web.client.ui.ColorPicker" uiBinder="=Whiteboard/src&lt;com.incoleg.whiteboard.web.client.ui{ColorPicker.java[ColorPicker[ColorPickerUiBinder"/>
-<entry owner="com.incoleg.whiteboard.web.client.wb.Whiteboard" uiBinder="=Whiteboard/src&lt;com.incoleg.whiteboard.web.client.wb{Whiteboard.java[Whiteboard[WhiteboardUiBinder"/>
-<entry owner="com.edujini.web.aksh.modules.maths.editor.client.MathsEditor" uiBinder="=MathsEditor/src&lt;com.edujini.web.aksh.modules.maths.editor.client{MathsEditor.java[MathsEditor[MathsEditorUiBinder"/>
-<entry owner="de.vogella.gwt.uibinder.client.MyHTMLTable" uiBinder="=de.vogella.gwt.uibinder/src&lt;de.vogella.gwt.uibinder.client{MyHTMLTable.java[MyHTMLTable[MyUiBinder"/>
-<entry owner="com.incoleg.whiteboard.web.client.wb.WhiteboardToolbar" uiBinder="=Whiteboard/src&lt;com.incoleg.whiteboard.web.client.wb{WhiteboardToolbar.java[WhiteboardToolbar[WhiteboardToolbarUiBinder"/>
-<entry owner="de.vogella.gwt.uibinder.client.HelloWidgetWorld" uiBinder="=de.vogella.gwt.uibinder/src&lt;de.vogella.gwt.uibinder.client{HelloWidgetWorld.java[HelloWidgetWorld[MyUiBinder"/>
-</uiBinderSubtypeToOwner>
-<uiBinderSubtypeToUiXml>
-<entry uiBinder="=Whiteboard/src&lt;com.incoleg.whiteboard.web.client.ui{ColorPicker.java[ColorPicker[ColorPickerUiBinder" uiXmlPath="com/incoleg/whiteboard/web/client/ui/ColorPicker.ui.xml"/>
-<entry uiBinder="=Whiteboard/src&lt;com.incoleg.whiteboard.web.client.wb{Whiteboard.java[Whiteboard[WhiteboardUiBinder" uiXmlPath="com/incoleg/whiteboard/web/client/wb/Whiteboard.ui.xml"/>
-<entry uiBinder="=MathsEditor/src&lt;com.edujini.web.aksh.modules.maths.editor.client{MathsEditor.java[MathsEditor[MathsEditorUiBinder" uiXmlPath="com/edujini/web/aksh/modules/maths/editor/client/MathsEditor.ui.xml"/>
-<entry uiBinder="=de.vogella.gwt.uibinder/src&lt;de.vogella.gwt.uibinder.client{HelloWidgetWorld.java[HelloWidgetWorld[MyUiBinder" uiXmlPath="de/vogella/gwt/uibinder/client/HelloWidgetWorld.ui.xml"/>
-<entry uiBinder="=Whiteboard/src&lt;com.incoleg.whiteboard.web.client.wb{WhiteboardToolbar.java[WhiteboardToolbar[WhiteboardToolbarUiBinder" uiXmlPath="com/incoleg/whiteboard/web/client/wb/WhiteboardToolbar.ui.xml"/>
-<entry uiBinder="=de.vogella.gwt.uibinder/src&lt;de.vogella.gwt.uibinder.client{MyHTMLTable.java[MyHTMLTable[MyUiBinder" uiXmlPath="de/vogella/gwt/uibinder/client/MyHTMLTable.ui.xml"/>
-</uiBinderSubtypeToUiXml>
+<uiBinderSubtypeToOwner/>
+<uiBinderSubtypeToUiXml/>
 <uiXmlReferencedFields>
 <uiField location="/de.vogella.gwt.uibinder/src/de/vogella/gwt/uibinder/client/HelloWidgetWorld.ui.xml" name="submit"/>
 <uiField location="/de.vogella.gwt.uibinder/src/de/vogella/gwt/uibinder/client/HelloWidgetWorld.ui.xml" name="text1"/>

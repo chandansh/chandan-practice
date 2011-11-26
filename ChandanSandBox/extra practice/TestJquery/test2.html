@@ -1,0 +1,36 @@
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="Myplugin.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("button").click(function() {
+			$("p").hide();
+		});
+		$("p.one").txtClick();
+		$("p.two").txtClick("mouse clicked on me.");
+		$("p").each(function(index) {
+			alert(index + ': ' + $(this).text());
+		});
+		$("p.two").bgcolor("green").bgcolor("red");
+		$("p.three").bgcolor1();
+		$("p.four").bgcolor1({
+			'bcolor' : 'pink',
+			'font' : 'Arial Black'
+		});
+		$("p.one").each(function() {
+			$(this).css("background-color", "blue");
+		});
+	});
+</script>
+</head>
+
+<body>
+<h2>This is a heading</h2>
+<p class="one">This is a paragraph.</p>
+<p class="two">This is another paragraph.</p>
+<p class="three">This is another paragraph.</p>
+<p class="four">This is another paragraph.</p>
+<button>Click me</button>
+</body>
+</html>

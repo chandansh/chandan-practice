@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello HelloAndroid!, I am a String Resource..hi how r u.</string>
+    <string name="app_name">Hello, Android</string>
+
+</resources>

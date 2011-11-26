@@ -1,0 +1,477 @@
+!SESSION 2011-11-26 19:37:35.468 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_26
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product -data D:\chandan-repos\ChandanSandBox\extra practice -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2011-11-26 19:37:43.250
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-11-26 19:37:43.250
+!MESSAGE A conflict occurred for CTRL+DEL:
+Binding(CTRL+DEL,
+	ParameterizedCommand(Command(org.eclipse.datatools.sqltools.result.removeInstance,Remove Result,
+		,
+		Category(org.eclipse.datatools.sqltools.result.category,SQL Results View,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.google.gdt.eclipse.suite 1 0 2011-11-26 19:37:47.593
+!MESSAGE Registering: com.google.appengine.eclipse.sdkbundle_1.5.3.r37v201108301710
+
+!ENTRY com.google.gdt.eclipse.suite 1 0 2011-11-26 19:37:47.890
+!MESSAGE Registering: com.google.gwt.eclipse.sdkbundle_2.4.0.r37v201108301710
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2011-11-26 19:38:59.718
+!MESSAGE Error while tracking project-level changes from a change in R/
+!STACK 1
+Java Model Exception: Java Model Status [Unbound classpath container: 'JRE System Library [jdk1.6.0_23]' in project 'RestLet']
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:1990)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.isResourceInAnOutputPath(ProjectChangeTimestampTracker.java:123)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.visitDelta(ProjectChangeTimestampTracker.java:164)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.visitDelta(ProjectChangeTimestampTracker.java:171)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.resourceChanged(ProjectChangeTimestampTracker.java:183)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.Folder.create(Folder.java:113)
+	at org.eclipse.core.internal.resources.Folder.create(Folder.java:125)
+	at org.eclipse.ui.wizards.datatransfer.ImportOperation.importFolder(ImportOperation.java:736)
+	at org.eclipse.ui.wizards.datatransfer.ImportOperation.importRecursivelyFrom(ImportOperation.java:786)
+	at org.eclipse.ui.wizards.datatransfer.ImportOperation.importRecursivelyFrom(ImportOperation.java:791)
+	at org.eclipse.ui.wizards.datatransfer.ImportOperation.importFileSystemObjects(ImportOperation.java:674)
+	at org.eclipse.ui.wizards.datatransfer.ImportOperation.execute(ImportOperation.java:407)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.ui.internal.wizards.datatransfer.WizardProjectsImportPage.createExistingProject(WizardProjectsImportPage.java:1406)
+	at org.eclipse.ui.internal.wizards.datatransfer.WizardProjectsImportPage.access$16(WizardProjectsImportPage.java:1316)
+	at org.eclipse.ui.internal.wizards.datatransfer.WizardProjectsImportPage$16.execute(WizardProjectsImportPage.java:1251)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 1 org.eclipse.jdt.core 4 963 2011-11-26 19:38:59.718
+!MESSAGE Unbound classpath container: 'JRE System Library [jdk1.6.0_23]' in project 'RestLet'
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2011-11-26 19:39:33.968
+!MESSAGE Error while tracking project-level changes from a change in R/
+!STACK 1
+Java Model Exception: Java Model Status [Unbound classpath container: 'JRE System Library [jdk1.6.0_23]' in project 'RestLet']
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:1990)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.isResourceInAnOutputPath(ProjectChangeTimestampTracker.java:123)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.visitDelta(ProjectChangeTimestampTracker.java:164)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.visitDelta(ProjectChangeTimestampTracker.java:171)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.visitDelta(ProjectChangeTimestampTracker.java:171)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.resourceChanged(ProjectChangeTimestampTracker.java:183)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.File.create(File.java:174)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.ui.wizards.datatransfer.ImportOperation.importFile(ImportOperation.java:580)
+	at org.eclipse.ui.wizards.datatransfer.ImportOperation.importRecursivelyFrom(ImportOperation.java:782)
+	at org.eclipse.ui.wizards.datatransfer.ImportOperation.importRecursivelyFrom(ImportOperation.java:791)
+	at org.eclipse.ui.wizards.datatransfer.ImportOperation.importRecursivelyFrom(ImportOperation.java:791)
+	at org.eclipse.ui.wizards.datatransfer.ImportOperation.importRecursivelyFrom(ImportOperation.java:791)
+	at org.eclipse.ui.wizards.datatransfer.ImportOperation.importFileSystemObjects(ImportOperation.java:674)
+	at org.eclipse.ui.wizards.datatransfer.ImportOperation.execute(ImportOperation.java:407)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.ui.internal.wizards.datatransfer.WizardProjectsImportPage.createExistingProject(WizardProjectsImportPage.java:1406)
+	at org.eclipse.ui.internal.wizards.datatransfer.WizardProjectsImportPage.access$16(WizardProjectsImportPage.java:1316)
+	at org.eclipse.ui.internal.wizards.datatransfer.WizardProjectsImportPage$16.execute(WizardProjectsImportPage.java:1251)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 1 org.eclipse.jdt.core 4 963 2011-11-26 19:39:33.968
+!MESSAGE Unbound classpath container: 'JRE System Library [jdk1.6.0_23]' in project 'RestLet'
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2011-11-26 19:40:27.328
+!MESSAGE Error while tracking project-level changes from a change in R/
+!STACK 1
+Java Model Exception: Java Model Status [Unbound classpath container: 'JRE System Library [jdk1.6.0_23]' in project 'RestLet']
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:1990)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.isResourceInAnOutputPath(ProjectChangeTimestampTracker.java:123)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.visitDelta(ProjectChangeTimestampTracker.java:164)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.visitDelta(ProjectChangeTimestampTracker.java:171)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.resourceChanged(ProjectChangeTimestampTracker.java:183)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.jdt.core 4 963 2011-11-26 19:40:27.328
+!MESSAGE Unbound classpath container: 'JRE System Library [jdk1.6.0_23]' in project 'RestLet'
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2011-11-26 19:40:31.187
+!MESSAGE Error while tracking project-level changes from a change in R/
+!STACK 1
+Java Model Exception: Java Model Status [Unbound classpath container: 'JRE System Library [jdk1.6.0_23]' in project 'RestLet']
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:1990)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.isResourceInAnOutputPath(ProjectChangeTimestampTracker.java:123)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.visitDelta(ProjectChangeTimestampTracker.java:164)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.visitDelta(ProjectChangeTimestampTracker.java:171)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.resourceChanged(ProjectChangeTimestampTracker.java:183)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2353)
+	at org.eclipse.core.internal.events.NotificationManager$NotifyJob.run(NotificationManager.java:40)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.jdt.core 4 963 2011-11-26 19:40:31.187
+!MESSAGE Unbound classpath container: 'JRE System Library [jdk1.6.0_23]' in project 'RestLet'
+
+!ENTRY org.eclipse.core.resources 4 2 2011-11-26 19:40:35.031
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.runtime.CoreException: Unable to locate the JVM for project RestLet. Please verify that you have a project-level JVM installed by inspecting your project's build path.
+	at com.google.gdt.eclipse.core.ProcessUtilities.computeJavaExecutableFullyQualifiedPath(ProcessUtilities.java:115)
+	at com.google.gdt.eclipse.core.ProcessUtilities.computeJavaCompilerExecutableFullyQualifiedPath(ProcessUtilities.java:99)
+	at com.google.gdt.eclipse.core.ProcessUtilities.isUsingJDK(ProcessUtilities.java:178)
+	at com.google.appengine.eclipse.core.validators.GaeProjectValidator.validateUsingJDKifUsingJSPs(GaeProjectValidator.java:228)
+	at com.google.appengine.eclipse.core.validators.GaeProjectValidator.build(GaeProjectValidator.java:109)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 com.google.gdt.eclipse.core 4 0 2011-11-26 19:40:35.031
+!MESSAGE Unable to locate the JVM for project RestLet. Please verify that you have a project-level JVM installed by inspecting your project's build path.
+!SUBENTRY 1 com.google.gdt.eclipse.core 4 0 2011-11-26 19:40:35.031
+!MESSAGE Unable to locate the JVM for project RestLet. Please verify that you have a project-level JVM installed by inspecting your project's build path.
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2011-11-26 19:40:36.500
+!MESSAGE Unable to locate the JVM for project RestLet. Please verify that you have a project-level JVM installed by inspecting your project's build path.
+
+!ENTRY org.eclipse.jdt.core 4 4 2011-11-26 19:40:44.000
+!MESSAGE JavaBuilder handling CoreException
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Thread/bin/consumer.class'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:308)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:286)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.writeClassFileContents(AbstractImageBuilder.java:844)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.writeClassFile(AbstractImageBuilder.java:823)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.acceptResult(AbstractImageBuilder.java:187)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:508)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:364)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.compile(BatchImageBuilder.java:178)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:301)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:60)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2011-11-26 19:40:44.000
+!MESSAGE A resource exists with a different case: '/Thread/bin/consumer.class'.
+
+!ENTRY org.eclipse.jdt.core 4 4 2011-11-26 19:40:44.000
+!MESSAGE JavaBuilder handling CoreException
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Thread/bin/producer.class'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:308)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:286)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.writeClassFileContents(AbstractImageBuilder.java:844)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.writeClassFile(AbstractImageBuilder.java:823)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.acceptResult(AbstractImageBuilder.java:187)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:508)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:364)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.compile(BatchImageBuilder.java:178)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:301)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:60)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2011-11-26 19:40:44.000
+!MESSAGE A resource exists with a different case: '/Thread/bin/producer.class'.
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2011-11-26 19:41:19.265
+!MESSAGE Error while tracking project-level changes from a change in R/
+!STACK 1
+Java Model Exception: Java Model Status [Unbound classpath container: 'JRE System Library [jdk1.6.0_23]' in project 'RestLet']
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:1990)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.isResourceInAnOutputPath(ProjectChangeTimestampTracker.java:123)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.visitDelta(ProjectChangeTimestampTracker.java:164)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.visitDelta(ProjectChangeTimestampTracker.java:171)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.resourceChanged(ProjectChangeTimestampTracker.java:183)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:156)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.jdt.core 4 963 2011-11-26 19:41:19.265
+!MESSAGE Unbound classpath container: 'JRE System Library [jdk1.6.0_23]' in project 'RestLet'
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2011-11-26 19:41:22.265
+!MESSAGE Error while tracking project-level changes from a change in R/
+!STACK 1
+Java Model Exception: Java Model Status [Unbound classpath container: 'JRE System Library [jdk1.6.0_23]' in project 'RestLet']
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:1990)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.isResourceInAnOutputPath(ProjectChangeTimestampTracker.java:123)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.visitDelta(ProjectChangeTimestampTracker.java:164)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.visitDelta(ProjectChangeTimestampTracker.java:171)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.resourceChanged(ProjectChangeTimestampTracker.java:183)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:156)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.jdt.core 4 963 2011-11-26 19:41:22.265
+!MESSAGE Unbound classpath container: 'JRE System Library [jdk1.6.0_23]' in project 'RestLet'
+
+!ENTRY org.eclipse.core.resources 4 2 2011-11-26 19:41:23.218
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.runtime.CoreException: Unable to locate the JVM for project RestLet. Please verify that you have a project-level JVM installed by inspecting your project's build path.
+	at com.google.gdt.eclipse.core.ProcessUtilities.computeJavaExecutableFullyQualifiedPath(ProcessUtilities.java:115)
+	at com.google.gdt.eclipse.core.ProcessUtilities.computeJavaCompilerExecutableFullyQualifiedPath(ProcessUtilities.java:99)
+	at com.google.gdt.eclipse.core.ProcessUtilities.isUsingJDK(ProcessUtilities.java:178)
+	at com.google.appengine.eclipse.core.validators.GaeProjectValidator.validateUsingJDKifUsingJSPs(GaeProjectValidator.java:228)
+	at com.google.appengine.eclipse.core.validators.GaeProjectValidator.build(GaeProjectValidator.java:109)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 com.google.gdt.eclipse.core 4 0 2011-11-26 19:41:23.218
+!MESSAGE Unable to locate the JVM for project RestLet. Please verify that you have a project-level JVM installed by inspecting your project's build path.
+!SUBENTRY 1 com.google.gdt.eclipse.core 4 0 2011-11-26 19:41:23.218
+!MESSAGE Unable to locate the JVM for project RestLet. Please verify that you have a project-level JVM installed by inspecting your project's build path.
+
+!ENTRY org.eclipse.core.resources 4 75 2011-11-26 19:41:23.406
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 com.google.appengine.eclipse.core 4 75 2011-11-26 19:41:23.406
+!MESSAGE Errors running builder 'Google App Engine Project Validator' on project 'RestLet'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Unable to locate the JVM for project RestLet. Please verify that you have a project-level JVM installed by inspecting your project's build path.
+	at com.google.gdt.eclipse.core.ProcessUtilities.computeJavaExecutableFullyQualifiedPath(ProcessUtilities.java:115)
+	at com.google.gdt.eclipse.core.ProcessUtilities.computeJavaCompilerExecutableFullyQualifiedPath(ProcessUtilities.java:99)
+	at com.google.gdt.eclipse.core.ProcessUtilities.isUsingJDK(ProcessUtilities.java:178)
+	at com.google.appengine.eclipse.core.validators.GaeProjectValidator.validateUsingJDKifUsingJSPs(GaeProjectValidator.java:228)
+	at com.google.appengine.eclipse.core.validators.GaeProjectValidator.build(GaeProjectValidator.java:109)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 com.google.gdt.eclipse.core 4 0 2011-11-26 19:41:23.406
+!MESSAGE Unable to locate the JVM for project RestLet. Please verify that you have a project-level JVM installed by inspecting your project's build path.
+!SUBENTRY 1 com.google.gdt.eclipse.core 4 0 2011-11-26 19:41:23.406
+!MESSAGE Unable to locate the JVM for project RestLet. Please verify that you have a project-level JVM installed by inspecting your project's build path.
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2011-11-26 19:41:28.000
+!MESSAGE Error while tracking project-level changes from a change in R/
+!STACK 1
+Java Model Exception: Java Model Status [Unbound classpath container: 'JRE System Library [jdk1.6.0_23]' in project 'RestLet']
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:1990)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.isResourceInAnOutputPath(ProjectChangeTimestampTracker.java:123)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.visitDelta(ProjectChangeTimestampTracker.java:164)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.visitDelta(ProjectChangeTimestampTracker.java:171)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.resourceChanged(ProjectChangeTimestampTracker.java:183)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2353)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:4860)
+	at com.google.gdt.eclipse.core.sdk.ClasspathContainerUpdateJob.run(ClasspathContainerUpdateJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.jdt.core 4 963 2011-11-26 19:41:28.000
+!MESSAGE Unbound classpath container: 'JRE System Library [jdk1.6.0_23]' in project 'RestLet'
+
+!ENTRY org.eclipse.core.resources 4 2 2011-11-26 19:41:29.140
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.runtime.CoreException: Unable to locate the JVM for project RestLet. Please verify that you have a project-level JVM installed by inspecting your project's build path.
+	at com.google.gdt.eclipse.core.ProcessUtilities.computeJavaExecutableFullyQualifiedPath(ProcessUtilities.java:115)
+	at com.google.gdt.eclipse.core.ProcessUtilities.computeJavaCompilerExecutableFullyQualifiedPath(ProcessUtilities.java:99)
+	at com.google.gdt.eclipse.core.ProcessUtilities.isUsingJDK(ProcessUtilities.java:178)
+	at com.google.appengine.eclipse.core.validators.GaeProjectValidator.validateUsingJDKifUsingJSPs(GaeProjectValidator.java:228)
+	at com.google.appengine.eclipse.core.validators.GaeProjectValidator.build(GaeProjectValidator.java:109)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 com.google.gdt.eclipse.core 4 0 2011-11-26 19:41:29.140
+!MESSAGE Unable to locate the JVM for project RestLet. Please verify that you have a project-level JVM installed by inspecting your project's build path.
+!SUBENTRY 1 com.google.gdt.eclipse.core 4 0 2011-11-26 19:41:29.140
+!MESSAGE Unable to locate the JVM for project RestLet. Please verify that you have a project-level JVM installed by inspecting your project's build path.
+
+!ENTRY org.eclipse.core.resources 4 75 2011-11-26 19:41:29.437
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 com.google.appengine.eclipse.core 4 75 2011-11-26 19:41:29.437
+!MESSAGE Errors running builder 'Google App Engine Project Validator' on project 'RestLet'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Unable to locate the JVM for project RestLet. Please verify that you have a project-level JVM installed by inspecting your project's build path.
+	at com.google.gdt.eclipse.core.ProcessUtilities.computeJavaExecutableFullyQualifiedPath(ProcessUtilities.java:115)
+	at com.google.gdt.eclipse.core.ProcessUtilities.computeJavaCompilerExecutableFullyQualifiedPath(ProcessUtilities.java:99)
+	at com.google.gdt.eclipse.core.ProcessUtilities.isUsingJDK(ProcessUtilities.java:178)
+	at com.google.appengine.eclipse.core.validators.GaeProjectValidator.validateUsingJDKifUsingJSPs(GaeProjectValidator.java:228)
+	at com.google.appengine.eclipse.core.validators.GaeProjectValidator.build(GaeProjectValidator.java:109)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 com.google.gdt.eclipse.core 4 0 2011-11-26 19:41:29.437
+!MESSAGE Unable to locate the JVM for project RestLet. Please verify that you have a project-level JVM installed by inspecting your project's build path.
+!SUBENTRY 1 com.google.gdt.eclipse.core 4 0 2011-11-26 19:41:29.437
+!MESSAGE Unable to locate the JVM for project RestLet. Please verify that you have a project-level JVM installed by inspecting your project's build path.
+
+!ENTRY org.eclipse.jdt.core 4 4 2011-11-26 19:42:35.734
+!MESSAGE JavaBuilder handling CoreException
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Thread/bin/consumer.class'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:308)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:286)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.writeClassFileContents(AbstractImageBuilder.java:844)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.writeClassFile(AbstractImageBuilder.java:823)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.acceptResult(AbstractImageBuilder.java:187)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:508)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:364)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.compile(BatchImageBuilder.java:178)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:301)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:60)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:184)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2011-11-26 19:42:35.734
+!MESSAGE A resource exists with a different case: '/Thread/bin/consumer.class'.
+
+!ENTRY org.eclipse.jdt.core 4 4 2011-11-26 19:42:35.734
+!MESSAGE JavaBuilder handling CoreException
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Thread/bin/producer.class'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:308)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:286)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.writeClassFileContents(AbstractImageBuilder.java:844)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.writeClassFile(AbstractImageBuilder.java:823)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.acceptResult(AbstractImageBuilder.java:187)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:508)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:364)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.compile(BatchImageBuilder.java:178)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:301)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:60)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:184)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2011-11-26 19:42:35.734
+!MESSAGE A resource exists with a different case: '/Thread/bin/producer.class'.

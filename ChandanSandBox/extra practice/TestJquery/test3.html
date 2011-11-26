@@ -1,0 +1,42 @@
+<html>
+<head>
+<script src="jquery.js"></script>
+<script src="newtxthover.js"></script>
+<script>
+	$(document).ready(function() {
+		//$("#one").txtHover("This is Mouse Hover");
+		$("p").txtHover();
+	});
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	(function(jQuery) {
+		var win = this;
+		//alert('Who am i?' + this);
+		jQuery(document).ready(function() {
+			//alert('Document ready this: ' + this + ", win=" + win);
+			//jQuery("#two").html("<div>Aila</div>");
+		});
+	})(jQuery);
+
+	function testOnClick(p) {
+		alert('[22] testOnClick: ' + this);
+	}
+</script>
+<p id="one">Some text.</p>
+<p id="two">Some another text.</p>
+<button id='test'>Click Me</button>
+<script type="text/javascript">
+	document.getElementById('test').onclick = function() {
+		//testOnClick.apply(this);
+	};
+</script>
+</body>
+</html>
+
+
+
+
+
+
