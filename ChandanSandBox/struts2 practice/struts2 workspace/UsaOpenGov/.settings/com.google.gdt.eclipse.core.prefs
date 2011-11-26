@@ -1,0 +1,5 @@
+#Mon Sep 26 17:08:01 GMT+05:30 2011
+eclipse.preferences.version=1
+jarsExcludedFromWebInfLib=D\:/testproject/UsaOpenGov/war/WEB-INF/lib/jdo2-api-2.3-ea.jar
+warSrcDir=war
+warSrcDirIsOutput=true

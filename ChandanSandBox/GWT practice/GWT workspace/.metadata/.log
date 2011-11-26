@@ -1,0 +1,54 @@
+!SESSION 2011-11-26 13:17:35.281 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_26
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -data D:\testproject\GWT workspace -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2011-11-26 13:17:42.218
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-11-26 13:17:42.218
+!MESSAGE A conflict occurred for CTRL+DEL:
+Binding(CTRL+DEL,
+	ParameterizedCommand(Command(org.eclipse.datatools.sqltools.result.removeInstance,Remove Result,
+		,
+		Category(org.eclipse.datatools.sqltools.result.category,SQL Results View,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.google.gdt.eclipse.suite 1 0 2011-11-26 13:17:45.234
+!MESSAGE Registering: com.google.appengine.eclipse.sdkbundle_1.5.3.r37v201108301710
+
+!ENTRY com.google.gdt.eclipse.suite 1 0 2011-11-26 13:17:45.593
+!MESSAGE Registering: com.google.gwt.eclipse.sdkbundle_2.4.0.r37v201108301710
+
+!ENTRY com.google.gdt.eclipse.core 2 0 2011-11-26 13:23:35.062
+!MESSAGE Cannot revalidate non-existent compilation unit MathsBundle.java
+
+!ENTRY org.eclipse.ui.workbench 2 0 2011-11-26 13:31:19.671
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-11-26 13:31:19.671
+!MESSAGE Conflict for 'org.eclipse.wst.jsdt.ui.edit.text.java.open.editor':
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@edddd4),
+	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@9486a5,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@d4db38)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@122dad5)),sourcePriority=1064961)
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@edddd4),
+	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@9486a5,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@d4db38)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@122dad5)),sourcePriority=1064961)
+
+!ENTRY com.google.appengine.eclipse.core 2 0 2011-11-26 13:34:27.156
+!MESSAGE Could not find Java source for class file /de.vogella.gwt.helloserver/war/WEB-INF/classes/de/vogella/gwt/module/client/MyUser.class
+
+!ENTRY com.google.appengine.eclipse.core 2 0 2011-11-26 13:34:27.156
+!MESSAGE Could not find Java source for class file /de.vogella.gwt.helloserver/war/WEB-INF/classes/de/vogella/gwt/module/model/Person.class

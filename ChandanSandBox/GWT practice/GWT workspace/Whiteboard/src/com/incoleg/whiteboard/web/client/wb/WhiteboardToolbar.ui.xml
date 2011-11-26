@@ -1,0 +1,46 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:c="urn:import:com.incoleg.whiteboard.web.client.ui">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:HorizontalPanel ui:field="mainPanel">
+		<g:Button ui:field="add" text="Add" />
+		<g:Button ui:field="download" text="D" />
+		<g:Button ui:field="undo" text="U" />
+		<g:Button ui:field="redo" text="R" />
+		<g:ToggleButton ui:field="circle">
+			<g:upFace>C</g:upFace>
+			<g:downFace>C</g:downFace>
+		</g:ToggleButton>
+		<g:ToggleButton ui:field="rectangle">
+			<g:upFace>R</g:upFace>
+			<g:downFace>R</g:downFace>
+		</g:ToggleButton>
+		<g:ToggleButton ui:field="hexagon">
+			<g:upFace>H</g:upFace>
+			<g:downFace>H</g:downFace>
+		</g:ToggleButton>
+		<g:ToggleButton ui:field="line">
+			<g:upFace>L</g:upFace>
+			<g:downFace>L</g:downFace>
+		</g:ToggleButton>
+		<g:ToggleButton ui:field="pencil">
+			<g:upFace>P</g:upFace>
+			<g:downFace>P</g:downFace>
+		</g:ToggleButton>
+		<g:ToggleButton ui:field="sqroot">
+			<g:upFace>SR</g:upFace>
+			<g:downFace>SR</g:downFace>
+		</g:ToggleButton>
+		<g:ToggleButton ui:field="transparent">
+			<g:upFace>T</g:upFace>
+			<g:downFace>T</g:downFace>
+		</g:ToggleButton>
+		<g:Label ui:field="borderColorPicker" text="#000000" />
+		<g:Label ui:field="fillColorPicker" text="#ffff00" />
+	</g:HorizontalPanel>
+</ui:UiBinder>

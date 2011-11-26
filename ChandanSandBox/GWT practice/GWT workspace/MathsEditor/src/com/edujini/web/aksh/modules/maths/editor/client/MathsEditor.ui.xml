@@ -1,0 +1,489 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:e="urn:import:com.edujini.web.aksh.modules.maths.editor.client.ui">
+	<ui:style>
+		.main {
+			min-width: 480px;
+		}
+
+		.editor {
+			width: 98%;
+			margin: 2px;
+			overflow: auto;
+		}
+
+		.finalImage {
+			display: none;
+		}
+
+		.group-container {
+			overflow: hidden;
+			cursor: hand;
+			cursor: pointer;
+			display: inline-block;
+			vertical-align: top;
+			margin: 0;
+			float: left;
+			padding-left: 4px;
+		}
+
+		.group-row-1 {
+			z-index: 2000;
+		}
+
+		.group-row-2 {
+			z-index: 1950;
+		}
+
+		.group-container img {
+			margin: 0px;
+			padding: 0px;
+			float: left;
+		}
+
+		.accents {
+			width: 30px;
+			height: 30px;
+		}
+
+		.accents_ext {
+			width: 23px;
+			height: 30px;
+		}
+
+		.brackets {
+			width: 52px;
+			height: 26px;
+		}
+
+		.greekupper {
+			width: 45px;
+			height: 30px;
+		}
+
+		.greeklower {
+			width: 75px;
+			height: 30px;
+		}
+
+		.symbols {
+			width: 75px;
+			height: 30px;
+		}
+
+		.relations {
+			width: 60px;
+			height: 30px;
+		}
+
+		.matrix {
+			width: 96px;
+			height: 32px;
+		}
+
+		.operators {
+			width: 104px;
+			height: 26px;
+		}
+
+		.extras {
+			width: 63px;
+			height: 22px;
+		}
+
+		.styles {
+			width: 51px;
+			height: 21px;
+		}
+
+		.arrows {
+			width: 52px;
+			height: 30px;
+		}
+
+		.subsupset {
+			width: 60px;
+			height: 30px;
+		}
+
+		.foreign {
+			width: 30px;
+			height: 30px;
+		}
+
+		.spaces {
+			width: 29px;
+			height: 30px;
+		}
+
+		.binary {
+			width: 60px;
+			height: 30px;
+		}
+	</ui:style>
+
+	<ui:with type="com.edujini.web.aksh.modules.maths.editor.client.images.MathsBundle" field="mb" />
+
+	<g:HTMLPanel styleName="{style.main}">
+		<div style='position: relative; width: 100%;' class="{style.group-row-1}">
+			<e:HTMLPanel ui:field="spaces" addStyleNames="{style.group-container} {style.spaces} ">
+				<e:SymbolImage resource="{mb.spaces_01}" symbol="\," tooltip="thin space" />
+				<e:SymbolImage resource="{mb.spaces_02}" symbol="\:" tooltip="medium space" />
+				<e:SymbolImage resource="{mb.spaces_03}" symbol="\;" tooltip="large space" />
+				<e:SymbolImage resource="{mb.spaces_04}" symbol="\!" tooltip="negative space" />
+			</e:HTMLPanel>
+			<e:HTMLPanel ui:field="accents" addStyleNames="{style.group-container} {style.accents} ">
+				<e:SymbolImage resource="{mb.accents_01}" symbol="{}^'" tooltip="a'" />
+				<e:SymbolImage resource="{mb.accents_02}" symbol="{}^{''}" tooltip="a&quot;" />
+				<e:SymbolImage resource="{mb.accents_03}" symbol="\dot{}" tooltip="\dot{{a}" />
+				<e:SymbolImage resource="{mb.accents_04}" symbol="\ddot{}" tooltip="\ddot{{a}"  />
+				<e:SymbolImage resource="{mb.accents_05}" symbol="\hat{}" tooltip="\hat{{a}"  />
+				<e:SymbolImage resource="{mb.accents_06}" symbol="\check{}" tooltip="\check{{a}"  />
+				<e:SymbolImage resource="{mb.accents_07}" symbol="\grave{}" tooltip="\grave{{a}"  />
+				<e:SymbolImage resource="{mb.accents_08}" symbol="\acute{}" tooltip="\acute{{a}"  />
+				<e:SymbolImage resource="{mb.accents_09}" symbol="\tilde{}" tooltip="\tilde{{a}"  />
+				<e:SymbolImage resource="{mb.accents_10}" symbol="\breve{}" tooltip="\breve{{a}"  />
+				<e:SymbolImage resource="{mb.accents_11}" symbol="\bar{}" tooltip="\bar{{a}"  />
+				<e:SymbolImage resource="{mb.accents_12}" symbol="\vec{}" tooltip="\vec{{a}"  />
+				<e:SymbolImage resource="{mb.accents_13}" symbol="\not{}" tooltip="\not{{a}"  />
+				<e:SymbolImage resource="{mb.accents_14}" symbol="{{a}^{\circ}" tooltip="\circ"  />
+			</e:HTMLPanel>
+			<e:HTMLPanel ui:field="accents_ext" addStyleNames="{style.group-container} {style.accents_ext}">
+				<e:SymbolImage resource="{mb.accents_ext_01}" symbol="\widetilde{}" tooltip="\widetilde" />
+				<e:SymbolImage resource="{mb.accents_ext_02}" symbol="\widehat{}" tooltip="\widehat" />
+				<e:SymbolImage resource="{mb.accents_ext_03}" symbol="\overleftarrow{}" tooltip="\overleftarrow" />
+				<e:SymbolImage resource="{mb.accents_ext_04}" symbol="\overrightarrow{}" tooltip="\overrightarrow" />
+				<e:SymbolImage resource="{mb.accents_ext_05}" symbol="\overline{}" tooltip="\overline" />
+				<e:SymbolImage resource="{mb.accents_ext_06}" symbol="\underline{}" tooltip="\underline" />
+				<e:SymbolImage resource="{mb.accents_ext_07}" symbol="\overbrace{}" tooltip="\overbrace" />
+				<e:SymbolImage resource="{mb.accents_ext_09}" symbol="\underbrace{}" tooltip="\underbrace" />
+				<e:SymbolImage resource="{mb.accents_ext_10}" symbol="\overset{}" tooltip="\overset" />
+				<e:SymbolImage resource="{mb.accents_ext_11}" symbol="\underset{}" tooltip="\underset" />
+			</e:HTMLPanel>
+			<e:HTMLPanel ui:field="arrows" addStyleNames="{style.group-container} {style.arrows}">
+				<e:SymbolImage resource="{mb.arrows_03}" symbol="\leftarrow" tooltip="\leftarrow" />
+				<e:SymbolImage resource="{mb.arrows_04}" symbol="\rightarrow" tooltip="\rightarrow" />
+				<e:SymbolImage resource="{mb.arrows_05}" symbol="\Leftarrow" tooltip="\Leftarrow" />
+				<e:SymbolImage resource="{mb.arrows_06}" symbol="\Rightarrow" tooltip="\Rightarrow" />
+				<e:SymbolImage resource="{mb.arrows_07}" symbol="\leftrightarrow" tooltip="\leftrightarrow" />
+				<e:SymbolImage resource="{mb.arrows_08}" symbol="\Leftrightarrow" tooltip="\Leftrightarrow" />
+				<e:SymbolImage resource="{mb.arrows_09}" symbol="\leftharpoonup" tooltip="\leftharpoonup" />
+				<e:SymbolImage resource="{mb.arrows_10}" symbol="\rightharpoonup" tooltip="\rightharpoonup" />
+				<e:SymbolImage resource="{mb.arrows_11}" symbol="\leftharpoondown" tooltip="\leftharpoondown" />
+				<e:SymbolImage resource="{mb.arrows_12}" symbol="\rightharpoondown" tooltip="\rightharpoondown" />
+				<!-- e:SymbolImage resource="{mb.arrows_13}" symbol="\leftrightharpoons" / -->
+				<!-- e:SymbolImage resource="{mb.arrows_14}" symbol="\rightleftharpoons" / -->
+				<!-- e:SymbolImage resource="{mb.arrows_15}" symbol="\xleftarrow[a]{{b}" / -->
+				<!-- e:SymbolImage resource="{mb.arrows_16}" symbol="\xrightarrow[a]{{b}" / -->
+				<e:SymbolImage resource="{mb.arrows_17}" symbol="\overset{{x}{{\leftarrow}" tooltip="\overset{}{{\leftarrow}" />
+				<e:SymbolImage resource="{mb.arrows_18}" symbol="\overset{{x}{{\rightarrow}" tooltip="\overset{}{{\rightarrow}" />
+				<e:SymbolImage resource="{mb.arrows_19}" symbol="\underset{{x}{{\leftarrow}" tooltip="\underset{}{{\leftarrow}" />
+				<e:SymbolImage resource="{mb.arrows_20}" symbol="\underset{{x}{{\rightarrow}" tooltip="\underset{}{{\rightarrow}" />
+				<e:SymbolImage resource="{mb.arrows_02}" symbol="x \mapsto x^2" tooltip="x \mapsto x^2" />
+			</e:HTMLPanel>
+			<e:HTMLPanel ui:field="binary" addStyleNames="{style.group-container} {style.binary}">
+				<e:SymbolImage resource="{mb.binary_01}" symbol="\pm" />
+				<e:SymbolImage resource="{mb.binary_02}" symbol="\cap" />
+				<e:SymbolImage resource="{mb.binary_03}" symbol="\cup" />
+				<e:SymbolImage resource="{mb.binary_04}" symbol="\cdot" />
+				<e:SymbolImage resource="{mb.binary_05}" symbol="\mp" />
+				<!-- e:SymbolImage resource="{mb.binary_06}" symbol="\Cap" / -->
+				<!-- e:SymbolImage resource="{mb.binary_07}" symbol="\Cup" / -->
+				<e:SymbolImage resource="{mb.binary_08}" symbol="\uplus" />
+				<e:SymbolImage resource="{mb.binary_09}" symbol="\times" />
+				<e:SymbolImage resource="{mb.binary_10}" symbol="\sqcap" />
+				<e:SymbolImage resource="{mb.binary_11}" symbol="\sqcup" />
+				<e:SymbolImage resource="{mb.binary_12}" symbol="\bigsqcup" />
+				<e:SymbolImage resource="{mb.binary_13}" symbol="\ast" />
+				<e:SymbolImage resource="{mb.binary_14}" symbol="\wedge" />
+				<e:SymbolImage resource="{mb.binary_15}" symbol="\vee" />
+				<e:SymbolImage resource="{mb.binary_16}" symbol="\bigtriangleup" />
+				<e:SymbolImage resource="{mb.binary_17}" symbol="\div" />
+				<e:SymbolImage resource="{mb.binary_18}" symbol="\barwedge" />
+				<e:SymbolImage resource="{mb.binary_19}" symbol="\veebar" />
+				<e:SymbolImage resource="{mb.binary_20}" symbol="\bigtriangledown" />
+				<e:SymbolImage resource="{mb.binary_21}" symbol="\setminus" />
+				<e:SymbolImage resource="{mb.binary_22}" symbol="\triangleleft" />
+				<e:SymbolImage resource="{mb.binary_23}" symbol="\triangleright" />
+				<e:SymbolImage resource="{mb.binary_24}" symbol="\star" />
+				<e:SymbolImage resource="{mb.binary_25}" symbol="\dotplus" />
+				<e:SymbolImage resource="{mb.binary_26}" symbol="\lozenge" />
+				<e:SymbolImage resource="{mb.binary_27}" symbol="\blacklozenge" />
+				<e:SymbolImage resource="{mb.binary_28}" symbol="\bigstar" />
+				<e:SymbolImage resource="{mb.binary_29}" symbol="\amalg" />
+				<e:SymbolImage resource="{mb.binary_30}" symbol="\circ" />
+				<e:SymbolImage resource="{mb.binary_31}" symbol="\bullet" />
+				<e:SymbolImage resource="{mb.binary_32}" symbol="\bigcirc" />
+				<e:SymbolImage resource="{mb.binary_33}" symbol="\dagger" />
+				<e:SymbolImage resource="{mb.binary_34}" symbol="\square" />
+				<e:SymbolImage resource="{mb.binary_35}" symbol="\blacksquare" />
+				<e:SymbolImage resource="{mb.binary_36}" symbol="\bigoplus" />
+				<e:SymbolImage resource="{mb.binary_37}" symbol="\ddagger" />
+				<e:SymbolImage resource="{mb.binary_38}" symbol="\triangle" />
+				<e:SymbolImage resource="{mb.binary_39}" symbol="\blacktriangle" />
+				<e:SymbolImage resource="{mb.binary_40}" symbol="\bigotimes" />
+				<e:SymbolImage resource="{mb.binary_41}" symbol="\wr" />
+				<e:SymbolImage resource="{mb.binary_42}" symbol="\triangledown" />
+				<e:SymbolImage resource="{mb.binary_43}" symbol="\blacktriangledown" />
+				<e:SymbolImage resource="{mb.binary_44}" symbol="\bigodot" />
+				<e:SymbolImage resource="{mb.binary_45}" symbol="\diamond" />
+				<e:SymbolImage resource="{mb.binary_46}" symbol="\ominus" />
+				<e:SymbolImage resource="{mb.binary_47}" symbol="\oplus" />
+				<e:SymbolImage resource="{mb.binary_48}" symbol="\circledcirc" />
+				<e:SymbolImage resource="{mb.binary_49}" symbol="\oslash" />
+				<e:SymbolImage resource="{mb.binary_50}" symbol="\otimes" />
+				<e:SymbolImage resource="{mb.binary_51}" symbol="\circledast" />
+				<e:SymbolImage resource="{mb.binary_52}" symbol="\circleddash" />
+				<e:SymbolImage resource="{mb.binary_53}" symbol="\odot" />
+			</e:HTMLPanel>
+			<e:HTMLPanel ui:field="matrix" addStyleNames="{style.group-container} {style.matrix} ">
+				<e:SymbolImage resource="{mb.matrix_01}" symbol="\begin{{matrix}\nn 1 &amp; 2 &amp; 3 \\\nn 4 &amp; 5 &amp; 6\nn\end{{matrix}" />
+				<e:SymbolImage resource="{mb.matrix_02}" symbol="\begin{{bmatrix}\nn 1 &amp; 2 &amp; 3 \\\nn 4 &amp; 5 &amp; 6\nn\end{{bmatrix}" />
+				<e:SymbolImage resource="{mb.matrix_03}" symbol="\binom{{n}{{r}" />
+				<e:SymbolImage resource="{mb.matrix_04}" symbol="\begin{{pmatrix}\nn 1 &amp; 2 &amp; 3 \\\nn 4 &amp; 5 &amp; 6\nn\end{{pmatrix}" />
+				<e:SymbolImage resource="{mb.matrix_05}" symbol="\bigl(\begin{{smallmatrix}\nn 1 &amp; 2 &amp; 3\\ 4 &amp; 4 &amp; 6 \end{{smallmatrix}\bigr)" />
+				<e:SymbolImage resource="{mb.matrix_06}" symbol="\begin{{cases}\nn 1 &amp; \text{{ if } x= x_0 \\\nn 2 &amp; \text{{ if } x= x_1 \\\nn 3 &amp; \text{{ if } x= x_2\nn\end{{cases}" />
+				<e:SymbolImage resource="{mb.matrix_07}" symbol="\begin{{vmatrix}\nn 1 &amp; 2 &amp; 3 \\\nn 4 &amp; 5 &amp; 6\nn\end{{vmatrix}" />
+				<e:SymbolImage resource="{mb.matrix_08}" symbol="\begin{{Bmatrix}\nn 1 &amp; 2 &amp; 3 \\\nn 4 &amp; 5 &amp; 6\nn\end{{Bmatrix}" />
+				<e:SymbolImage resource="{mb.matrix_09}" symbol="\begin{{align*}\nn x &amp;= 1\\\nn y &amp;= 2\\\nn z &amp;= 3\nn\end{{align*}" />
+				<e:SymbolImage resource="{mb.matrix_10}" symbol="\begin{{Vmatrix}\nn 1 &amp; 2 &amp; 3 \\\nn 4 &amp; 5 &amp; 6\nn\end{{Vmatrix}" />
+				<e:SymbolImage resource="{mb.matrix_11}" symbol="\left\{\begin{{matrix}\nn 1 &amp; 2 &amp; 3 \\\nn 4 &amp; 5 &amp; 6\nn\end{{matrix}\right." />
+				<e:SymbolImage resource="{mb.matrix_13}" symbol="\left.\begin{{matrix}\nn 1 &amp; 2 &amp; 3 \\\nn 4 &amp; 5 &amp; 6\nn\end{{matrix}\right\}" />
+				<e:SymbolImage resource="{mb.matrix_12}" symbol="\left.\begin{{matrix}\nn1 &amp; 3 &amp; 5\\\nn2 &amp; 4 &amp; 6\nn\end{{matrix}\right|" />
+			</e:HTMLPanel>
+			<e:HTMLPanel ui:field="operators" addStyleNames="{style.group-container} {style.operators} ">
+				<e:SymbolImage resource="{mb.operators_01}" symbol="x^{{a}" />
+				<e:SymbolImage resource="{mb.operators_02}" symbol="\frac{{a}{{b}" />
+				<e:SymbolImage resource="{mb.operators_03}" symbol="\int" />
+				<e:SymbolImage resource="{mb.operators_04}" symbol="\bigcap" />
+				<e:SymbolImage resource="{mb.operators_05}" symbol="\sum" />
+				<e:SymbolImage resource="{mb.operators_06}" symbol="\prod" />
+				<e:SymbolImage resource="{mb.operators_07}" symbol="x_{{a}" />
+				<e:SymbolImage resource="{mb.operators_08}" symbol="x\frac{{a}{{b}" />
+				<e:SymbolImage resource="{mb.operators_09}" symbol="\int_{{a}^{{b}" />
+				<e:SymbolImage resource="{mb.operators_10}" symbol="\bigcap_{{a}^{{b}" />
+				<e:SymbolImage resource="{mb.operators_11}" symbol="\sub_{{a}^{{b}" />
+				<e:SymbolImage resource="{mb.operators_12}" symbol="\prod_{{a}^{{b}" />
+				<e:SymbolImage resource="{mb.operators_13}" symbol="x_{{a}^{{b}" />
+				<e:SymbolImage resource="{mb.operators_14}" symbol="\frac{\partial y}{\partial x}" />
+				<e:SymbolImage resource="{mb.operators_15}" symbol="\oint" />
+				<e:SymbolImage resource="{mb.operators_16}" symbol="\bigcup" />
+				<e:SymbolImage resource="{mb.operators_17}" symbol="\sqrt{{x}" />
+				<e:SymbolImage resource="{mb.operators_18}" symbol="\coprod" />
+				<e:SymbolImage resource="{mb.operators_19}" symbol="{{x_{{a}}^{{b}" />
+				<e:SymbolImage resource="{mb.operators_20}" symbol="\frac{\partial^2 y}{\partial x^2}" />
+				<e:SymbolImage resource="{mb.operators_21}" symbol="\oint_{{a}^{{b}" />
+				<e:SymbolImage resource="{mb.operators_22}" symbol="\bigcup_{{a}^{{b}" />
+				<e:SymbolImage resource="{mb.operators_23}" symbol="\sqrt[n]{{x}" />
+				<e:SymbolImage resource="{mb.operators_24}" symbol="\coprod_{{a}^{{b}" />
+				<e:SymbolImage resource="{mb.operators_25}" symbol="_{{a}^{{b}\textrm{{C}" />
+				<e:SymbolImage resource="{mb.operators_26}" symbol="\frac{\mathrm{{d} y}{\mathrm{{d} x}" />
+				<e:SymbolImage resource="{mb.operators_27}" symbol="\iint_{{a}^{{b}" />
+				<e:SymbolImage resource="{mb.operators_28}" symbol="\lim_{{x \to a} \frac{{1}{{x-a}" />
+			</e:HTMLPanel>
+			<e:HTMLPanel ui:field="relations" addStyleNames="{style.group-container} {style.relations} ">
+				<e:SymbolImage resource="{mb.relations_01}" symbol="&lt;" />
+				<e:SymbolImage resource="{mb.relations_02}" symbol="&gt;" />
+				<e:SymbolImage resource="{mb.relations_03}" symbol="=" />
+				<e:SymbolImage resource="{mb.relations_04}" symbol="\leq" />
+				<e:SymbolImage resource="{mb.relations_05}" symbol="\geq" />
+				<e:SymbolImage resource="{mb.relations_06}" symbol="\doteq" />
+				<e:SymbolImage resource="{mb.relations_07}" symbol="\leqslant" />
+				<e:SymbolImage resource="{mb.relations_08}" symbol="\geqslant" />
+				<e:SymbolImage resource="{mb.relations_09}" symbol="\equiv" />
+				<e:SymbolImage resource="{mb.relations_10}" symbol="\not{{&lt;}" />
+				<e:SymbolImage resource="{mb.relations_11}" symbol="\not{{&gt;}" />
+				<e:SymbolImage resource="{mb.relations_12}" symbol="\neq" />
+				<e:SymbolImage resource="{mb.relations_13}" symbol="\nleqslant" />
+				<e:SymbolImage resource="{mb.relations_14}" symbol="\ngeqslant" />
+				<e:SymbolImage resource="{mb.relations_15}" symbol="\not{{\equiv}" />
+				<e:SymbolImage resource="{mb.relations_16}" symbol="\prec" />
+				<e:SymbolImage resource="{mb.relations_17}" symbol="\succ" />
+				<e:SymbolImage resource="{mb.relations_18}" symbol="\overset{{\underset{{\mathrm{{def}x}{{y}}{{=z}" />
+				<e:SymbolImage resource="{mb.relations_19}" symbol="\preceq" />
+				<e:SymbolImage resource="{mb.relations_20}" symbol="\succeq" />
+				<e:SymbolImage resource="{mb.relations_21}" symbol="\sim" />
+				<e:SymbolImage resource="{mb.relations_22}" symbol="\ll" />
+				<e:SymbolImage resource="{mb.relations_23}" symbol="\gg" />
+				<e:SymbolImage resource="{mb.relations_24}" symbol="\approx" />
+				<e:SymbolImage resource="{mb.relations_25}" symbol="\vdash" />
+				<e:SymbolImage resource="{mb.relations_26}" symbol="\dashv" />
+				<e:SymbolImage resource="{mb.relations_27}" symbol="\simeq" />
+				<e:SymbolImage resource="{mb.relations_28}" symbol="\smile" />
+				<e:SymbolImage resource="{mb.relations_29}" symbol="\frown" />
+				<e:SymbolImage resource="{mb.relations_30}" symbol="\cong" />
+				<e:SymbolImage resource="{mb.relations_31}" symbol="\models" />
+				<e:SymbolImage resource="{mb.relations_32}" symbol="\perp" />
+				<e:SymbolImage resource="{mb.relations_33}" symbol="\asymp" />
+				<e:SymbolImage resource="{mb.relations_34}" symbol="\mid" />
+				<e:SymbolImage resource="{mb.relations_35}" symbol="\parallel" />
+				<e:SymbolImage resource="{mb.relations_36}" symbol="\propto" />
+				<e:SymbolImage resource="{mb.relations_37}" symbol="\bowtie" />
+				<e:SymbolImage resource="{mb.relations_38}" symbol="\Join" />
+			</e:HTMLPanel>
+			<div style='clear: both; height: 1px; width: 1px; float: left'></div>
+		</div>
+		<div style='margin-top: 4px; position: relative; width: 100%; display: inline-block' class="{style.group-row-2}">
+			<e:HTMLPanel ui:field="brackets" addStyleNames="{style.group-container} {style.brackets} ">
+				<e:SymbolImage resource="{mb.brackets_01}" symbol="\left ( x \right )" />
+				<e:SymbolImage resource="{mb.brackets_02}" symbol="\left \| x \right \|" />
+				<e:SymbolImage resource="{mb.brackets_03}" symbol="\left [ x \right ]" />
+				<e:SymbolImage resource="{mb.brackets_04}" symbol="\left \langle x \right \rangle" />
+				<e:SymbolImage resource="{mb.brackets_05}" symbol="\left \{ x \right \}" />
+				<e:SymbolImage resource="{mb.brackets_06}" symbol="\left \lfloor x \right \rfloor" />
+				<e:SymbolImage resource="{mb.brackets_07}" symbol="\left | x \right |" />
+				<e:SymbolImage resource="{mb.brackets_08}" symbol="\left \lceil x \right \rceil" />
+				<e:SymbolImage resource="{mb.brackets_09}" symbol="\left \{ x \right." />
+				<e:SymbolImage resource="{mb.brackets_10}" symbol="\left. x \right \}" />
+			</e:HTMLPanel>
+			<e:HTMLPanel ui:field="foreign" addStyleNames="{style.group-container} {style.foreign} ">
+				<e:SymbolImage resource="{mb.foreign_01}" symbol="\aa" tooltip="\aa" />
+				<e:SymbolImage resource="{mb.foreign_02}" symbol="\AA" tooltip="\AA" />
+				<e:SymbolImage resource="{mb.foreign_03}" symbol="\ae" tooltip="\ae" />
+				<e:SymbolImage resource="{mb.foreign_04}" symbol="\AE" tooltip="\AE" />
+				<!-- <e:SymbolImage resource="{mb.foreign_05}" symbol="\l" /> -->
+				<!-- <e:SymbolImage resource="{mb.foreign_07}" symbol="\o" /> -->
+				<!-- <e:SymbolImage resource="{mb.foreign_08}" symbol="\O" /> -->
+				<e:SymbolImage resource="{mb.foreign_09}" symbol="\oe" tooltip="\oe" />
+				<e:SymbolImage resource="{mb.foreign_10}" symbol="\OE" tooltip="\OE" />
+				<e:SymbolImage resource="{mb.foreign_11}" symbol="\ss" tooltip="\ss" />
+				<e:SymbolImage resource="{mb.foreign_06}" symbol="\L" tooltip="\L" />
+				<!-- <e:SymbolImage resource="{mb.foreign_12}" symbol="\SS" /> -->
+				<e:SymbolImage resource="{mb.foreign_13}" symbol="\$" tooltip="\$" />
+				<!-- <e:SymbolImage resource="{mb.foreign_14}" symbol="\pounds" /> -->
+				<!-- <e:SymbolImage resource="{mb.foreign_15}" symbol="\cent" /> -->
+				<!-- <e:SymbolImage resource="{mb.foreign_16}" symbol="\euro" /> -->
+			</e:HTMLPanel>
+			<e:HTMLPanel ui:field="greeklower" addStyleNames="{style.group-container} {style.greeklower} ">
+				<e:SymbolImage resource="{mb.greeklower_01}" symbol="\alpha" tooltip="\alpha" />
+				<e:SymbolImage resource="{mb.greeklower_02}" symbol="\beta" tooltip="\beta" />
+				<e:SymbolImage resource="{mb.greeklower_03}" symbol="\gamma" tooltip="\gamma" />
+				<e:SymbolImage resource="{mb.greeklower_04}" symbol="\delta" tooltip="\delta" />
+				<e:SymbolImage resource="{mb.greeklower_05}" symbol="\epsilon" tooltip="\epsilon" />
+				<e:SymbolImage resource="{mb.greeklower_06}" symbol="\varepsilon" tooltip="\varepsilon" />
+				<e:SymbolImage resource="{mb.greeklower_07}" symbol="\zeta" tooltip="\zeta" />
+				<e:SymbolImage resource="{mb.greeklower_08}" symbol="\eta" tooltip="\eta" />
+				<e:SymbolImage resource="{mb.greeklower_09}" symbol="\theta" tooltip="\theta" />
+				<e:SymbolImage resource="{mb.greeklower_10}" symbol="\vartheta" tooltip="\vartheta" />
+				<e:SymbolImage resource="{mb.greeklower_11}" symbol="\iota" tooltip="\iota" />
+				<e:SymbolImage resource="{mb.greeklower_12}" symbol="\kappa" tooltip="\kappa" />
+				<e:SymbolImage resource="{mb.greeklower_13}" symbol="\lambda" tooltip="\lambda" />
+				<e:SymbolImage resource="{mb.greeklower_14}" symbol="\mu" tooltip="\mu" />
+				<e:SymbolImage resource="{mb.greeklower_15}" symbol="\nu" tooltip="\nu" />
+				<e:SymbolImage resource="{mb.greeklower_16}" symbol="\xi" tooltip="\xi" />
+				<e:SymbolImage resource="{mb.greeklower_17}" symbol="\pi" tooltip="\pi" />
+				<e:SymbolImage resource="{mb.greeklower_18}" symbol="\varpi" tooltip="\varpi" />
+				<e:SymbolImage resource="{mb.greeklower_19}" symbol="\rho" tooltip="\rho" />
+				<e:SymbolImage resource="{mb.greeklower_20}" symbol="\varrho" tooltip="\varrho" />
+				<e:SymbolImage resource="{mb.greeklower_21}" symbol="\sigma" tooltip="\sigma" />
+				<e:SymbolImage resource="{mb.greeklower_22}" symbol="\varsigma" tooltip="\varsigma" />
+				<e:SymbolImage resource="{mb.greeklower_23}" symbol="\tau" tooltip="\tau" />
+				<e:SymbolImage resource="{mb.greeklower_24}" symbol="\upsilon" tooltip="\upsilon" />
+				<e:SymbolImage resource="{mb.greeklower_25}" symbol="\phi" tooltip="\phi" />
+				<e:SymbolImage resource="{mb.greeklower_26}" symbol="\varphi" tooltip="\varphi" />
+				<e:SymbolImage resource="{mb.greeklower_27}" symbol="\chi" tooltip="\chi" />
+				<e:SymbolImage resource="{mb.greeklower_28}" symbol="\psi" tooltip="\psi" />
+				<e:SymbolImage resource="{mb.greeklower_29}" symbol="\omega" tooltip="\omega" />
+			</e:HTMLPanel>
+			<e:HTMLPanel ui:field="greekupper" addStyleNames="{style.group-container} {style.greekupper} ">
+				<e:SymbolImage resource="{mb.greekupper_03}" symbol="\Gamma" tooltip="\Gamma" />
+				<e:SymbolImage resource="{mb.greekupper_04}" symbol="\Delta" tooltip="\Delta" />
+				<e:SymbolImage resource="{mb.greekupper_09}" symbol="\Theta" tooltip="\Theta" />
+				<e:SymbolImage resource="{mb.greekupper_13}" symbol="\Lambda" tooltip="\Lambda" />
+				<e:SymbolImage resource="{mb.greekupper_16}" symbol="\Xi" tooltip="\Xi" />
+				<e:SymbolImage resource="{mb.greekupper_17}" symbol="\Pi" tooltip="\Pi" />
+				<e:SymbolImage resource="{mb.greekupper_21}" symbol="\Sigma" tooltip="\Sigma" />
+				<e:SymbolImage resource="{mb.greekupper_24}" symbol="\Upsilon" tooltip="\Upsilon" />
+				<e:SymbolImage resource="{mb.greekupper_25}" symbol="\Phi" tooltip="\Phi" />
+				<e:SymbolImage resource="{mb.greekupper_28}" symbol="\Psi" tooltip="\Psi" />
+				<e:SymbolImage resource="{mb.greekupper_29}" symbol="\Omega" tooltip="\Omega" />
+			</e:HTMLPanel>
+			<e:HTMLPanel addStyleNames="{style.group-container} {style.subsupset} ">
+				<e:SymbolImage resource="{mb.subsupset_03}" symbol="\sqsubseteq" tooltip="\sqsubseteq" />
+				<e:SymbolImage resource="{mb.subsupset_04}" symbol="\sqsupseteq" tooltip="\sqsupseteq" />
+				<e:SymbolImage resource="{mb.subsupset_05}" symbol="\subset" tooltip="\subset" />
+				<e:SymbolImage resource="{mb.subsupset_06}" symbol="\supset" tooltip="\supset" />
+				<e:SymbolImage resource="{mb.subsupset_07}" symbol="\subseteq" tooltip="\subseteq" />
+				<e:SymbolImage resource="{mb.subsupset_08}" symbol="\supseteq" tooltip="\supseteq" />
+				<e:SymbolImage resource="{mb.subsupset_09}" symbol="\not\subseteq" tooltip="\not\subseteq" />
+				<e:SymbolImage resource="{mb.subsupset_10}" symbol="\not\supseteq" tooltip="\not\supseteq" />
+				<e:SymbolImage resource="{mb.subsupset_15}" symbol="\in" tooltip="\in" />
+				<e:SymbolImage resource="{mb.subsupset_16}" symbol="\ni" tooltip="\ni" />
+				<e:SymbolImage resource="{mb.subsupset_17}" symbol="\notin" tooltip="\notin" />
+				<!-- <e:SymbolImage resource="{mb.subsupset_01}" symbol="\sqsubset" /> -->
+				<!-- <e:SymbolImage resource="{mb.subsupset_02}" symbol="\sqsupset" /> -->
+				<!-- <e:SymbolImage resource="{mb.subsupset_11}" symbol="\subseteqq" /> -->
+				<!-- <e:SymbolImage resource="{mb.subsupset_12}" symbol="\supseteqq" /> -->
+				<!-- <e:SymbolImage resource="{mb.subsupset_13}" symbol="\not\subseteqq" /> -->
+				<!-- <e:SymbolImage resource="{mb.subsupset_14}" symbol="\not\supseteqq" /> -->
+			</e:HTMLPanel>
+			<e:HTMLPanel addStyleNames="{style.group-container} {style.symbols} ">
+				<e:SymbolImage resource="{mb.symbols_01}" symbol="\therefore" tooltip="\therefore" />
+				<e:SymbolImage resource="{mb.symbols_02}" symbol="\partial" tooltip="\partial" />
+				<e:SymbolImage resource="{mb.symbols_goog_angle}" symbol="\angle" tooltip="\angle" />
+				<e:SymbolImage resource="{mb.symbols_06}" symbol="\imath" tooltip="\imath" />
+				<e:SymbolImage resource="{mb.symbols_10}" symbol="\jmath" tooltip="\jmath" />
+				<e:SymbolImage resource="{mb.symbols_03}" symbol="\mathbb{{P}" tooltip="\mathbb{{P}" />
+				<e:SymbolImage resource="{mb.symbols_07}" symbol="\mathbb{{N}" tooltip="\mathbb{{N}" />
+				<e:SymbolImage resource="{mb.symbols_11}" symbol="\mathbb{{Z}" tooltip="\mathbb{{Z}" />
+				<e:SymbolImage resource="{mb.symbols_14}" symbol="\mathbb{{R}" tooltip="\mathbb{{R}" />
+				<e:SymbolImage resource="{mb.symbols_15}" symbol="\mathbb{{I}" tooltip="\mathbb{{I}" />
+				<e:SymbolImage resource="{mb.symbols_27}" symbol="\mathbb{{C}" tooltip="\mathbb{{C}" />
+				<e:SymbolImage resource="{mb.symbols_19}" symbol="\mathbb{{Q}" tooltip="\mathbb{{Q}" />
+				<e:SymbolImage resource="{mb.symbols_20}" symbol="\infty" tooltip="\infty" />
+				<e:SymbolImage resource="{mb.symbols_21}" symbol="\S" tooltip="\S" />
+				<e:SymbolImage resource="{mb.symbols_25}" symbol="\P" tooltip="\P" />
+				<e:SymbolImage resource="{mb.symbols_22}" symbol="\forall" tooltip="\forall" />
+				<e:SymbolImage resource="{mb.symbols_23}" symbol="\Re" tooltip="\Re" />
+				<e:SymbolImage resource="{mb.symbols_18}" symbol="\Im" tooltip="\Im" />
+				<e:SymbolImage resource="{mb.symbols_26}" symbol="\exists" tooltip="\exists" />
+				<e:SymbolImage resource="{mb.symbols_28}" symbol="\wp" tooltip="\wp" />
+				<e:SymbolImage resource="{mb.symbols_30}" symbol="\top" tooltip="\top" />
+				<e:SymbolImage resource="{mb.symbols_08}" symbol="\cdots" tooltip="\cdots" />
+				<e:SymbolImage resource="{mb.symbols_13}" symbol="\ddots" tooltip="\ddots" />
+				<e:SymbolImage resource="{mb.symbols_17}" symbol="\vdots" tooltip="\vdots" />
+				<!-- <e:SymbolImage resource="{mb.symbols_05}" symbol="\because" /> -->
+				<!-- <e:SymbolImage resource="{mb.symbols_09}" symbol="\measuredangle" /> -->
+				<!-- <e:SymbolImage resource="{mb.symbols_12}" symbol="\sphericalangle" /> -->
+				<!-- <div style='width: 15px; height: 15px;'></div> -->
+				<!-- <e:SymbolImage resource="{mb.symbols_16}" symbol="\varnothing" /> -->
+				<!-- <e:SymbolImage resource="{mb.symbols_24}" symbol="\mho" /> -->
+				<!-- <e:SymbolImage resource="{mb.symbols_29}" symbol="\copyright" /> -->
+			</e:HTMLPanel>
+			<e:HTMLPanel addStyleNames="{style.group-container} {style.styles} ">
+				<e:SymbolImage resource="{mb.styles_03}" symbol="\mathbf{{x}" tooltip="Bold" />
+				<e:SymbolImage resource="{mb.styles_05}" symbol="\mathit{{x}" tooltip="Italic" />
+				<e:SymbolImage resource="{mb.styles_07}" symbol="\mathrm{{x}" tooltip="Roman" />
+				<e:SymbolImage resource="{mb.styles_09}" symbol="\mathfrak{{x}" tooltip="Fraktur" />
+				<e:SymbolImage resource="{mb.styles_11}" symbol="\mathbb{{x}" tooltip="Blackboard" />
+				<!-- <e:SymbolImage resource="{mb.styles_08}" symbol="\textrm{{x}" tooltip="" /> -->
+				<!-- <e:SymbolImage resource="{mb.styles_06}" symbol="\textit{{x}" tooltip="" /> -->
+				<!-- <e:SymbolImage resource="{mb.styles_01}" symbol="\boldsymbol{{x}" /> -->
+				<!-- <e:SymbolImage resource="{mb.styles_02}" symbol="\textup{{x}" /> -->
+				<!-- <e:SymbolImage resource="{mb.styles_04}" symbol="\textbf{{x}" /> -->
+				<!-- <e:SymbolImage resource="{mb.styles_10}" symbol="\textsl{{x}" /> -->
+				<!-- <e:SymbolImage resource="{mb.styles_12}" symbol="\texttt{{x}" /> -->
+				<!-- <e:SymbolImage resource="{mb.styles_13}" symbol="\textsc{{x}" /> -->
+				<!-- <e:SymbolImage resource="{mb.styles_14}" symbol="\emph{{x}" /> -->
+			</e:HTMLPanel>
+			<e:HTMLPanel addStyleNames="{style.group-container} {style.extras} ">
+				<e:SymbolImage resource="{mb.extras_00}" symbol="" tooltip="" />
+				<e:SymbolImage resource="{mb.extras_01}" symbol="e^{{i\theta} = \sin\theta + i\cos\theta" tooltip="Euler&apo;s theorem" />
+				<e:SymbolImage resource="{mb.extras_02}" symbol="\sin^2\theta + \cos^2\theta = 1" tooltip="Trignometric Identity" />
+				<e:SymbolImage resource="{mb.extras_03}" symbol="\sin{(\alpha + \beta)} = \sin\alpha\cos\beta + \sin\beta\cos\alpha"
+						tooltip="sin(a+b) expansion" />
+			</e:HTMLPanel>
+		</div>
+		<div style='margin-top: 5px; padding-bottom: 5px; width: 100%'>
+			<g:TextArea ui:field="editorArea" visibleLines="8" styleName="{style.editor}" />
+		</div>
+		<div style='padding-bottom: 10px; width: 100%; margin-top: 5px; margin-left: 5px;'>
+			<g:Button ui:field="generateBtn" text="Refresh..." />
+		</div>
+		<div style='margin-top: 10px; padding-bottom: 10px'>
+			<e:SymbolImage ui:field="finalImage" styleName="{style.finalImage}" />
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>
+
+
