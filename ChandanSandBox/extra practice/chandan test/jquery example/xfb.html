@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Login Page</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+</head>
+<body>
+	<div id="fb-root"></div>
+	<script src="http://connect.facebook.net/en_US/all.js"></script>
+	<script>
+
+		function doWork() {
+			//alert('This: ' + this + ', Args: ' + arguments.length);
+			var _t = '';
+			for(var idx in this) {
+				_t += idx + ',';
+			}
+			alert('This prop names: ' + _t + '\nUser: ' + this.getLoggedInUser());
+			_t = '';
+			for(var idx in arguments) {
+				_t += arguments[idx] + '\n';
+			}
+			alert('Arguments:\n' + _t);
+			if(this.getLoggedInUser() > 0) {
+				location.href = location.href;
+			}
+		}
+
+		function showAllPropsAndValues(item) {
+			var _t = "";
+			for(var idx in item) {
+				_t += idx + ":" + item[idx] + '\n';
+			}
+			alert('Props:\n' + _t);
+		}
+
+		jQuery(document).ready(function() {
+			FB.init({
+				appId : '266730843346616',
+				cookie : true,
+				status : true,
+				xfbml : true
+			});
+
+			FB.getLoginStatus(function(response) {
+				showAllPropsAndValues(response.session || { });
+				//alert('Got Login Status: ' + response + ", ar: " + response.authResponse + ", status: " + response.status);
+				if(response.session) {
+					jQuery("#login").html("Welcome <b>" + response.session.uid + "</b>");
+				}
+			});
+
+			jQuery("#check").click(function() {
+				FB.getLoginStatus(function(response) {
+					showAllPropsAndValues(response.session || { });
+					if(response.session) {
+						jQuery("#login").html("Welcome <b>" + response.authResponse.userID + "</b>");
+					}
+				});
+			});
+		});
+	</script>
+	<div id="login">
+		<fb:login-button
+			onlogin="doWork.apply(this, arguments)"
+			perms="email,read_stream,publish_stream,read_mailbox,create_event,xmpp_login,sms"
+			redirect-uri="http://games-5.appspot.com/xfb/">Login with Facebook</fb:login-button>
+	</div>
+	<button id='check'>Check</button>
+    <hr/>
+    <pre>
+
+    </pre>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

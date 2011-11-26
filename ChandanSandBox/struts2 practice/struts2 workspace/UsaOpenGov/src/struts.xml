@@ -1,0 +1,20 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+  <constant name="struts.action.excludePattern" value="/_ah/.*"/> 
+  <constant name="struts.action.extension" value="action,,"/>
+
+  <package name="default" extends="struts-default">    
+    <action name="dashboard" class="org.usaopengov.action.ViewDashboardAction">
+      <result name="success">/WEB-INF/pages/dashboard.jsp</result>
+    </action>
+  </package>
+  
+  <package name="admin" namespace="/admin" extends="struts-default">    
+    <action name="generate" class="org.usaopengov.action.GenerateDashboardAction">
+      <result name="success">/WEB-INF/pages/success.html</result>
+    </action>
+  </package>  
+  
+</struts>
