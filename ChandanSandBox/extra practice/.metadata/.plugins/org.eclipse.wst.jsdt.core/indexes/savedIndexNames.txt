@@ -1,4 +1,0 @@
-INDEX VERSION 1.122+D:\chandan-repos\ChandanSandBox\extra practice\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-3703558047.index
-3381400929.index
-3885345824.index

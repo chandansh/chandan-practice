@@ -1,7 +1,0 @@
-package com.test.queue;
-
-import javax.servlet.http.HttpServlet;
-
-public class CreateTaskServlet extends HttpServlet {
-
-}

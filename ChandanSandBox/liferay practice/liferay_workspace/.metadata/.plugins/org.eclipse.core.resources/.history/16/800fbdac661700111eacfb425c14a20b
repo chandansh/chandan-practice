@@ -1,7 +1,0 @@
-package com.server;
-
-import javax.servlet.http.HttpServlet;
-
-public class UploadServiceImpl extends HttpServlet {
-
-}

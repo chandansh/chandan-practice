@@ -1,5 +1,0 @@
-INDEX VERSION 1.126+D:\chandan-repos\ChandanSandBox\liferay practice\liferay workspace\.metadata\.plugins\org.eclipse.jdt.core
-3422104131.index
-296497364.index
-1359051171.index
-319552318.index

@@ -1,7 +1,0 @@
-package com.client;
-
-import com.google.gwt.user.client.rpc.RemoteService;
-
-public class BlobService implements RemoteService {
-
-}

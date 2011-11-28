@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<servers>
-  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Liferay v6.0 CE (Tomcat 6)  at localhost-config" hostname="localhost" id="Liferay v6.0 CE (Tomcat 6)  at localhost" name="Liferay v6.0 CE (Tomcat 6)  at localhost" runtime-id="Liferay v6.0 CE (Tomcat 6) " saveSeparateContextFiles="false" server-type="com.liferay.ide.eclipse.server.tomcat.60" server-type-id="com.liferay.ide.eclipse.server.tomcat.60" start-timeout="900" stop-timeout="300" testEnvironment="false" timestamp="1">
-    <list key="modules" value0="DemoLiferay-portlet::org.eclipse.jst.jee.server:DemoLiferay-portlet::jst.web::2.5" value1="MyLiferay-portlet::org.eclipse.jst.jee.server:MyLiferay-portlet::jst.web::2.5" value2="IncolegVideo-portlet::org.eclipse.jst.jee.server:IncolegVideo-portlet::jst.web::2.5" value3="HelloWorld-portlet::org.eclipse.jst.jee.server:HelloWorld-portlet::jst.web::2.5"/>
-  </server>
-</servers>
