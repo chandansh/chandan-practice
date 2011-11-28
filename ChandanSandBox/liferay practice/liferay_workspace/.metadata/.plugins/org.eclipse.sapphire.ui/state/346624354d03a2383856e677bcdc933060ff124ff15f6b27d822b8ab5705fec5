@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<master-details-editor-page-state>
+    <content-outline>
+        <ratio>0.2993710691823899</ratio>
+        <root>
+            <node>
+                <label>Service Builder</label>
+                <expanded>true</expanded>
+                <node>
+                    <label>Entities</label>
+                    <expanded>true</expanded>
+                    <node>
+                        <label>Customer</label>
+                        <expanded>true</expanded>
+                        <node>
+                            <label>Columns</label>
+                            <selected>true</selected>
+                        </node>
+                    </node>
+                </node>
+            </node>
+        </root>
+    </content-outline>
+</master-details-editor-page-state>

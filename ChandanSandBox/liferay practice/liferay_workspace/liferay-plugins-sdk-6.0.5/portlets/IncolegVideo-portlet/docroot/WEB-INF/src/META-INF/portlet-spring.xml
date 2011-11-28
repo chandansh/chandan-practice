@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.edujini.incoleg.video.service.VideoInfoLocalService" class="com.edujini.incoleg.video.service.impl.VideoInfoLocalServiceImpl" />
+	<bean id="com.edujini.incoleg.video.service.VideoInfoLocalServiceUtil" class="com.edujini.incoleg.video.service.VideoInfoLocalServiceUtil">
+		<property name="service" ref="com.edujini.incoleg.video.service.VideoInfoLocalService" />
+	</bean>
+	<bean id="com.edujini.incoleg.video.service.VideoInfoService" class="com.edujini.incoleg.video.service.impl.VideoInfoServiceImpl" />
+	<bean id="com.edujini.incoleg.video.service.VideoInfoServiceUtil" class="com.edujini.incoleg.video.service.VideoInfoServiceUtil">
+		<property name="service" ref="com.edujini.incoleg.video.service.VideoInfoService" />
+	</bean>
+	<bean id="com.edujini.incoleg.video.service.persistence.VideoInfoPersistence" class="com.edujini.incoleg.video.service.persistence.VideoInfoPersistenceImpl" parent="basePersistence" />
+	<bean id="com.edujini.incoleg.video.service.StoreSettingsLocalService" class="com.edujini.incoleg.video.service.impl.StoreSettingsLocalServiceImpl" />
+	<bean id="com.edujini.incoleg.video.service.StoreSettingsLocalServiceUtil" class="com.edujini.incoleg.video.service.StoreSettingsLocalServiceUtil">
+		<property name="service" ref="com.edujini.incoleg.video.service.StoreSettingsLocalService" />
+	</bean>
+	<bean id="com.edujini.incoleg.video.service.StoreSettingsService" class="com.edujini.incoleg.video.service.impl.StoreSettingsServiceImpl" />
+	<bean id="com.edujini.incoleg.video.service.StoreSettingsServiceUtil" class="com.edujini.incoleg.video.service.StoreSettingsServiceUtil">
+		<property name="service" ref="com.edujini.incoleg.video.service.StoreSettingsService" />
+	</bean>
+	<bean id="com.edujini.incoleg.video.service.persistence.StoreSettingsPersistence" class="com.edujini.incoleg.video.service.persistence.StoreSettingsPersistenceImpl" parent="basePersistence" />
+	<bean id="com.edujini.incoleg.video.service.VOMapLocalService" class="com.edujini.incoleg.video.service.impl.VOMapLocalServiceImpl" />
+	<bean id="com.edujini.incoleg.video.service.VOMapLocalServiceUtil" class="com.edujini.incoleg.video.service.VOMapLocalServiceUtil">
+		<property name="service" ref="com.edujini.incoleg.video.service.VOMapLocalService" />
+	</bean>
+	<bean id="com.edujini.incoleg.video.service.VOMapService" class="com.edujini.incoleg.video.service.impl.VOMapServiceImpl" />
+	<bean id="com.edujini.incoleg.video.service.VOMapServiceUtil" class="com.edujini.incoleg.video.service.VOMapServiceUtil">
+		<property name="service" ref="com.edujini.incoleg.video.service.VOMapService" />
+	</bean>
+	<bean id="com.edujini.incoleg.video.service.persistence.VOMapPersistence" class="com.edujini.incoleg.video.service.persistence.VOMapPersistenceImpl" parent="basePersistence" />
+</beans>

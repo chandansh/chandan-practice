@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_0_0.dtd">
+<service-builder package-path="com.edujini.incoleg.video">
+	<author>Edujini</author>
+	<namespace>video</namespace>
+
+	<entity name="VideoInfo" local-service="true" remote-service="true">
+
+		<column name="videoId" type="String" primary="true" />
+		<column name="fileName" type="String"></column>
+		<column name="mappedFileName" type="String"></column>
+		<column name="fileType" type="String"></column>
+		<column name="fileSize" type="double"></column>
+		<column name="fileDesc" type="String"></column>
+		<column name="userEmail" type="String"></column>
+		<column name="uploadTime" type="Date" />
+		<column name="vurl" type="String" />
+		<column name="status" type="int"></column>
+		<!-- Video Status 1=Uploading, 2=Uploaded, 3=Moved , 
+			4=Error occur, 5=Converted -->
+
+		<finder return-type="String" name="FileName">
+			<finder-column name="mappedFileName" />
+		</finder>
+
+	</entity>
+
+	<!-- Storage information will be stored for uploaded video -->
+	<entity name="StoreSettings" local-service="true"
+		remote-service="true">
+		<column name="storeId" type="long" id-type="increment" primary="true" />
+		<!-- Input Bucket ID -->
+		<column name="inBId" type="String" />
+		<!-- Process Bucket ID -->
+		<column name="prBId" type="String" />
+		<!-- output Bucket ID -->
+		<column name="outBId" type="String" />
+		<!-- Access Key ID -->
+		<column name="accessKId" type="String" />
+		<!-- Secret Access Key -->
+		<column name="secretAKey" type="String" />
+	</entity>
+
+
+	<!-- Video and Organization mappings -->
+	<entity name="VOMap" local-service="true" remote-service="true">
+		<column name="videoId" type="String" primary="true"></column>
+		<column name="orgId" type="String"></column>
+		<column name="StoreType" type="String"></column>
+	</entity>
+
+
+
+</service-builder>

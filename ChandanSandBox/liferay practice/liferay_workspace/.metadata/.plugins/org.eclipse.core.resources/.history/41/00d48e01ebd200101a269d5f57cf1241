@@ -1,0 +1,35 @@
+package com.coleg;
+
+import java.io.IOException;
+
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
+import javax.portlet.PortletException;
+import javax.portlet.RenderRequest;
+import javax.portlet.RenderResponse;
+
+import com.liferay.util.bridges.mvc.MVCPortlet;
+
+/**
+ * Portlet implementation class HelloPortlet
+ */
+public class HelloPortlet extends MVCPortlet {
+	@Override
+	public void doView(RenderRequest renderRequest,
+			RenderResponse renderResponse) throws IOException, PortletException {
+		System.out.println("[do-view]doView Called...... ");
+		super.doView(renderRequest, renderResponse);
+	}
+
+	@Override
+	public void processAction(ActionRequest actionRequest,
+			ActionResponse actionResponse) throws IOException, PortletException {
+		System.out.println("[processAction] called...");
+		String name = actionRequest.getParameter("name");
+		
+		System.out.println("Name: " + name);
+		
+		super.processAction(actionRequest, actionResponse);
+	}
+
+}

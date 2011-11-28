@@ -1,0 +1,9 @@
+package com.client;
+
+import com.google.gwt.user.client.rpc.RemoteService;
+
+public interface BlobService implements RemoteService {
+	String getBlobStoreUploadUrl();
+
+	Picture getPicture(String id);
+}

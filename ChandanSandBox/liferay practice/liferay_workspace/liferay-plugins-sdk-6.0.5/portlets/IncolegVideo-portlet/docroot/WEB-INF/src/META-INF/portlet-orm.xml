@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.edujini.incoleg.video.model.impl.VideoInfoModelImpl">
+		<attributes>
+			<id name="videoId" />
+			<basic name="fileName" />
+			<basic name="mappedFileName" />
+			<basic name="fileType" />
+			<basic name="fileSize" />
+			<basic name="fileDesc" />
+			<basic name="userEmail" />
+			<basic name="uploadTime">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="vurl" />
+			<basic name="status" />
+			<transient name="primaryKey" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.edujini.incoleg.video.model.impl.StoreSettingsModelImpl">
+		<attributes>
+			<id name="storeId" />
+			<basic name="inBId" />
+			<basic name="prBId" />
+			<basic name="outBId" />
+			<basic name="accessKId" />
+			<basic name="secretAKey" />
+			<transient name="primaryKey" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.edujini.incoleg.video.model.impl.VOMapModelImpl">
+		<attributes>
+			<id name="videoId" />
+			<basic name="orgId" />
+			<basic name="StoreType" />
+			<transient name="primaryKey" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.edujini.incoleg.video.model.impl.VideoInfoImpl" name="VideoInfo">
+		<table name="video_VideoInfo" />
+		<attributes />
+	</entity>
+	<entity class="com.edujini.incoleg.video.model.impl.StoreSettingsImpl" name="StoreSettings">
+		<table name="video_StoreSettings" />
+		<attributes />
+	</entity>
+	<entity class="com.edujini.incoleg.video.model.impl.VOMapImpl" name="VOMap">
+		<table name="video_VOMap" />
+		<attributes />
+	</entity>
+</entity-mappings>

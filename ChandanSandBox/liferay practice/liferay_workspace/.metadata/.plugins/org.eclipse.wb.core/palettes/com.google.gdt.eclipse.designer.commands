@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<commands>
+	<addCategory
+		id="category_1320903095468"
+		name="Custom"
+		description="Container for custom components"
+		visible="true"
+		open="true"/>
+	<addComponent
+		id="custom_1320903095468"
+		name="Login"
+		description="Creates com.gwt.tutorial.LoginManager.client.Login component."
+		visible="true"
+		class="com.gwt.tutorial.LoginManager.client.Login"
+		category="category_1320903095468"/>
+	<addComponent
+		id="custom_1320903113156"
+		name="Login"
+		description="Creates com.gwt.tutorial.LoginManager.client.Login component."
+		visible="true"
+		class="com.gwt.tutorial.LoginManager.client.Login"
+		category="category_1320903095468"/>
+	<addComponent
+		id="custom_1320912030187"
+		name="Login"
+		description="Creates com.gwt.tutorial.LoginManager.client.Login component."
+		visible="true"
+		class="com.gwt.tutorial.LoginManager.client.Login"
+		category="category_1320903095468"/>
+	<addComponent
+		id="custom_1320913315250"
+		name="Whiteboard"
+		description="Creates com.incoleg.whiteboard.web.client.wb.Whiteboard component."
+		visible="true"
+		class="com.incoleg.whiteboard.web.client.wb.Whiteboard"
+		category="category_1320903095468"/>
+	<addComponent
+		id="custom_1320913734828"
+		name="RichTextWidget"
+		description="Creates com.incoleg.whiteboard.web.client.ui.widgets.text.RichTextWidget component."
+		visible="true"
+		class="com.incoleg.whiteboard.web.client.ui.widgets.text.RichTextWidget"
+		category="category_1320903095468"/>
+	<addComponent
+		id="custom_1320913962468"
+		name="RichTextWidget"
+		description="Creates com.incoleg.whiteboard.web.client.ui.widgets.text.RichTextWidget component."
+		visible="true"
+		class="com.incoleg.whiteboard.web.client.ui.widgets.text.RichTextWidget"
+		category="category_1320903095468"/>
+	<addComponent
+		id="custom_1320914104062"
+		name="RichTextWidget"
+		description="Creates com.incoleg.whiteboard.web.client.ui.widgets.text.RichTextWidget component."
+		visible="true"
+		class="com.incoleg.whiteboard.web.client.ui.widgets.text.RichTextWidget"
+		category="category_1320903095468"/>
+	<addComponent
+		id="custom_1320914360296"
+		name="RichTextWidget"
+		description="Creates com.incoleg.whiteboard.web.client.ui.widgets.text.RichTextWidget component."
+		visible="true"
+		class="com.incoleg.whiteboard.web.client.ui.widgets.text.RichTextWidget"
+		category="category_1320903095468"/>
+	<addComponent
+		id="custom_1320914369203"
+		name="Whiteboard"
+		description="Creates com.incoleg.whiteboard.web.client.wb.Whiteboard component."
+		visible="true"
+		class="com.incoleg.whiteboard.web.client.wb.Whiteboard"
+		category="category_1320903095468"/>
+</commands>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;GAEBLOB/war/GwtTest1.css&apos; to &apos;gaeblob.css&apos;" description="Rename resource &apos;GwtTest1.css&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="war/GwtTest1.css" name="gaeblob.css" stamp="1322225015828" updateReferences="true"/>
+</session>

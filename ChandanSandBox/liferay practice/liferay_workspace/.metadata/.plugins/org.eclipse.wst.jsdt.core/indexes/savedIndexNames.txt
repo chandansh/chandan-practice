@@ -1,0 +1,5 @@
+INDEX VERSION 1.122+D:\chandan-repos\ChandanSandBox\liferay practice\liferay workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+296497364.index
+3422104131.index
+1359051171.index
+319552318.index

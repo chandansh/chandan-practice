@@ -1,0 +1,13 @@
+package com.client;
+
+import com.google.gwt.core.client.EntryPoint;
+
+public class GaeBlob implements EntryPoint {
+
+	@Override
+	public void onModuleLoad() {
+		
+
+	}
+
+}

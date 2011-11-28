@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<model-hints>
+	<model name="com.edujini.incoleg.video.model.VideoInfo">
+		<field name="videoId" type="String" />
+		<field name="fileName" type="String" />
+		<field name="mappedFileName" type="String" />
+		<field name="fileType" type="String" />
+		<field name="fileSize" type="double" />
+		<field name="fileDesc" type="String" />
+		<field name="userEmail" type="String" />
+		<field name="uploadTime" type="Date" />
+		<field name="vurl" type="String" />
+		<field name="status" type="int" />
+	</model>
+	<model name="com.edujini.incoleg.video.model.StoreSettings">
+		<field name="storeId" type="long" />
+		<field name="inBId" type="String" />
+		<field name="prBId" type="String" />
+		<field name="outBId" type="String" />
+		<field name="accessKId" type="String" />
+		<field name="secretAKey" type="String" />
+	</model>
+	<model name="com.edujini.incoleg.video.model.VOMap">
+		<field name="videoId" type="String" />
+		<field name="orgId" type="String" />
+		<field name="StoreType" type="String" />
+	</model>
+</model-hints>

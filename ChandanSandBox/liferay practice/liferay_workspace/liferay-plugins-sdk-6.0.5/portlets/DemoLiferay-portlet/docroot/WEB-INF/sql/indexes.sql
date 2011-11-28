@@ -1,0 +1,1 @@
+create index IX_1B78827 on coleg_model_Emp (field2);

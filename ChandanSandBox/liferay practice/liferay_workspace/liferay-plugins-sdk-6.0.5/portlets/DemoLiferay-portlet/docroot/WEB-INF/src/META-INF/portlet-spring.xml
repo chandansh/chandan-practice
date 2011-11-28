@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.coleg.service.EmpLocalService" class="com.coleg.service.impl.EmpLocalServiceImpl" />
+	<bean id="com.coleg.service.EmpLocalServiceUtil" class="com.coleg.service.EmpLocalServiceUtil">
+		<property name="service" ref="com.coleg.service.EmpLocalService" />
+	</bean>
+	<bean id="com.coleg.service.EmpService" class="com.coleg.service.impl.EmpServiceImpl" />
+	<bean id="com.coleg.service.EmpServiceUtil" class="com.coleg.service.EmpServiceUtil">
+		<property name="service" ref="com.coleg.service.EmpService" />
+	</bean>
+	<bean id="com.coleg.service.persistence.EmpPersistence" class="com.coleg.service.persistence.EmpPersistenceImpl" parent="basePersistence" />
+</beans>

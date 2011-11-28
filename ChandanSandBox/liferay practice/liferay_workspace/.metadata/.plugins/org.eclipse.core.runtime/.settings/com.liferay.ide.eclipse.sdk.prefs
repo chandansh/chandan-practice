@@ -1,0 +1,4 @@
+#Mon Nov 28 10:47:50 GMT+05:30 2011
+sdks=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<sdks default\="liferay-plugins-sdk-6.0.5">\r\n<sdk location\="D\:/testproject/liferay-plugins-sdk-6.0.5" name\="liferay-plugins-sdk-6.0.5" version\="6.0.5"/>\r\n<sdk location\="D\:/chandan-repos/ChandanSandBox/liferay practice/liferay workspace/liferay-plugins-sdk-6.0.5" name\="liferay-plugins-sdk-6.0.5" version\="6.0.5"/>\r\n</sdks>
+eclipse.preferences.version=1
+OVERWRITE_USER_BUILD_FILE=always

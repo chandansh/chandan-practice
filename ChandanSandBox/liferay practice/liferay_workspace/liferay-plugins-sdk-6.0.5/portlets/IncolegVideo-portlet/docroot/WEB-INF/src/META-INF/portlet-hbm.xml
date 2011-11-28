@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.edujini.incoleg.video.model.VideoInfo" />
+	<import class="com.edujini.incoleg.video.model.StoreSettings" />
+	<import class="com.edujini.incoleg.video.model.VOMap" />
+	<class name="com.edujini.incoleg.video.model.impl.VideoInfoImpl" table="video_VideoInfo">
+		<cache usage="read-write" />
+		<id name="videoId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="fileName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="mappedFileName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fileType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fileSize" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="fileDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="userEmail" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="uploadTime" type="org.hibernate.type.TimestampType" />
+		<property name="vurl" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.edujini.incoleg.video.model.impl.StoreSettingsImpl" table="video_StoreSettings">
+		<cache usage="read-write" />
+		<id name="storeId" type="long">
+			<generator class="increment" />
+		</id>
+		<property name="inBId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="prBId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="outBId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="accessKId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="secretAKey" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.edujini.incoleg.video.model.impl.VOMapImpl" table="video_VOMap">
+		<cache usage="read-write" />
+		<id name="videoId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="orgId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="StoreType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

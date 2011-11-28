@@ -1,0 +1,33 @@
+package com.test.queue;
+
+import java.io.Serializable;
+
+import javax.persistence.Id;
+
+@SuppressWarnings("serial")
+public class Email implements Serializable {
+	@Id
+	long id;
+	String email;
+	
+	public Email(String email) {
+		super();
+		this.email = email;
+	}
+	public Email() {
+		
+	}
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+}

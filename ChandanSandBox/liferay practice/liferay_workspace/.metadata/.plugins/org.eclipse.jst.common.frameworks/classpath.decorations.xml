@@ -1,0 +1,12 @@
+<classpath>
+  <container id="DemoLiferay-portlet!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="D:/testproject/liferay-plugins-sdk-6.0.5/portlets/DemoLiferay-portlet/docroot/WEB-INF/lib/DemoLiferay-portlet-service.jar">
+      <source-attachment-path>/DemoLiferay-portlet/docroot/WEB-INF/service</source-attachment-path>
+    </entry>
+  </container>
+  <container id="HelloWorld-portlet!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="D:/testproject/liferay-plugins-sdk-6.0.5/portlets/HelloWorld-portlet/docroot/WEB-INF/lib/HelloWorld-portlet-service.jar">
+      <source-attachment-path>/HelloWorld-portlet/docroot/WEB-INF/service</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<model-hints>
+	<model name="com.coleg.model.Employee">
+		<field name="id" type="String" />
+		<field name="name" type="String" />
+		<field name="address" type="String" />
+	</model>
+</model-hints>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modules>
+  <module moduleId="org.eclipse.jst.jee.server:HelloWorld-portlet" serverId="Liferay v6.0 CE Server (Tomcat 6) at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:Sample" serverId="Tomcat v6.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:RestLet" serverId="Tomcat v6.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:DemoLiferay-portlet" serverId="Liferay v6.0 CE (Tomcat 6)  at localhost"/>
+</modules>

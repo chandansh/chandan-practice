@@ -1,0 +1,11 @@
+<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
+<%@ taglib uri="http://liferay.com/tld/ui" prefix="aui" %>
+<portlet:defineObjects />
+
+This is the <b>HelloPortlet</b> portlet in View mode.
+!!!!!
+<form action="<portlet:actionURL/>" method="post">
+<input type="text" name="name">
+<input type="text" name="add">
+
+</form>

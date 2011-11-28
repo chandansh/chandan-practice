@@ -1,0 +1,23 @@
+package com.server;
+
+import com.client.BlobService;
+import com.client.model.Picture;
+import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+
+@SuppressWarnings("serial")
+public class BlobServiceImpl extends RemoteServiceServlet implements
+		BlobService {
+
+	@Override
+	public String getBlobStoreUploadUrl() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Picture getPicture(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

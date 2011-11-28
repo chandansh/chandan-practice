@@ -1,0 +1,65 @@
+<%@page import="org.w3c.dom.*,javax.xml.parsers.*"%>
+<%
+	DocumentBuilderFactory docFactory = DocumentBuilderFactory
+			.newInstance();
+	DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+	Document doc = docBuilder.parse("files/mcq0-50.xml");
+%>
+<%!public boolean isTextNode(Node n) {
+		return n.getNodeName().equals("#text");
+	}%>
+<%!public String stripCDATA(String s) {
+    s = s.trim();
+    if (s.startsWith("<![CDATA[")) {
+      s = s.substring(9);
+      int i = s.indexOf("]]&gt;");
+      if (i == -1) {
+        throw new IllegalStateException(
+            "argument starts with <![CDATA[ but cannot find pairing ]]&gt;");
+      }
+      s = s.substring(0, i);
+    }
+    return s;
+  }
+%>
+<html>
+<head>
+<title>Parsing of xml using DOM Parser</title>
+</head>
+<body>
+	<h2>
+		<font color='green'>Employees of Roseindia</font>
+	</h2>
+	<table border="2">
+		<tr>
+			<th>Name of Employee</th>
+			<th>Address</th>
+		</tr>
+		<%
+			Element element = doc.getDocumentElement();
+			NodeList personNodes = element.getChildNodes();
+			for (int i = 0; i < personNodes.getLength(); i++) {
+				Node emp = personNodes.item(i);
+				if (isTextNode(emp))
+					continue;
+				NodeList nl = emp.getChildNodes();
+		%>
+		<tr>
+			<%
+				for (int j = 0; j < nl.getLength(); j++) {
+						Node node = nl.item(j);
+						if (isTextNode(node))
+							continue;
+			%>
+			<td><%=stripCDATA(node.getFirstChild().getTextContent())%></td>
+			<%
+				}
+			%>
+		</tr>
+		<%
+			}
+		%>
+	</table>
+</body>
+</html>
+

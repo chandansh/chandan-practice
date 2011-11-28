@@ -1,0 +1,47 @@
+Buildfile: D:\testproject\liferay-plugins-sdk-6.0.5\portlets\DemoLiferay-portlet\build.xml
+build-service:
+    [mkdir] Created dir: D:\testproject\liferay-plugins-sdk-6.0.5\portlets\DemoLiferay-portlet\docroot\WEB-INF\service
+     [java] Loading jar:file:/D:/testproject/liferay-portal-6.0.5/tomcat-6.0.26/webapps/ROOT/WEB-INF/lib/portal-impl.jar!/system.properties
+     [java] Loading jar:file:/D:/testproject/liferay-portal-6.0.5/tomcat-6.0.26/webapps/ROOT/WEB-INF/lib/portal-impl.jar!/portal.properties
+     [java] Loading file:/D:/testproject/liferay-portal-6.0.5/tomcat-6.0.26/webapps/ROOT/WEB-INF/classes/portal-ext.properties
+     [java] Loading jar:file:/D:/testproject/liferay-portal-6.0.5/tomcat-6.0.26/webapps/ROOT/WEB-INF/lib/portal-impl.jar!/com/liferay/portal/tools/dependencies/portal-tools.properties
+     [java] 04:15:38,625 INFO  [PortalImpl:277] Global lib directory /D:/testproject/liferay-portal-6.0.5/tomcat-6.0.26/lib/ext/
+     [java] 04:15:38,640 INFO  [PortalImpl:297] Portal lib directory /D:/testproject/liferay-portal-6.0.5/tomcat-6.0.26/webapps/ROOT/WEB-INF/lib/
+     [java] Building Emp
+     [java] Writing docroot\WEB-INF\src\com\coleg\service\persistence\EmpPersistenceImpl.java
+     [java] Writing docroot\WEB-INF\service\com\coleg\service\persistence\EmpPersistence.java
+     [java] Writing docroot\WEB-INF\service\com\coleg\service\persistence\EmpUtil.java
+     [java] Writing docroot\WEB-INF\src\com\coleg\model\impl\EmpModelImpl.java
+     [java] Writing docroot\WEB-INF\src\com\coleg\model\impl\EmpImpl.java
+     [java] Writing docroot\WEB-INF\service\com\coleg\model\EmpModel.java
+     [java] Writing docroot\WEB-INF\service\com\coleg\model\Emp.java
+     [java] Writing docroot\WEB-INF\service\com\coleg\model\EmpClp.java
+     [java] Writing docroot\WEB-INF\service\com\coleg\model\EmpWrapper.java
+     [java] Writing docroot\WEB-INF\service\com\coleg\model\EmpSoap.java
+     [java] Writing docroot\WEB-INF\src\com\coleg\service\impl\EmpLocalServiceImpl.java
+     [java] Writing docroot\WEB-INF\src\com\coleg\service\base\EmpLocalServiceBaseImpl.java
+     [java] Writing docroot\WEB-INF\service\com\coleg\service\EmpLocalService.java
+     [java] Writing docroot\WEB-INF\service\com\coleg\service\EmpLocalServiceUtil.java
+     [java] Writing docroot\WEB-INF\service\com\coleg\service\EmpLocalServiceClp.java
+     [java] Writing docroot\WEB-INF\service\com\coleg\service\EmpLocalServiceWrapper.java
+     [java] Writing docroot\WEB-INF\src\com\coleg\service\impl\EmpServiceImpl.java
+     [java] Writing docroot\WEB-INF\src\com\coleg\service\base\EmpServiceBaseImpl.java
+     [java] Writing docroot\WEB-INF\service\com\coleg\service\EmpService.java
+     [java] Writing docroot\WEB-INF\service\com\coleg\service\EmpServiceUtil.java
+     [java] Writing docroot\WEB-INF\service\com\coleg\service\EmpServiceClp.java
+     [java] Writing docroot\WEB-INF\service\com\coleg\service\EmpServiceWrapper.java
+     [java] Writing docroot\WEB-INF\src\com\coleg\service\http\EmpJSONSerializer.java
+     [java] Writing docroot\WEB-INF\src\com\coleg\service\http\EmpServiceSoap.java
+     [java] Writing docroot\WEB-INF\service\com\coleg\service\messaging\ClpMessageListener.java
+     [java] Writing docroot\WEB-INF\service\com\coleg\service\ClpSerializer.java
+    [mkdir] Created dir: D:\testproject\liferay-plugins-sdk-6.0.5\portlets\DemoLiferay-portlet\docroot\WEB-INF\service-classes
+compile-java:
+    [javac] Compiling 18 source files to D:\testproject\liferay-plugins-sdk-6.0.5\portlets\DemoLiferay-portlet\docroot\WEB-INF\service-classes
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+      [zip] Building zip: D:\testproject\liferay-plugins-sdk-6.0.5\portlets\DemoLiferay-portlet\docroot\WEB-INF\lib\DemoLiferay-portlet-service.jar
+   [delete] Deleting directory D:\testproject\liferay-plugins-sdk-6.0.5\portlets\DemoLiferay-portlet\docroot\WEB-INF\service-classes
+BUILD SUCCESSFUL
+Total time: 21 seconds
