@@ -1,3 +1,4 @@
+*.classes
 liferay_workspace/eclipse/.metadata
 liferay_workspace/Servers
 liferay_workspace/liferay-plugins-sdk-6.0.5/portlets/IncolegVideo-portlet/docroot/WEB-INF/classes
