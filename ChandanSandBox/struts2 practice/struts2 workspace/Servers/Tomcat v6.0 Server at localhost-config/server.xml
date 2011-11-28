@@ -131,7 +131,7 @@
                prefix="localhost_access_log." suffix=".txt" pattern="common" resolveHosts="false"/>
         -->
 
-      <Context docBase="Sample" path="/Sample" reloadable="true" source="org.eclipse.jst.jee.server:Sample"/><Context docBase="Struts2Annotation" path="/Struts2Annotation" reloadable="true" source="org.eclipse.jst.jee.server:Struts2Annotation"/><Context docBase="struts2ui" path="/struts2ui" reloadable="true" source="org.eclipse.jst.jee.server:struts2ui"/></Host>
+      <Context docBase="Sample" path="/Sample" reloadable="true" source="org.eclipse.jst.jee.server:Sample"/></Host>
     </Engine>
   </Service>
 </Server>
