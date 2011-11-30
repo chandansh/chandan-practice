@@ -4,6 +4,8 @@ import com.client.model.Picture;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ChangeEvent;
+import com.google.gwt.event.dom.client.ChangeHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.rpc.AsyncCallback;
@@ -57,6 +59,8 @@ public class GaeBlob implements EntryPoint {
 		mainVerticalPanel.setSpacing(5);
 
 		uploadForm.setWidget(mainVerticalPanel);
+		
+		setURL();
 
 		// The upload form, when submitted, will trigger an HTTP call to the
 		// servlet. The following parameters must be set
@@ -75,28 +79,22 @@ public class GaeBlob implements EntryPoint {
 			@Override
 			public void onClick(ClickEvent event) {
 
-				blobService.getBlobStoreUploadUrl(new AsyncCallback<String>() {
-
-					@Override
-					public void onSuccess(String result) {
-						// Set the form action to the newly created
-						// blobstore upload URL
-						uploadForm.setAction(result.toString());
-
-						// Submit the form to complete the upload
-						uploadForm.submit();
-						uploadForm.reset();
-					}
-
-					@Override
-					public void onFailure(Throwable caught) {
-						caught.printStackTrace();
-					}
-				});
+				uploadForm.submit();
+				uploadForm.reset();
 
 			}
 		});
 
+		upload.addChangeHandler(new ChangeHandler() {
+			
+			@Override
+			public void onChange(ChangeEvent event) {
+				uploadForm.submit();
+				uploadForm.reset();
+				
+			}
+		});
+		
 		uploadForm
 				.addSubmitCompleteHandler(new FormPanel.SubmitCompleteHandler() {
 					@Override
@@ -114,6 +112,31 @@ public class GaeBlob implements EntryPoint {
 				});
 
 	}
+	
+	
+	 private void setURL()
+	 {
+		 
+		 blobService.getBlobStoreUploadUrl(new AsyncCallback<String>() {
+
+				@Override
+				public void onSuccess(String result) {
+					// Set the form action to the newly created
+					// blobstore upload URL
+					GWT.log(">>>>>>>>>>>>>>>" + result);
+					uploadForm.setAction(result.toString());
+
+					// Submit the form to complete the upload
+					
+				}
+
+				@Override
+				public void onFailure(Throwable caught) {
+					caught.printStackTrace();
+				}
+			});
+		 
+	 }
 
 	public void getPicture(String id) {
 
@@ -125,6 +148,7 @@ public class GaeBlob implements EntryPoint {
 
 				Image image = new Image();
 				image.setUrl(result.getImageUrl());
+				GWT.log(">>>>>>>>>>>>>>>" + result.getImageUrl());
 
 				// Use Getters from the Picture object to load the FlexTable
 				resultsTable.setWidget(0, 0, image);

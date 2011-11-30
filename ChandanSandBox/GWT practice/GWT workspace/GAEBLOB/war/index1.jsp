@@ -5,7 +5,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <link type="text/css" rel="stylesheet" href="gaeblob.css">
-<title>Gwt Test1 Project</title>
+<title>GAEBLOB Project</title>
 <script type="text/javascript" language="javascript"
 	src="gaeblob/gaeblob.nocache.js"></script>
 </head>

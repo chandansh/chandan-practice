@@ -2,7 +2,6 @@ package com.test.blob;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
@@ -13,7 +12,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.TestABC;
 import com.google.appengine.api.blobstore.BlobInfo;
 import com.google.appengine.api.blobstore.BlobInfoFactory;
 import com.google.appengine.api.blobstore.BlobstoreService;
@@ -31,7 +29,7 @@ public class ReadBlob extends HttpServlet {
 			throws ServletException, IOException {
 		PrintWriter out = resp.getWriter();
 		resp.setContentType("text/plain");
-		TestABC a = new TestABC();
+		//TestABC a = new TestABC();
 		DatastoreService ds = DatastoreServiceFactory.getDatastoreService();
 		BlobInfoFactory bif = new BlobInfoFactory(ds);
 		Entity entity = new Entity(BlobInfoFactory.KIND, "cksdata");
@@ -49,34 +47,30 @@ public class ReadBlob extends HttpServlet {
 
 		while (infos.hasNext()) {
 			BlobInfo binfo = infos.next();
-			//out.println("\n-------------------------------------------");
-			//out.println("content type: " + binfo.getContentType());
-			//out.println("key :" + binfo.getBlobKey());
-			//out.println("size :" + binfo.getSize());
-			//out.println("file name :" + binfo.getFilename());
-			//out.println("creation time :" + binfo.getCreation());
+			// out.println("\n-------------------------------------------");
+			// out.println("content type: " + binfo.getContentType());
+			// out.println("key :" + binfo.getBlobKey());
+			// out.println("size :" + binfo.getSize());
+			// out.println("file name :" + binfo.getFilename());
+			// out.println("creation time :" + binfo.getCreation());
 			byte[] readData = blobStoreService.fetchData(binfo.getBlobKey(), 0,
 					binfo.getSize());
 
 			String path = req.getRealPath("/data");
-			try
-			{
-				
-			
-			File newFile=new File("somefilname");
-			//FileOutputStream fos = new FileOutputStream(newFile);
-			out.println("path : " + path);
-			ByteArrayOutputStream o = new ByteArrayOutputStream();
-			o.write(readData);
+			try {
 
-			}catch (Exception e) {
+				File newFile = new File("somefilname");
+				// FileOutputStream fos = new FileOutputStream(newFile);
+				out.println("path : " + path);
+				ByteArrayOutputStream o = new ByteArrayOutputStream();
+				o.write(readData);
+
+			} catch (Exception e) {
 				// TODO: handle exception
 			}
-			
+
 			String s = "";
 
-			
-			
 			String respoValue = new String(readData, "UTF-8");
 			// out.println("data :"+respoValue);
 			out.println("-------------------------------------------\n");

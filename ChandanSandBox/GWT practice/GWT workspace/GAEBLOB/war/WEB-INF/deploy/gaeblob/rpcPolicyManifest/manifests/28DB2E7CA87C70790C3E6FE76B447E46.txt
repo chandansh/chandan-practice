@@ -1,2 +1,0 @@
-serviceClass: com.client.BlobService
-path: 04F08F422391ED409F22C68945D975BC.gwt.rpc
