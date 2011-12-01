@@ -2,23 +2,16 @@ package de.vogella.gwt.helloserver.client.entrypoint;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.dom.client.Style;
-import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.DialogBox;
-import com.google.gwt.user.client.ui.HasVerticalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RootPanel;
-import com.google.gwt.user.client.ui.SplitLayoutPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.gwt.tutorial.LoginManager.client.Login;
-import com.incoleg.whiteboard.web.client.ui.widgets.text.RichTextWidget;
-import com.incoleg.whiteboard.web.client.wb.Whiteboard;
 
 import de.vogella.gwt.helloserver.client.service.MyUserCallback;
 import de.vogella.gwt.helloserver.client.service.MyUserService;
@@ -78,22 +71,22 @@ public class HelloServer implements EntryPoint {
 		final Image img = new Image();
 		vPanel.add(img);
 
-		final Whiteboard whiteboard = new Whiteboard(300, 200);
-		whiteboard.addClickHandler(new ClickHandler() {
-			@Override
-			public void onClick(ClickEvent event) {
-				// Window.alert("Image: " + whiteboard.getDataURL());
-				img.setUrl(whiteboard.getDataURL());
-			}
-		});
-		vPanel.add(whiteboard);
-
-		final RichTextWidget rtw = new RichTextWidget();
-		rtw.setHeight("400px");
-		Style style = rtw.getElement().getStyle();
-		style.setMarginTop(20, Unit.PX);
-		style.setMarginLeft(20, Unit.PX);
-		vPanel.add(rtw);
+//		final Whiteboard whiteboard = new Whiteboard(300, 200);
+//		whiteboard.addClickHandler(new ClickHandler() {
+//			@Override
+//			public void onClick(ClickEvent event) {
+//				// Window.alert("Image: " + whiteboard.getDataURL());
+//				img.setUrl(whiteboard.getDataURL());
+//			}
+//		});
+//		vPanel.add(whiteboard);
+//
+//		final RichTextWidget rtw = new RichTextWidget();
+//		rtw.setHeight("400px");
+//		Style style = rtw.getElement().getStyle();
+//		style.setMarginTop(20, Unit.PX);
+//		style.setMarginLeft(20, Unit.PX);
+//		vPanel.add(rtw);
 		// Create the dialog box
 		final DialogBox dialogBox = new DialogBox();
 		dialogBox.setText("Welcome to GWT Server Communication!");
