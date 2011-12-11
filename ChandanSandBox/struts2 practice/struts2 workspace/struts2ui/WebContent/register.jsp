@@ -10,7 +10,7 @@
 <title>Register Page</title>
 </head>
 <body>
-	<s:form action="Register">
+	<s:form action="Register" >
 		<s:textfield name="userName" label="User Name" />
 		<s:password name="password" label="Password" />
 		<s:radio name="gender" label="Gender" list="{'Male','Female'}" />

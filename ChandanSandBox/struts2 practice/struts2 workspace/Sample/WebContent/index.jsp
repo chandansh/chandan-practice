@@ -8,9 +8,15 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+<br>
+<p>Hello how are you</p>
+<p><a href="<s:url action="update-input" namespace="/"  />">Update Your Data</a></p>
+
 <s:form action="welcome-user">
 	<s:textfield name="userName" label="User Name"/>
 	<s:submit/>
 </s:form>
+<h1>Hello how are you</h1>
 </body>
 </html>

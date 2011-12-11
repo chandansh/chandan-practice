@@ -2,3 +2,11 @@
 .metadata
 Servers
 .git
+Sample/build/classes
+struts2ui/build/classes
+UsaOpenGov/war/WEB-INF/classes
+Struts2Annotation/build/classes
+struts2-fileupload/war/WEB-INF/classes
+struts-2nd/war/WEB-INF/classes
+struts-2nd/war/WEB-INF/appengine-generated
+gae-struts/war/WEB-INF/classes
