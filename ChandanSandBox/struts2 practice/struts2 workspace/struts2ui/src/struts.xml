@@ -9,5 +9,10 @@
 			<result name="input">/register.jsp</result>
 			<result name="success">/success.jsp</result>
 		</action>
+		<action name="*Datatag" method="{1}" class="mypack.AlbumInfoAction">
+			<result name="populate">/datatag.jsp</result>
+			<result name="input">/datatag.jsp</result>
+			<result name="success">/datatag.jsp</result>
+		</action>
 	</package>
 </struts>
