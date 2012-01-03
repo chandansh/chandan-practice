@@ -20,6 +20,9 @@
 		<tr>
 			<td><a href="populateDatatag">data tag</a></td>
 		</tr>
+		<tr>
+			<td><a href="TestLogger">Test Logger Interceptor</a></td>
+		</tr>
 	</table>
 	<s:bean name="mypack.CurrencyConverter">
 		<s:param name="dollars" value="100" />

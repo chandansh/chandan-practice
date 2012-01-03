@@ -14,5 +14,9 @@
 			<result name="input">/datatag.jsp</result>
 			<result name="success">/datatag.jsp</result>
 		</action>
+		<action name="TestLogger" class="mypack.TestLoggerAction">
+			<interceptor-ref name="logger" />
+			<result name="success">/success.jsp</result>
+		</action>
 	</package>
 </struts>
