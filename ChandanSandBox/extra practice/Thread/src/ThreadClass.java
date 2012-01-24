@@ -1,7 +1,7 @@
-class NewThread implements Runnable
+class NewThread1A implements Runnable
 {
 	Thread t;
-	NewThread() 
+	NewThread1A() 
 	{
 		t = new Thread(this, "ChildThread");
 		System.out.println("Child Thread:" + t);
@@ -18,7 +18,7 @@ class ThreadClass
 {
 	public static void main(String args[]) 
 	{
-	   NewThread nn =  new NewThread();
+		NewThread1A nn =  new NewThread1A();
 	   System.out.println("Main thread Started");
 	   try
 	   {

@@ -1,8 +1,8 @@
-class NewThread implements Runnable 
+class NewThread11 implements Runnable 
 {
   	Thread t;
 
-  	NewThread() 
+  	NewThread11() 
 	{
    	 t = new Thread(this, "child");
     	 System.out.println(Thread.currentThread()+":::::: " +t);
@@ -29,11 +29,11 @@ class NewThread implements Runnable
   	}
 }
 
-class ThreadDemo 
+class ThreadDemo1
 {
   	public static void main(String args[]) 
 	{
-   		 new NewThread(); // create a new thread
+   		 new NewThread11(); // create a new thread
 
    		 try 
 		{

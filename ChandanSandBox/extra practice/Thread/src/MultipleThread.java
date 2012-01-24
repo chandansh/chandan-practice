@@ -1,7 +1,7 @@
-class newThreadClass implements Runnable
+class NewThreadClass1 implements Runnable
 {
 	String ThreadName;
-      newThreadClass(String name) 
+      NewThreadClass1(String name) 
         {
 	  	ThreadName = name;
 		Thread t = new Thread(this, ThreadName); 
@@ -31,8 +31,8 @@ class MultipleThread
 {
 	public static void main(String args[])
  	{
-		new newThreadClass("FirstChildThread");       //Creating first Thread
-		new newThreadClass("SecondChildThread"); //Creating second Thread
+		new NewThreadClass1("FirstChildThread");       //Creating first Thread
+		new NewThreadClass1("SecondChildThread"); //Creating second Thread
 		try
 		{
 			for(int i=1;i<=5;i++)

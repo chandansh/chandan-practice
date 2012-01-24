@@ -1,4 +1,4 @@
-class Thread1
+class Thread1A
 {
     synchronized void call()
     {
@@ -16,8 +16,8 @@ class Thread1
 }
 class Thread2 extends Thread
 {
-	Thread1 t;
-   	public Thread2(Thread1 t)
+	Thread1A t;
+   	public Thread2(Thread1A t)
 	{
 		this.t = t;
    	}
@@ -30,7 +30,7 @@ public class SynchronizedThreads
 {
 	public static void main(String args[])
 	{
-	   Thread1 obj1 = new Thread1();
+	   Thread1A obj1 = new Thread1A();
 	   Thread2 Obja = new Thread2(obj1);
 	   Thread2 Objb = new Thread2(obj1);
 	   Obja.start();

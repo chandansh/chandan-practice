@@ -1,39 +1,33 @@
-class Thread1{
-synchronized void call()
-    {
-	System.out.println("first statement");
-	try
-	{
-   	  Thread.sleep(1000);
+class ThreadA {
+	synchronized void call() {
+		System.out.println("first statement");
+		try {
+			Thread.sleep(1000);
+		} catch (Exception e) {
+			System.out.println("Error " + e);
+		}
+		System.out.println("second statement");
 	}
-	catch(Exception e)
-	{
-	  System.out.println("Error " + e);
-        }
-	System.out.println("second statement");
-     }
 }
 
-class Thread2 extends Thread
-{
-	Thread1 t;
-   	public Thread2(Thread1 t)
-	{
+class ThreadB extends Thread {
+	ThreadA t;
+
+	public ThreadB(ThreadA t) {
 		this.t = t;
-   	}
-   	public void run()
-	{
+	}
+
+	public void run() {
 		t.call();
-   	}
+	}
 }
-public class NotSynchronized
-{
-	public static void main(String args[])
-  	{
-		Thread1 obj1 = new Thread1();
-	   	Thread2 Obja = new Thread2(obj1);
-	   	Thread2 Objb = new Thread2(obj1);
-	   	Obja.start();
-	   	Objb.start();
-        }
+
+public class NotSynchronized {
+	public static void main(String args[]) {
+		ThreadA obj1 = new ThreadA();
+		ThreadB Obja = new ThreadB(obj1);
+		ThreadB Objb = new ThreadB(obj1);
+		Obja.start();
+		Objb.start();
+	}
 }

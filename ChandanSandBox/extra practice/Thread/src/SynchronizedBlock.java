@@ -1,4 +1,4 @@
-class Thread1
+class Thread11
 {
     void call()
     {
@@ -14,10 +14,10 @@ class Thread1
 	System.out.println("second statement");
     }
 }
-class Thread2 extends Thread
+class Thread12 extends Thread
 {
-	Thread1 t;
-	public Thread2(Thread1 t)
+	Thread11 t;
+	public Thread12(Thread11 t)
 	{
 		this.t = t;
    	}
@@ -32,9 +32,9 @@ public class SynchronizedBlock
 {
 	public static void main(String args[])
 	{
-	   Thread1 obj1 = new Thread1();
-	   Thread2 obja = new Thread2(obj1);
-	   Thread2 objb = new Thread2(obj1);
+	   Thread11 obj1 = new Thread11();
+	   Thread12 obja = new Thread12(obj1);
+	   Thread12 objb = new Thread12(obj1);
 	   obja.start();
 	   objb.start();
    	}
