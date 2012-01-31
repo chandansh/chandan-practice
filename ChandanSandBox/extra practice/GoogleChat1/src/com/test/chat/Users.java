@@ -10,7 +10,7 @@ public class Users {
 
 	}
 
-	public static Set get() {
+	public static Set<String> get() {
 		return users;
 	}
 

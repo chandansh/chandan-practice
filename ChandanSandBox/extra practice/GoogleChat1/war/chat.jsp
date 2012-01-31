@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Public Chat</title>
 <script type="text/javascript" src="/js/jquery.js"></script>
 <script src='/_ah/channel/jsapi'></script>
  
@@ -31,12 +31,12 @@ socket.onmessage = function(m){
     //$('#center').animate({scrollTop: $("#center").attr("scrollHeight")}, 500);
 };
 socket.onerror =  function(err){
-    alert("Error => "+err.description);
+    //alert("Error => "+err.description);
 };
 socket.onclose =  function(){
     //alert("channel closed");
     console.log("conecction closed");
-    window.location.href = "http://127.0.0.1:8888";
+    window.location.href = "/";
 };
 
 jQuery(document).ready(function(){
@@ -67,13 +67,13 @@ function send(){
 	 //alert(text);
 	 var channel_id = "${token}";
 	 $.ajax({
-	     url: '/msg',
+	     url: '/msg1',
 	     type: 'POST',
 	     data:{
 	         msg:text,
 	         //nick:nick,
 	         channel_id:channel_id,
-	         client_id:"${name}",
+	         sender:"${name}",
 	     },
 	     success: function(data){
 	 	  	var data1 = $.parseJSON(data);
@@ -89,7 +89,7 @@ function send(){
  
 
 <div id="center"></div>
-<textarea rows="25" cols="25" id="textarea"></textarea><br>
+<textarea rows="10" cols="25" id="textarea"></textarea><br>
 <input type="text" id="text">
 <input type="button" id="send" value="send">&nbsp;
 <input type="button" id="logout" value="logout">

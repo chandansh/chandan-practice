@@ -33,15 +33,18 @@ public class CheckDisconnectedServlet extends HttpServlet {
 		System.out.println("Disconnected client : " + clientId + " >> "
 				+ presence.isConnected());
 		Users.get().remove(clientId);
-		
+
 		String msg = clientId + " left the chat.";
-		msg = "{\"sender\" : \"chat room\" , \"msg\" : \"" + msg + "\"}";
-		Set<String> users = Users.get();
-		for (String user : users) {
-			ChannelMessage msg1 = new ChannelMessage(user, msg);
-			channelService.sendMessage(msg1);
-		}
-		
+		msg = "{\"sender\" : \"\" , \"msg\" : \"" + msg + "\"}";
+		ChannelMessage msg1 = new ChannelMessage("admin", msg);
+		channelService.sendMessage(msg1);
+
+		// Set<String> users = Users.get();
+		// for (String user : users) {
+		// ChannelMessage msg1 = new ChannelMessage(user, msg);
+		// channelService.sendMessage(msg1);
+		// }
+
 	}
 
 }

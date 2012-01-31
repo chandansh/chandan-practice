@@ -12,13 +12,14 @@ import com.google.appengine.api.channel.ChannelServiceFactory;
 
 @SuppressWarnings("serial")
 public class GoogleChat1Servlet extends HttpServlet {
-	@SuppressWarnings("unchecked")
+
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		String userId = req.getParameter("name");
 
 		ChannelService channelService = ChannelServiceFactory
 				.getChannelService();
+
 		Set<String> users = Users.get();
 		if (userId != null && !userId.equals("") && !users.contains(userId)) {
 			users.add(userId);
@@ -28,7 +29,10 @@ public class GoogleChat1Servlet extends HttpServlet {
 			req.setAttribute("token", token);
 			req.setAttribute("name", userId);
 
-			req.getRequestDispatcher("/chat.jsp").include(req, resp);
+			if (userId.equals("admin"))
+				req.getRequestDispatcher("/adminchat.jsp").include(req, resp);
+			else
+				req.getRequestDispatcher("/chat.jsp").include(req, resp);
 
 			// resp.getWriter().write(token);
 		} else {

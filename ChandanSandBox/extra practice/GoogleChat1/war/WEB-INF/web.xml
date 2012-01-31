@@ -23,6 +23,15 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>msg-servlet1</servlet-name>
+		<servlet-class>com.test.chat.MsgHandlar1</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>msg-servlet1</servlet-name>
+		<url-pattern>/msg1</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>checkConnectedServlet</servlet-name>
 		<servlet-class>com.test.chat.CheckConnectedServlet</servlet-class>
 	</servlet>

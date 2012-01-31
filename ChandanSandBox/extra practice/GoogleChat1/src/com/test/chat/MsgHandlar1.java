@@ -1,8 +1,6 @@
 package com.test.chat;
 
 import java.io.IOException;
-import java.util.List;
-import java.util.Set;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -10,12 +8,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.google.appengine.api.channel.ChannelMessage;
-import com.google.appengine.api.channel.ChannelPresence;
 import com.google.appengine.api.channel.ChannelService;
 import com.google.appengine.api.channel.ChannelServiceFactory;
 
 @SuppressWarnings("serial")
-public class MsgHandlar extends HttpServlet {
+public class MsgHandlar1 extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
@@ -31,16 +28,27 @@ public class MsgHandlar extends HttpServlet {
 		System.out.println(msg);
 		System.out.println(client_id);
 		String msgDisp = "";
-		Set<String> users = Users.get();
-		for (String user : users) {
-			if (user.equals(client_id))
-				msgDisp = "{\"sender\" : \"me\" , \"msg\" : \"" + msg + "\"}";
-			else
-				msgDisp = "{\"sender\" : \"" + client_id + "\" , \"msg\" : \""
-						+ msg + "\"}";
-			ChannelMessage msg1 = new ChannelMessage(user, msgDisp);
-			System.out.println(msg1.getClientId());
-			System.out.println(msg1.getMessage());
+		ChannelMessage msg1 = null;
+
+		if (!client_id.equals("admin")) {
+			msgDisp = "{\"sender\" : \"" + client_id + "\" , \"msg\" : \""
+					+ msg + "\"}";
+			msg1 = new ChannelMessage("admin", msgDisp);
+			channelService.sendMessage(msg1);
+
+			msgDisp = "{\"sender\" : \"me\" , \"msg\" : \"" + msg + "\"}";
+			msg1 = new ChannelMessage(client_id, msgDisp);
+			channelService.sendMessage(msg1);
+		} else {
+			String sendTo = req.getParameter("send_to");
+			msgDisp = "{\"sender\" : \"admin\" , \"msg\" : \"" + msg + "\"}";
+			msg1 = new ChannelMessage(sendTo, msgDisp);
+			channelService.sendMessage(msg1);
+
+			msgDisp = "{\"sender\" : \"me\" , \"msg\" : \"" + msg
+					+ "\" ,\"sendTo\" : \"" + sendTo + "\"}";
+			// System.out.println(msgDisp);
+			msg1 = new ChannelMessage("admin", msgDisp);
 			channelService.sendMessage(msg1);
 		}
 		//

@@ -34,14 +34,17 @@ public class CheckConnectedServlet extends HttpServlet {
 				+ presence.isConnected());
 
 		String msg = clientId + " joined the chat.";
-		msg = "{\"sender\" : \"chat room\" , \"msg\" : \"" + msg + "\"}";
-		Set<String> users = Users.get();
-		for (String user : users) {
-			if (!user.equals(clientId)) {
-				ChannelMessage msg1 = new ChannelMessage(user, msg);
-				channelService.sendMessage(msg1);
-			}
-		}
+		msg = "{\"sender\" : \"\" , \"msg\" : \"" + msg + "\"}";
+		ChannelMessage msg1 = new ChannelMessage("admin", msg);
+		channelService.sendMessage(msg1);
+
+		// Set<String> users = Users.get();
+		// for (String user : users) {
+		// if (!user.equals(clientId)) {
+		// ChannelMessage msg1 = new ChannelMessage(user, msg);
+		// channelService.sendMessage(msg1);
+		// }
+		// }
 
 	}
 
