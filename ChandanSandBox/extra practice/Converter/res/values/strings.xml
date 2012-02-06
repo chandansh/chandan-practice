@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Temperature Converter Application.</string>
+    <string name="app_name">Temperature Converter</string>
+    <string name="fahrenhiet">to Fahrenhiet</string>
+    <string name="celsius">to celsius</string>
+    <string name="calc">calculate</string>
+    <color name="myColor">#3355FF</color>
+    <string name="myClickHandler">myClickHandler</string>
+
+</resources>

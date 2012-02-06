@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Question"
+    />
+
+    <RadioGroup
+        android:id="@+id/optsGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/opt1"
+        	android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Option 1" />
+
+        <RadioButton
+            android:id="@+id/opt2"
+    	    android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Option 2" />
+
+        <RadioButton
+            android:id="@+id/opt3"
+	        android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Option 3" />
+
+        <RadioButton
+            android:id="@+id/opt4"
+	        android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Option 4" />
+        </RadioGroup>
+</merge>

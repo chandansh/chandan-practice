@@ -22,11 +22,10 @@
 		<aop:aspect ref="knightLogger">
 
 			<aop:pointcut id="questPointcut"
-				expression="execution(* *.embarkOnQuest(..)) and target(bean)" />
-			<aop:before method="singBefore" pointcut-ref="questPointcut"
-				arg-names="bean" />
+				expression="execution(* *.embarkOnQuest(..))" />
+			<aop:before method="singBefore" pointcut-ref="questPointcut"/>
 			<aop:after-returning method="singAfter"
-				pointcut-ref="questPointcut" arg-names="bean" />
+				pointcut-ref="questPointcut" />
 		</aop:aspect>
 	</aop:config>
 
