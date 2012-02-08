@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/item1"
+        android:title="Hello1">
+    </item>
+    <item
+        android:id="@+id/item2"
+        android:actionProviderClass="android.widget.ShareActionProvider"
+        android:showAsAction="ifRoom"
+        android:title="Hello2">
+    </item>
+    <item
+        android:id="@+id/item3"
+        android:title="Hello3">
+    </item>
+    <item
+        android:id="@+id/item4"
+        android:actionViewClass="android.widget.SearchView"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:title="Search">
+    </item>
+    <item
+        android:id="@+id/file"
+        android:icon="@drawable/ic_launcher"
+        android:title="File">
+
+        <!-- "file" submenu -->
+        <menu>
+            <item
+                android:id="@+id/create_new"
+                android:title="Create New"/>
+            <item
+                android:id="@+id/open"
+                android:title="Open"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/item5"
+        android:icon="@drawable/sample_0"
+        android:title="Hello5"/>
+    <!-- menu group -->
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single" >
+        <item
+            android:id="@+id/groupItem1"
+            android:title="Group Item1"/>
+        <item
+            android:id="@+id/groupItem2"
+            android:title="Group item2"/>
+    </group>
+
+</menu>
