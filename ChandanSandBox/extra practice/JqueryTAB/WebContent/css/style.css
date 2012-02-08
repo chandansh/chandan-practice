@@ -1,0 +1,7 @@
+#main {width:2000px;margin:0 auto;position:relative}
+#header {height:340px;background:url(../images/test1.jpg) no-repeat left top}
+/*footer*/
+#footer {color:#fff;height:95px;background:url(../images/ui-bg_gloss-wave_75_2191c0_500x100.png) left top repeat-x}
+#footer .indent {padding:42px 40px 20px 40px}
+#footer a {color:#fbcf19}
+#footer img {position:relative;top:-4px}
