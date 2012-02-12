@@ -1,8 +1,9 @@
 package com.test;
 
+import java.util.ArrayList;
 import java.util.TreeSet;
 
-class Car implements Comparable<Car> {
+class Car implements Comparable<Car>, Cloneable {
 	private double price;
 
 	public double getPrice() {
@@ -23,6 +24,7 @@ class Car implements Comparable<Car> {
 
 public class ComparableTreeSetSorting {
 
+	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
 		Car car1 = new Car();
 		Car car2 = new Car();
@@ -52,5 +54,26 @@ public class ComparableTreeSetSorting {
 		for (Car c : carsDesc) {
 			System.out.println(c.getPrice());
 		}
+		
+		TreeSet<Car> set=(TreeSet<Car>)carsDesc.clone();
+		
+		System.out.println("Descending order from clone:");
+		for (Car c : set) {
+			System.out.println(c.getPrice());
+		}
+		
+		carsDesc.remove(car1);
+		carsDesc.remove(car2);
+		
+		System.out.println("after removel Descending order:");
+		for (Car c : carsDesc) {
+			System.out.println(c.getPrice());
+		}
+		
+		System.out.println(" after removel Descending order from clone:");
+		for (Car c : set) {
+			System.out.println(c.getPrice());
+		}
+	
 	}
 }

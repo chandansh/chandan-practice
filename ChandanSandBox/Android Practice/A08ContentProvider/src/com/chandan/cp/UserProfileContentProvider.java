@@ -23,11 +23,11 @@ public class UserProfileContentProvider extends ContentProvider {
 	private static final int MATCH_PROFILE_ONE = 2;
 	private static final int MATCH_PROFILE_DEPTS_ALL = 3;
 	private static final int MATCH_PROFILE_DEPTS_ONE = 4;
-	
-	private static final UriMatcher matcher = new UriMatcher(UriMatcher.NO_MATCH);
-	
-	static
-	{
+
+	private static final UriMatcher matcher = new UriMatcher(
+			UriMatcher.NO_MATCH);
+
+	static {
 		matcher.addURI(AUTHORITY, "p", MATCH_PROFILES_ALL);
 		matcher.addURI(AUTHORITY, "p/#", MATCH_PROFILE_ONE);
 		matcher.addURI(AUTHORITY, "p/#/d", MATCH_PROFILE_DEPTS_ALL);
@@ -47,13 +47,11 @@ public class UserProfileContentProvider extends ContentProvider {
 
 		int code = matcher.match(uri);
 
-		switch(code)
-		{
+		switch (code) {
 		case MATCH_PROFILE_ONE:
 			String id = uri.getPathSegments().get(1);
 			if (id.length() > 0) {
-				if(selection != null)
-				{
+				if (selection != null) {
 					selection = " _ID = " + id + " AND (" + selection + ")";
 				} else {
 					selection = " _ID = " + id;
@@ -85,17 +83,16 @@ public class UserProfileContentProvider extends ContentProvider {
 
 		int code = matcher.match(uri);
 
-		switch(code)
-		{
-			case MATCH_PROFILES_ALL:
-				return db.query("UserProfile", new String[] { "_id", "fname",
-						"lname", "age", "designation" }, null, null, null, null,
-						null);
-			case MATCH_PROFILE_ONE:
-				String id = uri.getPathSegments().get(1);
-				return db.query("UserProfile", new String[] { "_id", "fname",
-						"lname", "age", "designation" }, " _id = " + id, null, null, null,
-						null);
+		switch (code) {
+		case MATCH_PROFILES_ALL:
+			return db.query("UserProfile", new String[] { "_id", "fname",
+					"lname", "age", "designation" }, null, null, null, null,
+					null);
+		case MATCH_PROFILE_ONE:
+			String id = uri.getPathSegments().get(1);
+			return db.query("UserProfile", new String[] { "_id", "fname",
+					"lname", "age", "designation" }, " _id = " + id, null,
+					null, null, null);
 		}
 
 		return null;
@@ -104,23 +101,21 @@ public class UserProfileContentProvider extends ContentProvider {
 	@Override
 	public int update(Uri uri, ContentValues values, String selection,
 			String[] selectionArgs) {
-		
+
 		int rv = 0;
 
 		int code = matcher.match(uri);
 
-		switch(code)
-		{
+		switch (code) {
 		case MATCH_PROFILE_ONE:
 			String id = uri.getPathSegments().get(1);
 			if (id.length() > 0) {
-				if(selection != null)
-				{
+				if (selection != null) {
 					selection = " _ID = " + id + " AND (" + selection + ")";
 				} else {
 					selection = " _ID = " + id;
 				}
-				db.update("UserProfile", values, selection, selectionArgs);
+				rv = db.update("UserProfile", values, selection, selectionArgs);
 			}
 			break;
 		}
