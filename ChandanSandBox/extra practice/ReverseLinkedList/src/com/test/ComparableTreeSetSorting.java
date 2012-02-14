@@ -74,6 +74,7 @@ public class ComparableTreeSetSorting {
 		for (Car c : set) {
 			System.out.println(c.getPrice());
 		}
+		
 	
 	}
 }
