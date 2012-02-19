@@ -1,18 +1,20 @@
 package com.test;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
 
-interface AA {
+abstract interface AA {
 	int a = 10;
 
 	public void hello();
 
 	public static class AAInner {
 		int a = 10;
+		AAInner inObj = new AAInner();
 
 		AAInner() {
 			System.out.println("AAInner is created");
@@ -46,8 +48,11 @@ interface BB {
 }
 
 class A implements AA, BB {
+	Calendar cal = Calendar.getInstance();
+
+	@Override
 	public void hello() {
-		System.out.println("hello AA and BB is impleted");
+		System.out.println("hello AA and BB is implemented");
 	}
 
 	public void helloa() {
@@ -56,12 +61,38 @@ class A implements AA, BB {
 
 	@Override
 	public void hello1() {
-		System.out.println("Hello1 AA impleted.");
+		System.out.println("Hello1 AA implemented.");
 
+	}
+
+	public static class AAInner {
+		int a = 10;
+		A inObj = new A();
+
+		AAInner() {
+			System.out.println("AAInner is created");
+		}
 	}
 }
 
 class B extends A {
+	@Override
+	public void hello() {
+		System.out.println("hello AA and BB is implemented");
+	}
+
+	public void helloa() {
+		System.out.println("helloA  A method");
+	}
+
+	@Override
+	public void hello1() {
+		System.out.println("Hello1 AA implemented.");
+
+	}
+}
+
+class C extends B {
 	public void hello() {
 		System.out.println("hello B");
 	}
@@ -148,6 +179,15 @@ public abstract class InheritenceTest {
 		AA.AAInner1 inner1 = new AA.AAInner1();
 		System.out.println(inner1.getA());
 
+		List<B> list1 = new ArrayList<B>();
+		// list1.add(new A()); //this will compile tie error the method is not
+		// applicable for A
+		list1.add(new B());
+		list1.add(new C());
+		int x = 1, y = 2, a11 = 5, b11 = 6, p = 2, q = 4;
+		boolean bb = (x > y ? a11 : b11) == p * q;
+		Runtime.getRuntime().gc();
+		System.gc();
 	}
 
 	private static void printList(List<Integer> list) {
