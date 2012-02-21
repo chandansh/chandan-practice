@@ -1,7 +1,9 @@
 package com.springinaction.test;
 
 public class GreetingServiceImpl implements GreetingService {
+	
 	String greeting;
+
 
 	@Override
 	public void sayGreeting() {
