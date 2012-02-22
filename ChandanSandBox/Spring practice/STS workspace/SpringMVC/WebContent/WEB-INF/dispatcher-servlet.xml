@@ -17,8 +17,16 @@
 	</bean>
 	<bean id="userService" class="com.mypack.UserServiceImpl" />
 
+	<!-- you can also use "p" attribute like this both are same mapping using 
+		"p" attribute or "property" tag -->
+	<!-- <bean name="/userRegistration.htm" class="com.mypack.UserController" -->
+	<!-- p:userService-ref="userService" p:formView="userForm" p:successView="userSuccess" 
+		/> -->
 
-	<bean name="/userRegistration.htm" class="com.mypack.UserController"
-		p:userService-ref="userService" p:formView="userForm" p:successView="userSuccess" />
+	<bean name="/userRegistration.htm" class="com.mypack.UserController">
+		<property name="userService" ref="userService" />
+		<property name="formView" value="userForm" />
+		<property name="successView" value="userSuccess" />
+	</bean>
 
 </beans>
