@@ -8,6 +8,11 @@ public class StringReverse {
 	}
 
 	// TODO write algorithms for this
+	// algorithm is :
+	// step 1 : Get the character array from string
+	// step 2 : reverse the character array 
+	// step 3 : start from the array where ever you find ' ' space character
+	// reverse the array elements from last ' ' character
 	private static String strRev(String str) {
 		char[] chars = str.toCharArray();
 		reverse(chars);

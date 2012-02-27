@@ -19,6 +19,7 @@ class Car implements Comparable<Car>, Cloneable {
 		// if you switch members places
 		// you will get ascending order
 		return Double.compare(c.getPrice(), price);
+		
 	}
 }
 

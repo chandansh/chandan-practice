@@ -12,13 +12,14 @@ public class BitProcess {
 		byte flag = 0x00;
 		System.out.println(flag);
 		flag = (byte) (flag | FLAG_MARKED & flag | FLAG_ATTEMPTED);
+		System.out.println(flag);
 		System.out.println("after marked :" + (flag & FLAG_MARKED));
-		//flag = (byte) (flag & ~FLAG_MARKED);
-		//System.out.println("after unmarked :" + (flag & FLAG_MARKED));
-		//flag = (byte) (flag | FLAG_ATTEMPTED);
+		// flag = (byte) (flag & ~FLAG_MARKED);
+		// System.out.println("after unmarked :" + (flag & FLAG_MARKED));
+		// flag = (byte) (flag | FLAG_ATTEMPTED);
 		System.out.println("after attempted :" + (flag & FLAG_ATTEMPTED));
-//		flag = (byte) (flag & ~FLAG_ATTEMPTED);
-//		System.out.println("after unattempted :" + (flag & FLAG_ATTEMPTED));
+		// flag = (byte) (flag & ~FLAG_ATTEMPTED);
+		// System.out.println("after unattempted :" + (flag & FLAG_ATTEMPTED));
 
 	}
 
