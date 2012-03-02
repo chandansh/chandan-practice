@@ -6,7 +6,7 @@ import javax.jws.WebService;
 
 /**
  * The @WebService property endpointInterface links the SIB (this class) to the
- * SEI (ch01.ts.TimeServer). Note that the method implementations are not
+ * SEI (com.chandan.ws.TimeServer). Note that the method implementations are not
  * annotated as @WebMethods.
  */
 @WebService(endpointInterface = "com.chandan.ws.TimeServer")

@@ -6,7 +6,7 @@ public class TimeServerPublisher {
 
 	/**
 	 * This application publishes the web service whose SIB is
-	 * ch01.ts.TimeServerImpl. For now, the service is published at network
+	 * com.chandan.ws.TimeServer. For now, the service is published at network
 	 * address 127.0.0.1., which is localhost, and at port number 9876, as this
 	 * port is likely available on any desktop machine. The publication path is
 	 * /ws, an arbitrary name.
