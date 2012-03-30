@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_0_0.dtd">
+
+<service-builder package-path="com.mpower.training.order">
+	<namespace>myOrder_training</namespace>
+	<entity name="MyOrder" local-service="true" remote-service="false">
+		<column name="id" type="long" primary="true" id-type="identity"></column>
+		<column name="name" type="String"></column>
+		<column name="description" type="String"></column>
+		<order>
+			<order-column name="name"></order-column>
+		</order>
+		<finder return-type="MyOrder" name="Name">
+			<finder-column name="name"></finder-column>
+		</finder>
+		<finder return-type="MyOrder" name="IdAndName">
+			<finder-column name="id"></finder-column>
+			<finder-column name="name"></finder-column>
+		</finder>
+	</entity>
+</service-builder>

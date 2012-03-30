@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<model-hints>
+	<model name="com.mpoer.training.customer.model.Customer">
+		<field name="id" type="long" />
+		<field name="name" type="String" />
+		<field name="address" type="String" />
+		<field name="inductionDate" type="Date">
+			<hint name="show-time">false</hint>
+		</field>
+	</model>
+</model-hints>
