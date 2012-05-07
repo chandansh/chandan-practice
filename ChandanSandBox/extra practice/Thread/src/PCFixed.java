@@ -32,10 +32,10 @@ class Q {
 	}
 }
 
-class Producer implements Runnable {
+class Producer1 implements Runnable {
 	Q q;
 
-	Producer(Q q) {
+	Producer1(Q q) {
 		this.q = q;
 		new Thread(this, "Producer").start();
 	}
@@ -49,10 +49,10 @@ class Producer implements Runnable {
 	}
 }
 
-class Consumer implements Runnable {
+class Consumer1 implements Runnable {
 	Q q;
 
-	Consumer(Q q) {
+	Consumer1(Q q) {
 		this.q = q;
 		new Thread(this, "Consumer").start();
 	}
@@ -67,8 +67,8 @@ class Consumer implements Runnable {
 class PCFixed {
 	public static void main(String args[]) {
 		Q q = new Q();
-		new Producer(q);
-		new Consumer(q);
+		new Producer1(q);
+		new Consumer1(q);
 
 		System.out.println("Press Control-C to stop.");
 	}
