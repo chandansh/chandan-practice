@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-	<bean id="com.mpower.training.order.service.MyOrderLocalService" class="com.mpower.training.order.service.impl.MyOrderLocalServiceImpl" />
-	<bean id="com.mpower.training.order.service.MyOrderLocalServiceUtil" class="com.mpower.training.order.service.MyOrderLocalServiceUtil">
-		<property name="service" ref="com.mpower.training.order.service.MyOrderLocalService" />
-	</bean>
-	<bean id="com.mpower.training.order.service.persistence.MyOrderPersistence" class="com.mpower.training.order.service.persistence.MyOrderPersistenceImpl" parent="basePersistence" />
-</beans>

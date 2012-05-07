@@ -16,18 +16,15 @@ public class MyOrderPortlet implements Portlet {
 
 	PortletContext context;
 
-	@Override
 	public void destroy() {
 		System.out.println("Destroy is called by MyOrderPortlet.");
 	}
 
-	@Override
 	public void init(PortletConfig config) throws PortletException {
 		System.out.println("Init is called by MyOrderPortlet");
 		context = config.getPortletContext();
 	}
 
-	@Override
 	public void processAction(ActionRequest arg0, ActionResponse arg1)
 			throws PortletException, IOException {
 		System.out.println("Process action is called by MyOrderPortlet");
@@ -35,7 +32,6 @@ public class MyOrderPortlet implements Portlet {
 				+ "in process action");
 	}
 
-	@Override
 	public void render(RenderRequest arg0, RenderResponse arg1)
 			throws PortletException, IOException {
 		System.out.println("render action is called by MyOrderPortlet");

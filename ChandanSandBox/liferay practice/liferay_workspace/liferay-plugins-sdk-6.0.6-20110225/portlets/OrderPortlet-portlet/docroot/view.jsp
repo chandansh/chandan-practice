@@ -4,9 +4,9 @@
 <%@page import="javax.portlet.PortletURL"%>
 <%@page import="java.util.Date"%>
 <%@page isELIgnored="false"%>
-<%@ taglib uri="http://java.sun.com/portlet" prefix="portlet"%>
-<%@ taglib uri="http://liferay.com/tld/aui" prefix="aui"%>
-
+<%@taglib uri="http://java.sun.com/portlet" prefix="portlet"%>
+<%@taglib uri="http://liferay.com/tld/aui" prefix="aui"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <portlet:defineObjects />
 <%
@@ -40,15 +40,3 @@ Enter the Order Details.
 	}
 %>
 </table>
-<%-- <c:forEach items="${orderList}" var="item"> --%>
-<%-- <c:out value="${item.orderId}"/> --%>
-<%-- <c:out value="${item.customer}"/> --%>
-<%-- <c:out value="${item.amount}"/> --%>
-
-<!-- </c:forEach> -->
-
-<%-- <form action="<%=url%>" method="post"> --%>
-<!-- 	<input type="text" name="companyName"><br> -->
-<!-- 	<input type="submit"> -->
-
-<!-- </form> -->

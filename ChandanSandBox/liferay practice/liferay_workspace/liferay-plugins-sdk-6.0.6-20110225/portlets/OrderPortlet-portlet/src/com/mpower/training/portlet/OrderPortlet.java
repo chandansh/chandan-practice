@@ -25,14 +25,12 @@ public class OrderPortlet implements Portlet {
 	private PortletContext context;
 	private boolean salesOrderSaved = false;
 
-	@Override
 	public void destroy() {
 
 		System.out.println("destroy is executed.");
 
 	}
 
-	@Override
 	public void init(PortletConfig config)
 		throws PortletException {
 
@@ -40,7 +38,6 @@ public class OrderPortlet implements Portlet {
 		context = config.getPortletContext();
 	}
 
-	@Override
 	public void processAction(ActionRequest actionRequest, ActionResponse actionResponse)
 		throws PortletException, IOException {
 
@@ -86,7 +83,6 @@ public class OrderPortlet implements Portlet {
 
 	}
 
-	@Override
 	public void render(RenderRequest renderRequest, RenderResponse renderResponse)
 		throws PortletException, IOException {
 

@@ -60,7 +60,7 @@ public class MyOrderWrapper implements MyOrder {
 		_myOrder.setDescription(description);
 	}
 
-	public MyOrder toEscapedModel() {
+	public com.mpower.training.order.model.MyOrder toEscapedModel() {
 		return _myOrder.toEscapedModel();
 	}
 
@@ -105,7 +105,7 @@ public class MyOrderWrapper implements MyOrder {
 		return _myOrder.clone();
 	}
 
-	public int compareTo(MyOrder myOrder) {
+	public int compareTo(com.mpower.training.order.model.MyOrder myOrder) {
 		return _myOrder.compareTo(myOrder);
 	}
 

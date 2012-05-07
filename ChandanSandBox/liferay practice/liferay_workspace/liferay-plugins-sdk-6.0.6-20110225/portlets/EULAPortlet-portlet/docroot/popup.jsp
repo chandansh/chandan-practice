@@ -1,6 +1,3 @@
-<%@page	import="com.softslate.commerce.businessobjects.order.OrderItemBean"%>
-<%@page import="com.softslate.commerce.businessobjects.order.OrderBean"%>
-<%@ include file="/html/portlet/common/init.jsp"%>
 <%@page import="java.util.Collection"%>
 <%@page import="java.util.Set"%>
 <%@page import="java.util.List"%>
@@ -12,7 +9,10 @@
 <%@page import="javax.portlet.PortletURL"%>
 <%@page import="com.liferay.portal.kernel.portlet.LiferayWindowState"%>
 <%@page import="java.util.ArrayList"%>
-
+<%@taglib uri="http://java.sun.com/portlet" prefix="portlet"%>
+<%@taglib uri="http://liferay.com/tld/theme" prefix="theme"%>
+<portlet:defineObjects/>
+<theme:defineObjects/>
 <%
 int orderId = ParamUtil.getInteger(renderRequest, "orderId");
 
@@ -156,9 +156,9 @@ if(!themeDisplay.isSignedIn()) {
 			className="com.softslate.commerce.businessobjects.order.OrderItemBean"
 			modelVar="orderItemBean">
 			<%
-				editURL.setParameter("orderId",(String.valueOf(orderItemBean.getOrderID())));
-				editURL.setParameter("productId",(String.valueOf(orderItemBean.getProductID())));
-				deleteURL.setParameter("productId",(String.valueOf(orderItemBean.getProductID())));
+				//editURL.setParameter("orderId",(String.valueOf(orderItemBean.getOrderID())));
+				//editURL.setParameter("productId",(String.valueOf(orderItemBean.getProductID())));
+				//deleteURL.setParameter("productId",(String.valueOf(orderItemBean.getProductID())));
 			%>
 			<liferay-ui:search-container-column-text value="<%=(String.valueOf(orderItemBean.getOrder().getOrderID())) %>" name="Requisition Id" />
 			<liferay-ui:search-container-column-text>
