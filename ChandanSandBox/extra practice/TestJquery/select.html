@@ -1,0 +1,40 @@
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	
+	var countyTowns = [
+		["Delhi", "Bangalore"],
+		["New york", "wasington"]
+	];
+	$(document).ready(function(){
+		//alert("started");
+		$("#counties").change(function() {
+			var county = this.selectedIndex - 1;
+			$("#towns").empty();
+			if (county === -1) {
+				$("#towns").attr("disabled", true);
+			} else {
+				var towns = countyTowns[county];
+				for (var i = 0; i < towns.length; i++) {
+					$("#towns").append($("<option></option>").text(towns[i]));
+				}
+				$("#towns").attr("disabled", false);
+			}
+		});
+	});
+	
+</script>
+</head>
+<body>
+<form action = "">
+<select id="counties">
+    <option> none </option>
+    <option> india </option>
+    <option> USA </option>
+</select>
+
+<select id="towns" disabled="true">
+</select>
+</form>
+</body>
