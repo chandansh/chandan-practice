@@ -17,7 +17,7 @@ public class EmpApp {
 		Configuration cfg = new Configuration().configure();
 		SessionFactory factory = cfg.buildSessionFactory();
 		Session s = factory.openSession();
-		Emp e = new Emp("chandan", "Sr. Software Engineer", 70000);
+		Emp e = new Emp("azam", "Sr. Software Engineer", 70000);
 		Transaction t = s.beginTransaction();
 		s.save(e);
 		t.commit();

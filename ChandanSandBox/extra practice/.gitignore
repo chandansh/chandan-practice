@@ -1,6 +1,6 @@
 *.class
 .metadata
-Servers
+Servers*
 .git
 TaskQueue/war/WEB-INF/classes
 TestFaceBook/war/WEB-INF/classes
