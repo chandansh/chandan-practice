@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.slayer.model.ShoppingCartExt">
+		<field name="recId" type="long" />
+		<field name="cartId" type="long" />
+		<field name="itemId" type="long" />
+		<field name="amount" type="Integer" />
+	</model>
+	<model name="com.slayer.model.ShoppingCategoryExt">
+		<field name="categoryId" type="long" />
+		<field name="imageId" type="long" />
+		<field name="imageURL" type="String" />
+	</model>
+</model-hints>

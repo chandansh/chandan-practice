@@ -1,0 +1,1 @@
+<h1>My spring1 Portlet</h1>

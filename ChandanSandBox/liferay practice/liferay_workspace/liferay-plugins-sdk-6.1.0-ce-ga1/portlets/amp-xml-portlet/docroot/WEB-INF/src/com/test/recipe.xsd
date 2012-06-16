@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="recipe">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="RecipeIdentifier" />
+				<xs:element ref="NameText" />
+				<xs:element ref="Description" />
+				<xs:element ref="IngredientList" maxOccurs="1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="IngredientList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Ingredient" maxOccurs="unbounded"
+					minOccurs="1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Ingredient">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="DataCenter" maxOccurs="unbounded"
+					minOccurs="0" />
+				<xs:element ref="PtimesListQ" maxOccurs="unbounded"
+					minOccurs="0" />
+				<xs:element ref="PtimesQ" maxOccurs="unbounded"
+					minOccurs="0" />
+				<xs:element ref="OptionList" maxOccurs="unbounded"
+					minOccurs="0" />
+				<xs:element ref="PtimesSumQ" maxOccurs="unbounded"
+					minOccurs="0" />
+				<xs:element ref="TableTimesQ" maxOccurs="unbounded"
+					minOccurs="0" />
+				<xs:element ref="TableTimesSumQ" maxOccurs="unbounded"
+					minOccurs="0" />
+				<xs:element ref="CheckBox" maxOccurs="unbounded"
+					minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Quantity">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:integer">
+					<xs:attribute name="min" type="xs:integer" use="optional" />
+					<xs:attribute name="max" type="xs:integer" use="optional" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Corestructure">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SKU" />
+				<xs:element ref="Quantity" />
+				<xs:element ref="Price" />
+				<xs:element ref="DateTimeCreate" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="SKU" type="xs:string" />
+	<xs:element name="RecipeIdentifier" type="xs:string" />
+
+	<xs:element name="PtimesQ">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Corestructure" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OptionList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Corestructure" maxOccurs="unbounded" />
+				<xs:element ref="OptionValue" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PtimesListQ">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="HeaderText" />
+				<xs:element ref="Corestructure" maxOccurs="unbounded" />
+				<xs:element ref="PtimesQ" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PtimesSumQ">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="HeaderText" />
+				<xs:element ref="Corestructure" maxOccurs="unbounded" />
+				<xs:element ref="QuantityType" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TableTimesQ">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SKU" />
+				<xs:sequence minOccurs="0">
+					<xs:element ref="Quantity" />
+					<xs:element ref="Price" />
+					<xs:element ref="DateTimeCreate" />
+				</xs:sequence>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TableTimesSumQ">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="HeaderText" />
+				<xs:element ref="Corestructure" maxOccurs="unbounded" />
+				<xs:element ref="QuantityType" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PTableQ">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="HeaderText" />
+				<xs:element ref="Corestructure" maxOccurs="unbounded" />
+				<xs:element ref="QuantityType" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="QuantityType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="LabelText" />
+				<xs:element ref="Quantity" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CheckBox">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Corestructure" maxOccurs="unbounded" />
+				<xs:element ref="OptionBox" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OptionBox">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="LabelText" />
+				<xs:element ref="OptionValue" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Price" type="xs:decimal" />
+	<xs:element name="NameText" type="xs:string" />
+	<xs:element name="HeaderText" type="xs:string" />
+	<xs:element name="LabelText" type="xs:string" />
+	<xs:element name="Description" type="xs:string" />
+	<xs:element name="DateTimeCreate" type="xs:date" />
+	<xs:element name="OptionValue" type="xs:string" />
+	<xs:element name="DataCenter" type="xs:string" />
+</xs:schema>

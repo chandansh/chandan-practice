@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.slayer.service.ShoppingCartExtLocalService" class="com.slayer.service.impl.ShoppingCartExtLocalServiceImpl" />
+	<bean id="com.slayer.service.ShoppingCartExtLocalServiceUtil" class="com.slayer.service.ShoppingCartExtLocalServiceUtil">
+		<property name="service" ref="com.slayer.service.ShoppingCartExtLocalService" />
+	</bean>
+	<bean id="com.slayer.service.persistence.ShoppingCartExtPersistence" class="com.slayer.service.persistence.ShoppingCartExtPersistenceImpl" parent="basePersistence" />
+	<bean id="com.slayer.service.ShoppingCategoryExtLocalService" class="com.slayer.service.impl.ShoppingCategoryExtLocalServiceImpl" />
+	<bean id="com.slayer.service.ShoppingCategoryExtLocalServiceUtil" class="com.slayer.service.ShoppingCategoryExtLocalServiceUtil">
+		<property name="service" ref="com.slayer.service.ShoppingCategoryExtLocalService" />
+	</bean>
+	<bean id="com.slayer.service.persistence.ShoppingCategoryExtPersistence" class="com.slayer.service.persistence.ShoppingCategoryExtPersistenceImpl" parent="basePersistence" />
+</beans>
