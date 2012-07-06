@@ -16,7 +16,10 @@ Element element = (Element)renderRequest.getAttribute("element");
 
 %>
 
-<%= FreeMarkerUtil.getHtml(pageContext, renderRequest, "") %>
+<%-- <%= FreeMarkerUtil.getHtml(pageContext, renderRequest, "") %> --%>
+
+<aui:input name="name" maxlength="2" ></aui:input>
+<input type="text"  />
 
 </aui:form>	
 	

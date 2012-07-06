@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<project name="ServiceMix-HelloWorld" basedir="." xmlns:sm="urn:servicemix-ant" xmlns:c="urn:contrib-ant">
+
+	<property name="work" value="work"/>
+	
+	<taskdef resource="net/sf/antcontrib/antlib.xml" uri="urn:contrib-ant">
+		<classpath>
+			<pathelement location="lib/ant-contrib.jar" />
+		</classpath>
+	</taskdef>
+	
+	<target name="create-helloworld">
+		<delete dir="${work}"/>
+		<mkdir dir="${work}"/>
+		<antcall target="create-serviceunit">
+			<param name="servicemix-conf" value="conf" />
+			<param name="service-dest-file" value="File-helloworld-SU.zip" />
+		</antcall>
+		<echo message="Create the service assembly" />
+		<antcall target="create-serviceassembly">
+			<param name="jbi-conf" value="conf" />
+			<param name="sm-dest-file" value="ESBinAction-helloworld-sa.zip" />
+			<param name="service-units" value="File-helloworld-SU.zip" />
+		</antcall>
+	</target>
+	
+	<target name="create-serviceunit">
+		
+		<!-- some general cleanup of old files and create new directories -->
+		<echo message="Preparing service unit creation" />
+		<delete failonerror="false" file="${work}/${service-dest-file}" />
+		<delete failonerror="false" dir="${work}/${service-dest-file}.work" />
+		<mkdir dir="${work}/${service-dest-file}.work" />
+		<mkdir dir="${work}/${service-dest-file}.work/META-INF" />
+
+		<!--do we have a resource directory -->
+		<c:if>
+			<isset property="include-resource-dir" />
+			<c:then>
+				<echo message="Resource directory specified, including in serviceunit" />
+				<copy todir="${work}/${service-dest-file}.work">
+					<fileset dir="${include-resource-dir}">
+						<include name="**/*" />
+					</fileset>
+				</copy>
+			</c:then>
+			<c:else>
+				<echo message="No resource directory specified" />
+			</c:else>
+		</c:if>
+
+		<!--do we have a classes to copy directory -->
+		<c:if>
+			<isset property="include-classes" />
+			<c:then>
+				<echo message="Including classes into Service unit" />
+				<c:if>
+					<isset property="include-classes-archive" />
+					<c:then>
+						<echo message="compiling classes" />
+						<javac srcdir="${workspace.home}/src" destdir="${workspace.home}/classes">
+							<include name="${include-classes}" />
+						</javac>
+
+						<echo message="archiving classes to ${include-classes-archive}" />
+						<jar destfile="${work}/${service-dest-file}.work/${include-classes-archive}">
+							<fileset dir="${workspace.home}/classes">
+								<include name="${include-classes}" />
+							</fileset>
+						</jar>
+					</c:then>
+					<c:else>
+						<echo message="compiling classes from ${include-classes}" />
+						<javac srcdir="${workspace.home}/src" destdir="${workspace.home}/classes">
+							<include name="${include-classes}" />
+						</javac>
+						<copy todir="${work}/${service-dest-file}.work">
+							<fileset dir="${workspace.home}/classes">
+								<include name="${include-classes}" />
+							</fileset>
+							<fileset dir="${workspace.home}/src">
+								<include name="${include-classes}"/>
+								<exclude name="**/*.java"/>
+							</fileset>
+						</copy>
+					</c:else>
+				</c:if>
+			</c:then>
+			<c:else>
+				<echo message="No classes need to be included" />
+			</c:else>
+		</c:if>
+		
+		<c:if>
+			<isset property="generated-classes-filter" />
+			<c:then>
+				<echo message="compiling classes from ${generated-classes-filter}" />
+				<javac srcdir="${workspace.home}/src-generated" destdir="${workspace.home}/classes">
+					<include name="${generated-classes-filter}" />
+					<include name="esb/util/framework/*" />
+					<classpath refid="compile.path" />
+				</javac>
+				<copy todir="${work}/${service-dest-file}.work">
+					<fileset dir="${workspace.home}/classes">
+						<include name="${generated-classes-filter}" />
+						<include name="esb/util/framework/*" />
+					</fileset>
+				</copy>
+			</c:then>
+			<c:else>
+				<echo message="No generated classes need to be included" />
+			</c:else>		
+		</c:if>
+
+		<c:if>
+			<isset property="servicemix-conf" />
+			<c:then>
+				<echo message="Try to copy servicemix specific files, warnings can be ignored" />
+				<copy todir="${work}/${service-dest-file}.work" file="${servicemix-conf}/servicemix.xml" failonerror="false" />
+				<copy todir="${work}/${service-dest-file}.work" file="${servicemix-conf}/xbean.xml" failonerror="false" />
+			</c:then>
+		</c:if>
+
+		<c:if>
+			<isset property="jbi-conf" />
+			<c:then>
+				<echo message="Try to copy JBI specific files, warnings can be ignored" />
+				<copy todir="${work}/${service-dest-file}.work/META-INF" file="${jbi-conf}" failonerror="false" />
+			</c:then>
+		</c:if>
+
+		<jar destfile="${work}/${service-dest-file}">
+			<fileset dir="${work}/${service-dest-file}.work" />
+		</jar>
+	</target>
+
+	<target name="create-serviceassembly">
+		<delete failonerror="false" file="${work}/${sm-dest-file}" />
+		<mkdir dir="${work}/META-INF" />
+		<copy file="${jbi-conf}/jbi.xml" tofile="${work}/META-INF/jbi.xml" overwrite="true" />
+		<jar destfile="${work}/${sm-dest-file}">
+			<fileset dir="${work}">
+				<include name="META-INF/**" />
+				<include name="${service-units}" />
+			</fileset>
+		</jar>
+	</target>
+</project>
