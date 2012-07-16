@@ -11,7 +11,7 @@ public class BitProcess {
 	public static void main(String[] args) {
 		byte flag = 0x00;
 		System.out.println(flag);
-		flag = (byte) (flag | FLAG_MARKED & flag | FLAG_ATTEMPTED);
+		//flag = (byte) (flag | FLAG_MARKED & flag | FLAG_ATTEMPTED);
 		System.out.println(flag);
 		System.out.println("after marked :" + (flag & FLAG_MARKED));
 		// flag = (byte) (flag & ~FLAG_MARKED);

@@ -12,7 +12,7 @@ http://www.springframework.org/schema/util
 http://www.springframework.org/schema/util/spring-util-3.0.xsd
 ">
 	<!-- Auto-detect controllers in these packages -->
-	<context:component-scan base-package="web.spring1" />
+	<context:component-scan base-package="web.contact1.controllers" />
 	<!-- We're using Annotations -->
 	<context:annotation-config />
 	<!-- View Resolver -->
@@ -20,7 +20,7 @@ http://www.springframework.org/schema/util/spring-util-3.0.xsd
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="viewClass"
 			value="org.springframework.web.servlet.view.JstlView" />
-		<property name="prefix" value="/WEB-INF/jsp/spring1/" />
+		<property name="prefix" value="/WEB-INF/jsp/contact1/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
 </beans>

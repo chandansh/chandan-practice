@@ -32,6 +32,10 @@
 		<portlet-name>my-Spring1</portlet-name>
 		<display-name>My Spring1</display-name>
 		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+            <name>contextConfigLocation</name>
+            <value>/WEB-INF/context/mySpring1-portlet.xml</value>
+        </init-param>
 		<expiration-cache>0</expiration-cache>
 		<supports>
 			<mime-type>text/html</mime-type>
@@ -40,6 +44,68 @@
 			<title>My Spring1</title>
 			<short-title>My Spring1</short-title>
 			<keywords>My Spring1</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>contact</portlet-name>
+		<display-name>contact</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+            <name>contextConfigLocation</name>
+            <value>/WEB-INF/context/contact-portlet.xml</value>
+        </init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-info>
+			<title>contact</title>
+			<short-title>contact</short-title>
+			<keywords>contact</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>contact1</portlet-name>
+		<display-name>contact1</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+            <name>contextConfigLocation</name>
+            <value>/WEB-INF/context/contact1-portlet.xml</value>
+        </init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-info>
+			<title>contact1</title>
+			<short-title>contact1</short-title>
+			<keywords>contact1</keywords>
 		</portlet-info>
 		<security-role-ref>
 			<role-name>administrator</role-name>

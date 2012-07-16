@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<project name="cloud-utils" default="deploy">
+	<property file="../../build.${user.name}.properties" prefix="plugin-package" />
+	<property name="liferay.tomcat.home" location="${plugin-package.app.server.dir}" />
+	<property name="tomcat.lib" location="${liferay.tomcat.home}/lib" />
+	<property name="tomcat.root.lib" location="${liferay.tomcat.home}/webapps/ROOT/WEB-INF/lib" />
+
+	<property name="cloud.service.proj" location="../cloud-service-portlet" />
+	<property name="amp.service.proj" location="../amp-service-portlet" />
+	<property name="quote.process.proj" location="../quote-process-portlet" />
+	<property name="cloud.dashboard.proj" location="../cloud-dashboard-portlet" />
+	<property name="cloud.registration.proj" location="../cloud-registration-portlet" />
+
+	<path id="all_libs">
+		<fileset dir="lib">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="${tomcat.lib}">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="${tomcat.lib}/ext">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="${tomcat.root.lib}">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="${cloud.service.proj}/docroot/WEB-INF/lib">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="${amp.service.proj}/docroot/WEB-INF/lib">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<target name="init" depends="clean">
+		<mkdir dir="dist" />
+	</target>
+
+
+	<target name="compile" depends="init">
+		<echo message="${cloud.service.proj}/docroot/WEB-INF/lib" />
+		<javac srcdir="src" destdir="bin" verbose="true">
+			<classpath>
+				<!--<pathelement location="lib/cloud-service-portlet-service.jar" />-->
+				<pathelement location="${amp.service.proj}/docroot/WEB-INF/classes" />
+			</classpath>
+			<classpath refid="all_libs" />
+		</javac>
+	</target>
+
+	<target name="package" depends="compile">
+		<jar destfile="dist/cloud-utils.jar" basedir="bin" />
+	</target>
+	<target name="deploy" depends="package">
+		<echo message="start copy jar to projects" />
+		<copy todir="${quote.process.proj}/docroot/WEB-INF/lib" failonerror="false">
+			<fileset dir="dist/" includes="*.jar" />
+		</copy>
+		<copy todir="${cloud.dashboard.proj}/docroot/WEB-INF/lib" failonerror="false">
+			<fileset dir="dist/" includes="*.jar" />
+		</copy>
+		<copy todir="${cloud.registration.proj}/docroot/WEB-INF/lib" failonerror="false">
+			<fileset dir="dist/" includes="*.jar" />
+		</copy>
+		<copy todir="${tomcat.lib}/ext" failonerror="false">
+			<fileset dir="dist/" includes="*.jar" />
+		</copy>
+	</target>
+
+	<target name="clean">
+		<delete dir="build" />
+		<delete dir="dist" />
+	</target>
+
+</project>

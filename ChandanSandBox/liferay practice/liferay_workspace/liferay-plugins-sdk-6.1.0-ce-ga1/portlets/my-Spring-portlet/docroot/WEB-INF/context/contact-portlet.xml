@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-3.0.xsd
+http://www.springframework.org/schema/util
+http://www.springframework.org/schema/util/spring-util-3.0.xsd
+">
+	<!-- Auto-detect controllers in these packages -->
+	<!-- <context:component-scan base-package="web.spring1" /> -->
+	<!-- We're using Annotations -->
+	<!-- <context:annotation-config /> -->
+	<!-- View Resolver -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WEB-INF/jsp/contact/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<bean id="portletModeHandlerMapping"
+		class="org.springframework.web.portlet.handler.PortletModeHandlerMapping">
+		<property name="portletModeMap">
+			<map>
+				<entry key="view">
+					<ref local="contactController" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="contactController" class="web.contact.controllers.ContactController">
+		<property name="contactDAO" ref="contactDAO" />
+		<property name="commandClass" value="web.test.model.Contact" />
+		<property name="commandName" value="contact" />
+		<property name="formView" value="insert"></property>
+		<property name="successView" value="show"></property>
+	</bean>
+</beans>
+
