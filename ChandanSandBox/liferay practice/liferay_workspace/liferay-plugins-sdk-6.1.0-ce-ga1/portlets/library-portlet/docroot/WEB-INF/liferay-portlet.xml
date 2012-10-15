@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 6.0.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_6_0_0.dtd">
+
+<liferay-portlet-app>
+	
+	<portlet>
+		<portlet-name>libraryportlet</portlet-name>
+		<icon>/icon.png</icon>
+		<indexer-class>com.library.LibraryIndex</indexer-class>
+		<!-- <scheduler-entry>
+				<scheduler-description>
+					Deleting the book from the database table
+				</scheduler-description>
+				<scheduler-event-listener-class>com.library.DeleteBookScheduler</scheduler-event-listener-class>
+				<trigger>
+						<simple>
+							<simple-trigger-value>2</simple-trigger-value>
+							<time-unit>minute</time-unit>
+						</simple>
+						<cron>
+							<cron-trigger-value>0 5 18 ? * 6</cron-trigger-value>
+						</cron>
+				</trigger>
+		</scheduler-entry> -->
+		
+		<friendly-url-mapper-class>com.liferay.portal.kernel.portlet.DefaultFriendlyURLMapper
+		</friendly-url-mapper-class>
+		 <friendly-url-mapping>library</friendly-url-mapping>
+		 <friendly-url-routes>com/library/friendly/friendlyURL.xml</friendly-url-routes>
+		 <social-activity-interpreter-class>com.social.LibraryActivityInterpreter</social-activity-interpreter-class>
+		<control-panel-entry-category>content</control-panel-entry-category>
+		<control-panel-entry-weight>10.0</control-panel-entry-weight>
+		<asset-renderer-factory>com.library.Asset.LMSEntryAssetRendererFactory</asset-renderer-factory>
+		<workflow-handler>com.library.LibraryWorkflowHandler</workflow-handler>
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/portlet.css</header-portlet-css>
+		<header-portlet-javascript>
+		 	/js/jquery.js 
+		</header-portlet-javascript>
+		<footer-portlet-javascript>
+			/js/jquery.validate.min.js
+		</footer-portlet-javascript>
+		<footer-portlet-javascript>
+			/js/service.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>libraryportlet-portlet</css-class-wrapper>
+		<add-default-resource>true</add-default-resource>
+		
+	</portlet>
+	<portlet>
+		<portlet-name>listenerportlet</portlet-name>
+		<icon>/icon.png</icon>
+		<instanceable>false</instanceable>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>listenerportlet-portlet</css-class-wrapper>
+	</portlet>
+	<role-mapper>
+		<role-name>administrator</role-name>
+		<role-link>Administrator</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>guest</role-name>
+		<role-link>Guest</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>power-user</role-name>
+		<role-link>Power User</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>user</role-name>
+		<role-link>User</role-link>
+	</role-mapper>
+</liferay-portlet-app>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource-action-mapping>
+	<model-resource>
+		<model-name>
+			com.test.slayer.model.Address
+		</model-name>
+		<portlet-ref>
+			<portlet-name>addressbook</portlet-name>
+		</portlet-ref>
+		<supports>
+			<action-key>PERMISSIONS</action-key>
+			<action-key>LIST</action-key>
+			<action-key>UPDATE</action-key>
+			<action-key>COPY</action-key>
+			<action-key>DELETE</action-key>
+			<action-key>VIEW</action-key>
+		</supports>
+		<community-defaults>
+			<action-key>VIEW</action-key>
+			<action-key>LIST</action-key>
+			<action-key>UPDATE</action-key>
+		</community-defaults>
+		<guest-defaults>
+			<action-key>VIEW</action-key>
+			<action-key>COPY</action-key>
+		</guest-defaults>
+		<guest-unsupported>
+			<action-key>UPDATE</action-key>
+		</guest-unsupported>
+	</model-resource>
+</resource-action-mapping>

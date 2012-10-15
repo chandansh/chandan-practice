@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+	<sql id="findBooks">
+		<![CDATA[
+			SELECT
+				*
+			FROM 
+				lms_lmsbook 
+			WHERE 
+				(lms_lmsbook.bookTitle like ?)
+		]]>
+	</sql>
+	
+	<sql id="findBookJoin">
+		<![CDATA[
+			SELECT
+				lms_lmsbook.bookId as joinId, lms_lmsbook.*,lms_memberaddress.*
+			FROM
+				lms_lmsbook INNER JOIN lms_memberaddress
+					ON lms_memberaddress.userId = lms_lmsbook.userId
+			WHERE
+			(lms_lmsbook.bookTitle like ?)
+            
+		]]>
+
+</sql>
+</custom-sql>
+
+
+

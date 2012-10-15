@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.test", "com.mpower.services.service", "book-portlet");

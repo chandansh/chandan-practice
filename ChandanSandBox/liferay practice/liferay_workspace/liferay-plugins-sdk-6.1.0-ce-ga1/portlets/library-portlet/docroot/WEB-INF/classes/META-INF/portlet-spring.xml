@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.library.slayer.service.LMSBookLocalService" class="com.library.slayer.service.impl.LMSBookLocalServiceImpl" />
+	<bean id="com.library.slayer.service.LMSBookLocalServiceUtil" class="com.library.slayer.service.LMSBookLocalServiceUtil">
+		<property name="service" ref="com.library.slayer.service.LMSBookLocalService" />
+	</bean>
+	<bean id="com.library.slayer.service.LMSBookService" class="com.library.slayer.service.impl.LMSBookServiceImpl" />
+	<bean id="com.library.slayer.service.LMSBookServiceUtil" class="com.library.slayer.service.LMSBookServiceUtil">
+		<property name="service" ref="com.library.slayer.service.LMSBookService" />
+	</bean>
+	<bean id="com.library.slayer.service.persistence.LMSBookPersistence" class="com.library.slayer.service.persistence.LMSBookPersistenceImpl" parent="basePersistence" />
+	<bean id="com.library.slayer.service.LMSBookJoinLocalService" class="com.library.slayer.service.impl.LMSBookJoinLocalServiceImpl" />
+	<bean id="com.library.slayer.service.LMSBookJoinLocalServiceUtil" class="com.library.slayer.service.LMSBookJoinLocalServiceUtil">
+		<property name="service" ref="com.library.slayer.service.LMSBookJoinLocalService" />
+	</bean>
+	<bean id="com.library.slayer.service.persistence.LMSBookJoinPersistence" class="com.library.slayer.service.persistence.LMSBookJoinPersistenceImpl" parent="basePersistence" />
+	<bean id="com.library.slayer.service.MemberAddressLocalService" class="com.library.slayer.service.impl.MemberAddressLocalServiceImpl" />
+	<bean id="com.library.slayer.service.MemberAddressLocalServiceUtil" class="com.library.slayer.service.MemberAddressLocalServiceUtil">
+		<property name="service" ref="com.library.slayer.service.MemberAddressLocalService" />
+	</bean>
+	<bean id="com.library.slayer.service.persistence.MemberAddressPersistence" class="com.library.slayer.service.persistence.MemberAddressPersistenceImpl" parent="basePersistence" />
+</beans>

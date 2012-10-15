@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.library.slayer.model.impl.LMSBookModelImpl">
+		<attributes>
+			<id name="bookId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="bookTitle" />
+			<basic name="author" />
+			<basic name="description" />
+			<basic name="fileName" />
+			<basic name="downloaded" />
+			<basic name="status" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="userId" />
+			<basic name="userName" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.library.slayer.model.impl.LMSBookJoinModelImpl">
+		<attributes>
+			<id name="joinId" />
+			<basic name="bookId" />
+			<basic name="userId" />
+			<basic name="bookTitle" />
+			<basic name="author" />
+			<basic name="firstName" />
+			<basic name="lastName" />
+			<basic name="city" />
+			<basic name="zip" />
+			<basic name="emailAddress" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.library.slayer.model.impl.MemberAddressModelImpl">
+		<attributes>
+			<id name="userId" />
+			<basic name="firstName" />
+			<basic name="lastName" />
+			<basic name="streetAddress1" />
+			<basic name="streetAddress2" />
+			<basic name="city" />
+			<basic name="zip" />
+			<basic name="emailAddress" />
+			<basic name="phoneNumber" />
+			<basic name="mobileNumber" />
+			<basic name="dateAdded">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.library.slayer.model.impl.LMSBookImpl" name="LMSBook">
+		<table name="LMS_LMSBook" />
+		<attributes />
+	</entity>
+	<entity class="com.library.slayer.model.impl.LMSBookJoinImpl" name="LMSBookJoin">
+		<table name="LMS_LMSBookJoin" />
+		<attributes />
+	</entity>
+	<entity class="com.library.slayer.model.impl.MemberAddressImpl" name="MemberAddress">
+		<table name="LMS_MemberAddress" />
+		<attributes />
+	</entity>
+</entity-mappings>

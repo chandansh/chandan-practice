@@ -12,6 +12,7 @@ import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.repository.model.FileEntry;
 import com.liferay.portal.kernel.upload.UploadPortletRequest;
+import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.WebKeys;
 import com.liferay.portal.service.ServiceContext;
 import com.liferay.portal.theme.ThemeDisplay;
@@ -32,8 +33,12 @@ public class FileUploadPortlet extends MVCPortlet {
 				.getAttribute(WebKeys.THEME_DISPLAY);
 		UploadPortletRequest uploadRequest = PortalUtil
 				.getUploadPortletRequest(actionRequest);
-
 		
+		String value = uploadRequest.getParameter("name");
+		System.out.println("value of name field: "+ value);
+		
+		String value1 = ParamUtil.getString(uploadRequest, "name");
+		System.out.println("value1 of name field: "+ value1);
 		
 		File submissionFile = uploadRequest.getFile("myfile");
 		InputStream infile = uploadRequest.getFileAsStream("myfile");

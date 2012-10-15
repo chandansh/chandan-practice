@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.mpoer.training.customer.model.Customer" />
+	<class name="com.mpoer.training.customer.model.impl.CustomerImpl" table="training_Customer">
+		<cache usage="read-write" />
+		<id name="id" column="id_" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="address" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="inductionDate" type="org.hibernate.type.TimestampType" />
+	</class>
+</hibernate-mapping>

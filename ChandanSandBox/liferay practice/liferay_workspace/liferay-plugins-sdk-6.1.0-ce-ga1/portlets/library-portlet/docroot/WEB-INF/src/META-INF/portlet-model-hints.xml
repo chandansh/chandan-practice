@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.library.slayer.model.LMSBook">
+		<field name="uuid" type="String" />
+		<field name="bookId" type="long" />
+		<field name="bookTitle" type="String" />
+		<field name="author" type="String" />
+		<field name="description" type="String" />
+		<field name="fileName" type="String" />
+		<field name="downloaded" type="int" />
+		<field name="status" type="int" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+	</model>
+	<model name="com.library.slayer.model.LMSBookJoin">
+		<field name="joinId" type="long" />
+		<field name="bookId" type="long" />
+		<field name="userId" type="long" />
+		<field name="bookTitle" type="String" />
+		<field name="author" type="String" />
+		<field name="firstName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="city" type="String" />
+		<field name="zip" type="String" />
+		<field name="emailAddress" type="String" />
+	</model>
+	<model name="com.library.slayer.model.MemberAddress">
+		<field name="userId" type="long" />
+		<field name="firstName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="streetAddress1" type="String" />
+		<field name="streetAddress2" type="String" />
+		<field name="city" type="String" />
+		<field name="zip" type="String" />
+		<field name="emailAddress" type="String" />
+		<field name="phoneNumber" type="String" />
+		<field name="mobileNumber" type="String" />
+		<field name="dateAdded" type="Date" />
+	</model>
+</model-hints>

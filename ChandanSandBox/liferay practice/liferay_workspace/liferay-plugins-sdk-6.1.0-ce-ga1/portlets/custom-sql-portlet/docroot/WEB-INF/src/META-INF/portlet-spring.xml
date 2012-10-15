@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.slayer.service.AuthorLocalService" class="com.slayer.service.impl.AuthorLocalServiceImpl" />
+	<bean id="com.slayer.service.AuthorLocalServiceUtil" class="com.slayer.service.AuthorLocalServiceUtil">
+		<property name="service" ref="com.slayer.service.AuthorLocalService" />
+	</bean>
+	<bean id="com.slayer.service.persistence.AuthorPersistence" class="com.slayer.service.persistence.AuthorPersistenceImpl" parent="basePersistence" />
+	<bean id="com.slayer.service.persistence.AuthorPostPersistence" class="com.slayer.service.persistence.AuthorPostPersistenceImpl" parent="basePersistence" />
+	<bean id="com.slayer.service.PostLocalService" class="com.slayer.service.impl.PostLocalServiceImpl" />
+	<bean id="com.slayer.service.PostLocalServiceUtil" class="com.slayer.service.PostLocalServiceUtil">
+		<property name="service" ref="com.slayer.service.PostLocalService" />
+	</bean>
+	<bean id="com.slayer.service.persistence.PostPersistence" class="com.slayer.service.persistence.PostPersistenceImpl" parent="basePersistence" />
+	<bean id="com.slayer.service.persistence.PostFinder" class="com.slayer.service.persistence.PostFinderImpl" parent="basePersistence" />
+</beans>

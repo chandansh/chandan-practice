@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.slayer.model.Author">
+		<field name="authorId" type="long" />
+		<field name="name" type="String" />
+		<field name="specialization" type="String" />
+	</model>
+	<model name="com.slayer.model.AuthorPost">
+		<field name="authorPostId" type="long" />
+		<field name="postId" type="long" />
+		<field name="title" type="String" />
+		<field name="content" type="String" />
+		<field name="authorId" type="long" />
+		<field name="name" type="String" />
+		<field name="specialization" type="String" />
+	</model>
+	<model name="com.slayer.model.Post">
+		<field name="postId" type="long" />
+		<field name="title" type="String" />
+		<field name="content" type="String" />
+		<field name="authorId" type="long" />
+	</model>
+</model-hints>

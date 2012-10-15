@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.test.slayer.service.AddressLocalService" class="com.test.slayer.service.impl.AddressLocalServiceImpl" />
+	<bean id="com.test.slayer.service.AddressLocalServiceUtil" class="com.test.slayer.service.AddressLocalServiceUtil">
+		<property name="service" ref="com.test.slayer.service.AddressLocalService" />
+	</bean>
+	<bean id="com.test.slayer.service.persistence.AddressPersistence" class="com.test.slayer.service.persistence.AddressPersistenceImpl" parent="basePersistence" />
+</beans>

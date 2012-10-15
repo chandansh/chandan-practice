@@ -25,17 +25,17 @@
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script src="http://connect.facebook.net/en_US/all.js"></script>
 <script type="text/javascript">
-// 	jQuery(document).ready(function() {
-// 		FB.init({
-// 			appId : '266730843346616',
-// 			cookie : true,
-// 			status : true,
-// 			xfbml : true
-// 		});
-// 	});
+ 	jQuery(document).ready(function() {
+ 		FB.init({
+ 			appId : '266730843346616',
+ 			cookie : true,
+			status : true,
+ 			xfbml : true
+ 		});
+ 	});
 
 	function onLogin() {
-		//FB.getLoginStatus()
+		FB.getLoginStatus();
 	}
 
 	//alert('JSON, stringfy: ' + (typeof JSON.stringify));
@@ -107,7 +107,7 @@ String signed_request=null;
 			try {
 
 				if (oauth_token != null) {
-					//String accToken = "AAADylx0rFrgBAMEaKTFbV7NQYa1HwF8lm18AX2EYwheh5NZAiJiQPvBqxyTH5iSnbbpDV4UsjgAKVZAGMmo0Ja0PTJMvqukNNeZCkwiZBNR8PMAav0sW";
+					//String accToken = "AAADylx0rFrgBAOA5hmpenR9siIBgNZBYRta8oxcgY7ECZBFEbHuvHSQB2M7xLwU2BTbIujeZBzywR51Mg44KcdcgiZCKu4mV3WqS2jECEZCwzizR10Tuw";
 					String accToken = oauth_token;
 					HTTPRequest req = new HTTPRequest(new URL(
 							"https://graph.facebook.com/me?access_token="

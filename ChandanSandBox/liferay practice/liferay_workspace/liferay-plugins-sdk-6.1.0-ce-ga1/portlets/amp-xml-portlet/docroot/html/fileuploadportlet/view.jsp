@@ -6,5 +6,6 @@ This is the <b>FileUploadPortlet</b> portlet in View mode.
 <portlet:actionURL var="actionURL"/>
 <aui:form name="uploadForm" action="<%= actionURL %>" method="post" enctype="multipart/form-data" >
 	<aui:input name="myfile" type="file"></aui:input>
+	<aui:input name="name" type="text"></aui:input>
 	<aui:button type="submit" value="Submit"/>
 </aui:form>

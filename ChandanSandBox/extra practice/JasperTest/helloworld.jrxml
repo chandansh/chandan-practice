@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="dashboard_quote" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" isFloatColumnFooter="true" whenResourceMissingType="Empty" uuid="31d974e5-c7f6-4ecd-9454-69e0c809e698">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="logo" class="java.lang.String"/>
+	<parameter name="orderId" class="java.lang.Long"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="sku" class="java.lang.String"/>
+	<field name="amount" class="java.lang.Double"/>
+	<field name="quantity" class="java.lang.Long"/>
+	<field name="unitPrice" class="java.lang.Double"/>
+	<title>
+		<band height="40" splitType="Stretch">
+			<image vAlign="Middle">
+				<reportElement x="14" y="6" width="100" height="28"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="ad029a06-4636-43fa-818a-4ec4f6b660b6" x="180" y="0" width="200" height="20"/>
+				<textElement/>
+				<text><![CDATA[Hello World!]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="4417151d-bb7c-44d9-8347-d8fd11b0c83c" x="270" y="0" width="128" height="20"/>
+				<textElement textAlignment="Justified">
+					<font size="8" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="7fcc6cd7-96b6-4aba-919a-9a7cb697af89" x="9" y="16" width="74" height="10" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Requisition Id]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="aaa88455-ebde-470e-9a9f-62b71b52baf7" x="90" y="16" width="73" height="10"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{orderId}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="aa4668e5-b144-48c4-88cd-05499412c837" x="9" y="30" width="78" height="10"/>
+				<textElement>
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Requisition Details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="73968cb5-d76e-4c12-a1b1-016bd6439f2d" x="99" y="16" width="140" height="10"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Product Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b55d29af-4663-4336-a299-0db73fc1430d" x="407" y="16" width="58" height="10"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quantity	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d61e9649-33cd-4717-ac2a-bacb046b9268" x="471" y="16" width="73" height="10"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="498237f4-8117-4a04-8b20-4dba59a58246" x="250" y="16" width="57" height="10"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SKU]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6fe00b81-3b05-4b1c-9ebc-68e794788b74" x="327" y="16" width="57" height="10"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24">
+		
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="5ef0e344-117f-4d1f-997e-3780803e15aa" x="99" y="0" width="140" height="10"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name} ]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="5ef0e344-117f-4d1f-997e-3780803e15aa" x="99" y="0" width="140" height="10"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{COLUMN_COUNT} ]]></textFieldExpression>
+			</textField>
+			
+			<textField>
+				<reportElement uuid="f90c877a-2e10-4452-ae87-0775f1f8950d" x="406" y="0" width="58" height="10"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00" isBlankWhenNull="false">
+				<reportElement uuid="09a9d6e2-0e15-4294-82eb-639d0fce1d2a" x="470" y="0" width="74" height="10"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{unitPrice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="43b215d3-1f9b-46f6-bd44-c7fc0e8402e8" x="249" y="0" width="58" height="10"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sku}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ebab8edd-0f39-41b0-8108-e2f628cb3192" x="326" y="0" width="58" height="10"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
