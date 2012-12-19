@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.test.service.MyStudentLocalService" class="com.test.service.impl.MyStudentLocalServiceImpl" />
+	<bean id="com.test.service.MyStudentLocalServiceUtil" class="com.test.service.MyStudentLocalServiceUtil">
+		<property name="service" ref="com.test.service.MyStudentLocalService" />
+	</bean>
+	<bean id="com.test.service.MyStudentService" class="com.test.service.impl.MyStudentServiceImpl" />
+	<bean id="com.test.service.MyStudentServiceUtil" class="com.test.service.MyStudentServiceUtil">
+		<property name="service" ref="com.test.service.MyStudentService" />
+	</bean>
+	<bean id="com.test.service.persistence.MyStudentPersistence" class="com.test.service.persistence.MyStudentPersistenceImpl" parent="basePersistence" />
+	<bean id="com.test.service.StudentLocalService" class="com.test.service.impl.StudentLocalServiceImpl" />
+	<bean id="com.test.service.StudentLocalServiceUtil" class="com.test.service.StudentLocalServiceUtil">
+		<property name="service" ref="com.test.service.StudentLocalService" />
+	</bean>
+	<bean id="com.test.service.StudentService" class="com.test.service.impl.StudentServiceImpl" />
+	<bean id="com.test.service.StudentServiceUtil" class="com.test.service.StudentServiceUtil">
+		<property name="service" ref="com.test.service.StudentService" />
+	</bean>
+	<bean id="com.test.service.persistence.StudentPersistence" class="com.test.service.persistence.StudentPersistenceImpl" parent="basePersistence" />
+</beans>

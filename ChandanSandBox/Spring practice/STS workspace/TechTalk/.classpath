@@ -2,29 +2,29 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry kind="lib" path="/SIAFirst/lib/aopalliance-1.0.jar"/>
-	<classpathentry kind="lib" path="/SIAFirst/lib/commons-lang-2.5.jar"/>
-	<classpathentry kind="lib" path="/SIAFirst/lib/commons-logging-1.1.1.jar"/>
-	<classpathentry kind="lib" path="/SIAFirst/lib/log4j-1.2.14.jar"/>
-	<classpathentry kind="lib" path="/SIAFirst/lib/org.springframework.aop-3.1.0.RC2.jar"/>
-	<classpathentry kind="lib" path="/SIAFirst/lib/org.springframework.asm-3.1.0.RC2.jar"/>
-	<classpathentry kind="lib" path="/SIAFirst/lib/org.springframework.aspects-3.1.0.RC2.jar"/>
-	<classpathentry kind="lib" path="/SIAFirst/lib/org.springframework.beans-3.1.0.RC2.jar"/>
-	<classpathentry kind="lib" path="/SIAFirst/lib/org.springframework.context-3.1.0.RC2.jar"/>
-	<classpathentry kind="lib" path="/SIAFirst/lib/org.springframework.context.support-3.1.0.RC2.jar"/>
-	<classpathentry kind="lib" path="/SIAFirst/lib/org.springframework.core-3.1.0.RC2.jar"/>
-	<classpathentry kind="lib" path="/SIAFirst/lib/org.springframework.expression-3.1.0.RC2.jar"/>
-	<classpathentry kind="lib" path="/SIAFirst/lib/org.springframework.instrument-3.1.0.RC2.jar"/>
-	<classpathentry kind="lib" path="/SIAFirst/lib/org.springframework.instrument.tomcat-3.1.0.RC2.jar"/>
-	<classpathentry kind="lib" path="/SIAFirst/lib/org.springframework.jdbc-3.1.0.RC2.jar"/>
-	<classpathentry kind="lib" path="/SIAFirst/lib/org.springframework.jms-3.1.0.RC2.jar"/>
-	<classpathentry kind="lib" path="/SIAFirst/lib/org.springframework.orm-3.1.0.RC2.jar"/>
-	<classpathentry kind="lib" path="/SIAFirst/lib/org.springframework.oxm-3.1.0.RC2.jar"/>
-	<classpathentry kind="lib" path="/SIAFirst/lib/org.springframework.test-3.1.0.RC2.jar"/>
-	<classpathentry kind="lib" path="/SIAFirst/lib/org.springframework.transaction-3.1.0.RC2.jar"/>
-	<classpathentry kind="lib" path="/SIAFirst/lib/org.springframework.web-3.1.0.RC2.jar"/>
-	<classpathentry kind="lib" path="/SIAFirst/lib/org.springframework.web.portlet-3.1.0.RC2.jar"/>
-	<classpathentry kind="lib" path="/SIAFirst/lib/org.springframework.web.servlet-3.1.0.RC2.jar"/>
-	<classpathentry kind="lib" path="/SIAFirst/lib/org.springframework.web.struts-3.1.0.RC2.jar"/>
+	<classpathentry kind="lib" path="lib/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-lang-2.5.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.aop-3.1.0.RC2.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.asm-3.1.0.RC2.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.aspects-3.1.0.RC2.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.beans-3.1.0.RC2.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.context-3.1.0.RC2.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.context.support-3.1.0.RC2.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.core-3.1.0.RC2.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.expression-3.1.0.RC2.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.instrument-3.1.0.RC2.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.instrument.tomcat-3.1.0.RC2.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.jdbc-3.1.0.RC2.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.jms-3.1.0.RC2.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.orm-3.1.0.RC2.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.oxm-3.1.0.RC2.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.test-3.1.0.RC2.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.transaction-3.1.0.RC2.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.web-3.1.0.RC2.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.web.portlet-3.1.0.RC2.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.web.servlet-3.1.0.RC2.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.web.struts-3.1.0.RC2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

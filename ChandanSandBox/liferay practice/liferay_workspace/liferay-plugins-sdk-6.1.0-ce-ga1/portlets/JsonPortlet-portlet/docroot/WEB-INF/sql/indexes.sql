@@ -1,0 +1,1 @@
+create index IX_18F9D798 on jsontest_Student (uuid_);

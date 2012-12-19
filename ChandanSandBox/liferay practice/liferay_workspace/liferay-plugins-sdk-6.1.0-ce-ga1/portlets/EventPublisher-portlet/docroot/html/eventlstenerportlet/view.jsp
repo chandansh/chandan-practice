@@ -15,7 +15,12 @@
 --%>
 
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
-
+<%@ taglib uri="http://liferay.com/tld/theme" prefix="theme" %>
 <portlet:defineObjects />
-
+<theme:defineObjects/>
 This is the <b>EventLstenerPortlet</b> portlet in View mode.
+
+<portlet:renderURL var="url"></portlet:renderURL>
+
+<a href="${url}">url</a>
+<%=themeDisplay.getPlid()%>

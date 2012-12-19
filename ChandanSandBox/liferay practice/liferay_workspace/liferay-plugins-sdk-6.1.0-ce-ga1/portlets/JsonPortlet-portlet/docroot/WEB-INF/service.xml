@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_0_0.dtd">
+<service-builder package-path="com.test">
+	<author>Chandan</author>
+	<namespace>jsontest</namespace>
+
+	<entity name="Student" uuid="true" local-service="true" remote-service="true">
+
+		<column name="studentId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="name" type="String" />
+		<column name="standard" type="String" />
+		<column name="address" type="String" />
+		
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="studentId" />
+		</order>
+
+	</entity>
+	<entity name="MyStudent" local-service="true" remote-service="true">
+	    <column name="id" type="long" primary="true"/>
+	    <column name="name" type="String"></column>
+	</entity>
+</service-builder>

@@ -1,0 +1,1 @@
+<h1>My action page</h1>
