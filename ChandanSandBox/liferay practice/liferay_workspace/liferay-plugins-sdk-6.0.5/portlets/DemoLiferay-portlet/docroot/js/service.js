@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.coleg_model", "com.coleg.service");

@@ -1,0 +1,11 @@
+liferay server 
+ \liferay-portal-6.0.5\tomcat-6.0.26\webapps\ROOT\WEB-INF\classes
+
+make a file named portal-ext.properties on above location and file content below
+
+content:
+
+jdbc.default.driverClassName=com.mysql.jdbc.Driver
+jdbc.default.url=jdbc:mysql://localhost/testportal?useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false
+jdbc.default.username=root
+jdbc.default.password=root

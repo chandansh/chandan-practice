@@ -1,0 +1,18 @@
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" version="1.0">  
+  <service-assembly>  
+    <identification>  
+      <name>ESBinAction-helloworld-sa</name>  
+      <description>Example showing the file binding component</description>  
+    </identification>                    
+    <service-unit>  
+      <identification>  
+        <name>File-SU</name>  
+        <description>A file poller and sender</description>  
+      </identification>  
+      <target>  
+        <artifacts-zip>File-helloworld-SU.zip</artifacts-zip>  
+        <component-name>servicemix-file</component-name>  
+      </target>  
+    </service-unit>        
+  </service-assembly>  
+</jbi>

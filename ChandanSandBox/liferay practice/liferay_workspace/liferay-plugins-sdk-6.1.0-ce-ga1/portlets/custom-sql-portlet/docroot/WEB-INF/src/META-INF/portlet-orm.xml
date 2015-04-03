@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.slayer.model.impl.AuthorModelImpl">
+		<attributes>
+			<id name="authorId" />
+			<basic name="name" />
+			<basic name="specialization" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.slayer.model.impl.AuthorPostModelImpl">
+		<attributes>
+			<id name="authorPostId" />
+			<basic name="postId" />
+			<basic name="title" />
+			<basic name="content" />
+			<basic name="authorId" />
+			<basic name="name" />
+			<basic name="specialization" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.slayer.model.impl.PostModelImpl">
+		<attributes>
+			<id name="postId" />
+			<basic name="title" />
+			<basic name="content" />
+			<basic name="authorId" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.slayer.model.impl.AuthorImpl" name="Author">
+		<table name="me_Author" />
+		<attributes />
+	</entity>
+	<entity class="com.slayer.model.impl.AuthorPostImpl" name="AuthorPost">
+		<table name="me_AuthorPost" />
+		<attributes />
+	</entity>
+	<entity class="com.slayer.model.impl.PostImpl" name="Post">
+		<table name="me_Post" />
+		<attributes />
+	</entity>
+</entity-mappings>

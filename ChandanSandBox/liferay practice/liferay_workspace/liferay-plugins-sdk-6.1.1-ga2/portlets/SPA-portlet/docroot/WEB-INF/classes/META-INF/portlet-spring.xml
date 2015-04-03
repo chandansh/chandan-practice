@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.myslayer.service.CarLocalService" class="com.myslayer.service.impl.CarLocalServiceImpl" />
+	<bean id="com.myslayer.service.CarLocalServiceUtil" class="com.myslayer.service.CarLocalServiceUtil">
+		<property name="service" ref="com.myslayer.service.CarLocalService" />
+	</bean>
+	<bean id="com.myslayer.service.CarService" class="com.myslayer.service.impl.CarServiceImpl" />
+	<bean id="com.myslayer.service.CarServiceUtil" class="com.myslayer.service.CarServiceUtil">
+		<property name="service" ref="com.myslayer.service.CarService" />
+	</bean>
+	<bean id="com.myslayer.service.persistence.CarPersistence" class="com.myslayer.service.persistence.CarPersistenceImpl" parent="basePersistence" />
+</beans>

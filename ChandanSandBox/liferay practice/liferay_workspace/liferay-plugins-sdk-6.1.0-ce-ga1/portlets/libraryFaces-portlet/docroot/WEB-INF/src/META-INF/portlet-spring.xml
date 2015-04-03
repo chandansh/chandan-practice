@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.library.slayer.service.LIBBookLocalService" class="com.library.slayer.service.impl.LIBBookLocalServiceImpl" />
+	<bean id="com.library.slayer.service.LIBBookLocalServiceUtil" class="com.library.slayer.service.LIBBookLocalServiceUtil">
+		<property name="service" ref="com.library.slayer.service.LIBBookLocalService" />
+	</bean>
+	<bean id="com.library.slayer.service.persistence.LIBBookPersistence" class="com.library.slayer.service.persistence.LIBBookPersistenceImpl" parent="basePersistence" />
+</beans>

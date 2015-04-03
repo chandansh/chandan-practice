@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.library.slayer" auto-namespace-tables="false">
+	<author>veena</author>
+	<namespace>LIB</namespace>
+	<entity name="LIBBook" local-service="true" remote-service="false">
+		<!-- PK fields -->
+		<column name="bookId" type="long" primary="true" />
+		<!-- Audit fields -->
+		<column name="bookTitle" type="String" />
+		<column name="author" type="String" />
+	</entity>
+</service-builder>

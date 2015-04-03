@@ -1,0 +1,9 @@
+*.class
+.metadata
+Servers*
+.git
+TaskQueue/war/WEB-INF/classes
+TestFaceBook/war/WEB-INF/classes
+TestXML/war/WEB-INF/classes
+xGames1/war/WEB-INF/classes
+TestFaceBook/.gwt

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.test.model.MyStudent">
+		<field name="id" type="long" />
+		<field name="name" type="String" />
+	</model>
+	<model name="com.test.model.Student">
+		<field name="uuid" type="String" />
+		<field name="studentId" type="long" />
+		<field name="name" type="String" />
+		<field name="standard" type="String" />
+		<field name="address" type="String" />
+	</model>
+</model-hints>

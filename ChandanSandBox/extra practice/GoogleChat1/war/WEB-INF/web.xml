@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<servlet>
+		<servlet-name>GoogleChat1</servlet-name>
+		<servlet-class>com.test.chat.GoogleChat1Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GoogleChat1</servlet-name>
+		<url-pattern>/googlechat1</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>msg-servlet</servlet-name>
+		<servlet-class>com.test.chat.MsgHandlar</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>msg-servlet</servlet-name>
+		<url-pattern>/msg</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>msg-servlet1</servlet-name>
+		<servlet-class>com.test.chat.MsgHandlar1</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>msg-servlet1</servlet-name>
+		<url-pattern>/msg1</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>checkConnectedServlet</servlet-name>
+		<servlet-class>com.test.chat.CheckConnectedServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>checkConnectedServlet</servlet-name>
+		<url-pattern>/_ah/channel/connected/</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>checkDisConnectedServlet</servlet-name>
+		<servlet-class>com.test.chat.CheckDisconnectedServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>checkDisConnectedServlet</servlet-name>
+		<url-pattern>/_ah/channel/disconnected/</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>test</servlet-name>
+		<servlet-class>com.test.chat.TestServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>test</servlet-name>
+		<url-pattern>/testservlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- <servlet> -->
+	<!-- <servlet-name>devServlet</servlet-name> -->
+	<!-- <servlet-class>com.test.chat.ChannelDevServlet</servlet-class> -->
+	<!-- </servlet> -->
+	<!-- <servlet-mapping> -->
+	<!-- <servlet-name>devServlet</servlet-name> -->
+	<!-- <url-pattern>/_ah/channel/dev</url-pattern> -->
+	<!-- </servlet-mapping> -->
+
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>

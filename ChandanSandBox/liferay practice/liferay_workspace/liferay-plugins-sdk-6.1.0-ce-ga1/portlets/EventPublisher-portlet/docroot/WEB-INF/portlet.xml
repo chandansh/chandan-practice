@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	version="2.0">
+
+	<portlet>
+		<portlet-name>eventpublisherportlet</portlet-name>
+		<display-name>EventPublisherPortlet</display-name>
+		<portlet-class>com.test.EventPublisherPortlet</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/html/eventpublisherportlet/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>EventPublisherPortlet</title>
+			<short-title>EventPublisherPortlet</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+
+		<supported-processing-event xmlns:x='http://mytest.com'>
+			<qname>x:myinfo</qname>
+		</supported-processing-event>
+	</portlet>
+
+	<portlet>
+		<portlet-name>eventlstenerportlet</portlet-name>
+		<display-name>EventLstenerPortlet</display-name>
+		<portlet-class>com.test.EventLstenerPortlet</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/html/eventlstenerportlet/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>EventLstenerPortlet</title>
+			<short-title>EventLstenerPortlet</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-processing-event xmlns:x='http://mytest.com'>
+			<qname>x:myinfo</qname>
+		</supported-processing-event>
+	</portlet>
+	
+	
+	<portlet>
+		<portlet-name>tabbedportlet</portlet-name>
+		<display-name>TabbedPortlet</display-name>
+		<portlet-class>com.test.TabbedPortlet</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/html/tabbedportlet/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>TabbedPortlet</title>
+			<short-title>TabbedPortlet</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>journalarticleportlet</portlet-name>
+		<display-name>JournalArticlePortlet</display-name>
+		<portlet-class>com.test.JournalArticlePortlet</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/html/journalarticleportlet/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>JournalArticlePortlet</title>
+			<short-title>JournalArticlePortlet</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<event-definition xmlns:x='http://mytest.com'>
+		<qname>x:myinfo</qname>
+		<value-type>java.lang.String</value-type>
+	</event-definition>
+
+
+
+
+</portlet-app>

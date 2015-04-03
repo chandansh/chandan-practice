@@ -1,0 +1,1 @@
+create index IX_887D41D9 on video_VideoInfo (mappedFileName);

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.test.slayer.model.Address">
+		<field name="addId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="address" type="String" />
+		<field name="city" type="String" />
+		<field name="state" type="String" />
+		<field name="pin" type="String" />
+	</model>
+</model-hints>

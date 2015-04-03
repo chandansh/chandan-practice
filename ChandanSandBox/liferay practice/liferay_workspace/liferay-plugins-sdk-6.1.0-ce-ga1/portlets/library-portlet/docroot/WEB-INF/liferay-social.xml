@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE liferay-social PUBLIC "-//Liferay//DTD Social 6.1.0//EN" "http://www.liferay.com/dtd/liferay-social_6_1_0.dtd">
+
+<liferay-social>
+	
+	<activity>
+		<model-name>com.library.slayer.model.LMSBook</model-name>
+		<activity-type>2</activity-type>
+		<language-key>ADD_ENTRY</language-key>
+		<log-activity>true</log-activity>
+		<contribution-limit enabled="false" />
+		<participation-value>5</participation-value>
+		<participation-limit period="lifetime">1</participation-limit>
+		<counter>
+			<name>user.library</name>
+			<owner-type>actor</owner-type>
+		</counter>
+	</activity>	
+	
+</liferay-social>

@@ -1,0 +1,12 @@
+0    [main] WARN  mypack.MultipleAppender  - Sample warn message
+0    [main] ERROR mypack.MultipleAppender  - Sample error message
+0    [main] FATAL mypack.MultipleAppender  - Sample fatal message
+16   [main] WARN  mypack.MultipleAppenderLog4j  - Sample warn message
+16   [main] ERROR mypack.MultipleAppenderLog4j  - Sample error message
+16   [main] FATAL mypack.MultipleAppenderLog4j  - Sample fatal message
+16   [main] WARN  mypack.MultipleAppenderLog4j  - Sample warn message
+16   [main] ERROR mypack.MultipleAppenderLog4j  - Sample error message
+16   [main] FATAL mypack.MultipleAppenderLog4j  - Sample fatal message
+0    [main] WARN  mypack.MultipleAppenderLog4jXml  - Sample warn message
+0    [main] ERROR mypack.MultipleAppenderLog4jXml  - Sample error message
+0    [main] FATAL mypack.MultipleAppenderLog4jXml  - Sample fatal message

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recipe xmlns="http://cloud.xerox.com/services/qe" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://cloud.xerox.com/services/qe recipe.xsd ">
+	
+  <header>
+    <category>MDM</category>
+	<parentCategory>MDM</parentCategory>
+    <identifier>MDM</identifier>
+    <name>Mobile Device Management</name>
+    <description>Our Mobile Device Management offering is a full-service solution, delivered in a Cloud-based utility model that puts you in control and allows you to track, monitor, manage and secure corporate and employee-owned mobile devices cost effectively. We’ll provide you an MDM solution so that you can configure devices over-the-air for enterprise access, give you a way to monitor compliance with your specific security policies and a secure method to deliver approved corporate mobile apps. If a device is lost, you can remotely lock or wipe specific confidential data from that phone or tablet over-the-air. Our MDM solution is the easiest, most effective way to gain visibility and control of both corporate and employee-owned mobile devices, without investing in hardware or paying software licenses. Because it’s delivered in a Cloudbased utility model, you only pay for activated devices. In short, it’s the right solution for today’s mobile business world.</description>
+    <supplier></supplier>
+  </header>
+  <ingredientList dataCenter="Dallas">
+    <pTimesQ>
+      <coreStructure>
+        <sku>02-001-0001</sku>
+        <quantity>500</quantity>
+        <minAllowedQuantity>500</minAllowedQuantity>
+        <maxAllowedQuantity>9999999</maxAllowedQuantity>
+        <price>5.5</price>
+        <createdDate>2012-01-01</createdDate>
+      </coreStructure>
+    </pTimesQ>
+    <pTimesQ>
+      <coreStructure>
+        <sku>02-001-0002</sku>
+        <quantity>0</quantity>
+        <minAllowedQuantity>0</minAllowedQuantity>
+        <maxAllowedQuantity>9999999</maxAllowedQuantity>
+        <price>2</price>
+        <createdDate>2012-01-01</createdDate>
+      </coreStructure>
+    </pTimesQ>
+    <pTimesQ>
+      <coreStructure>
+        <sku>02-001-0003</sku>
+        <quantity>0</quantity>
+        <minAllowedQuantity>0</minAllowedQuantity>
+        <maxAllowedQuantity>9999999</maxAllowedQuantity>
+        <price>1</price>
+        <createdDate>2012-01-01</createdDate>
+      </coreStructure>
+    </pTimesQ>
+  </ingredientList>
+</recipe>

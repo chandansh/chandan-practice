@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Preferences" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Preferences" />
+
+    <Button
+        android:id="@+id/button03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="openMyDialog"
+        android:text="Show Simple Dialog" >
+    </Button>
+
+    <Button
+        android:id="@+id/listDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="openListDialog"
+        android:text="Show List Dialog" >
+    </Button>
+
+    <Button
+        android:id="@+id/progressDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="openProgressDialog"
+        android:text="Show Progress Dialog" >
+    </Button>
+
+    <Button
+        android:id="@+id/customDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="openCustomDialog"
+        android:text="Show Custom Dialog" >
+    </Button>
+
+    <Button
+        android:id="@+id/button04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showRelativeActivity"
+        android:text="Show Relative" >
+    </Button>
+
+    <Button
+        android:id="@+id/button05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showListActivity"
+        android:text="Show List" >
+    </Button>
+
+    <Button
+        android:id="@+id/button06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showGridActivity"
+        android:text="Show Grid View" >
+    </Button>
+
+</LinearLayout>

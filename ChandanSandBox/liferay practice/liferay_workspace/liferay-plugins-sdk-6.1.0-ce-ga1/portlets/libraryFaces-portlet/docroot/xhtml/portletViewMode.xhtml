@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<f:view xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ice="http://www.icesoft.com/icefaces/component"
+	xmlns:icecore="http://www.icefaces.org/icefaces/core"
+	xmlns:liferay-ui="http://portletfaces.org/liferayfaces/liferay-ui"
+	xmlns:liferay-util="http://portletfaces.org/liferayfaces/liferay-util"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<h:body>
+	<h:form id="f">
+		<h3 class="header-title">#{i18n['library-management']}</h3>
+		<!-- <h4 class="">#{i18n['bookTitle']}</h4> -->
+		<h:outputText value="#{i18n['bookTitle']}" />
+		<h:inputText inlineMessage="true" label="#{i18n['bookTitle']}"
+			value="#{LibraryBean.bookTitle}" required="true" />
+		<!-- <h4 class="">#{i18n['author']}</h4> -->
+		<h:outputText value="#{i18n['author']}" />
+		<h:inputText inlineMessage="true" label="#{i18n['author']}"
+			value="#{LibraryBean.author}" required="true" />
+		<h:commandButton action="#{LibraryBean.add}" value="#{i18n['submit']}"/>
+		<h:link outcome="/xhtml/list.jsp" value="Show All Books"/></h:form></h:body>
+</f:view>
+
+
+
+
+
+
+
+
+
+		

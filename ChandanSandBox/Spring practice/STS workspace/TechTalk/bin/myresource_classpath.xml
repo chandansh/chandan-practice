@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	<bean id="test" class="com.test.TestBean">
+	    <property name="id" value="M101"/>
+	    <property name="name" value="mPower Emp"></property>
+	</bean>
+	
+	<bean id="hello" class="com.test.HelloWorldImpl" >
+	   <constructor-arg>
+	      <value>Hello World from Constructure</value>
+	   </constructor-arg>
+	   <constructor-arg ref="test"/>
+	   <constructor-arg>
+	       <list>
+	           <value>name1</value>
+	           <value>name2</value>
+	           <value>name3</value>
+	       </list>
+	   </constructor-arg>
+	  <!-- <property name="message" value="Hello World from Setter"></property> -->
+	</bean>
+</beans>

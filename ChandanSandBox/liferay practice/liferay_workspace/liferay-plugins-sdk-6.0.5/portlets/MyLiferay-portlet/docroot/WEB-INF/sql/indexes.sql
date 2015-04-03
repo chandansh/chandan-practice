@@ -1,0 +1,1 @@
+create index IX_BF3B1C8A on myportlet_coleg_Foo (field2);

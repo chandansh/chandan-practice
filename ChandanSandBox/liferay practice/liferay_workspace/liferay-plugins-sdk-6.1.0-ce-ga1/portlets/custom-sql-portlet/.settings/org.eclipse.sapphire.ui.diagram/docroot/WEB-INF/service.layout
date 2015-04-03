@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram-geometry>
+    <grid>
+        <visible>true</visible>
+    </grid>
+    <guides>
+        <visible>false</visible>
+    </guides>
+    <node>
+        <id>Entity#Author</id>
+        <bounds x="150" y="50"/>
+    </node>
+    <node>
+        <id>Entity#Post</id>
+        <bounds x="250" y="50"/>
+    </node>
+    <node>
+        <id>Entity#AuthorPost</id>
+        <bounds x="450" y="50"/>
+    </node>
+</diagram-geometry>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.mpower.services.model.Book">
+		<field name="bookId" type="long" />
+		<field name="bookNumber" type="long" />
+		<field name="writerName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="firstName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="quantity" type="int" />
+		<field name="totalCost" type="double" />
+		<field name="status" type="String" />
+	</model>
+	<model name="com.mpower.services.model.ExtWorkFlow">
+		<field name="extWorkflowId" type="long" />
+		<field name="resourcePrimKey" type="long" />
+		<field name="classNameId" type="long" />
+		<field name="classPK" type="long" />
+		<field name="parentResourcePrimKey" type="long" />
+		<field name="version" type="int" />
+		<field name="title" type="String" />
+		<field name="content" type="String" />
+		<field name="description" type="String" />
+		<field name="priority" type="int" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+	</model>
+</model-hints>

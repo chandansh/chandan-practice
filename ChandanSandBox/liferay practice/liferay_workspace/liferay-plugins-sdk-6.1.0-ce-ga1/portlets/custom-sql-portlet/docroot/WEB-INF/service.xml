@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_0_0.dtd">
+<service-builder package-path="com.slayer">
+	<author>Chandan</author>
+	<namespace>me</namespace>
+
+	<entity name="Author" local-service="true" remote-service="false">
+		<column name="authorId" type="long" primary="true" />
+		<column name="name" type="String" />
+		<column name="specialization" type="String" />
+		<column name="posts" type="Collection" entity="Post"
+			mapping-key="authorId" />
+	</entity>
+	<entity name="Post" local-service="true" remote-service="false">
+		<column name="postId" type="long" primary="true" />
+		<column name="title" type="String" />
+		<column name="content" type="String" />
+		<column name="authorId" type="long" />
+	</entity>
+
+	<entity name="AuthorPost"  local-service="false" table="" remote-service="false">
+		<column name="authorPostId" type="long" primary="true" />
+		<column name="postId" type="long" />
+		<column name="title" type="String" />
+		<column name="content" type="String" />
+		<column name="authorId" type="long" />
+		<column name="name" type="String" />
+		<column name="specialization" type="String" />
+	</entity>
+
+</service-builder>

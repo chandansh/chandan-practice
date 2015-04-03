@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<project name="Hello World" default="execute">
+ 
+<target name="compile" depends="init">
+<javac srcdir="src" destdir="build/classes" />
+<echo> Compilation Complete! </echo>
+</target>
+ 
+<target name="compress" depends="compile">
+<jar destfile="dist/HelloWorld.jar" basedir="build/classes" includes="*.class" />
+<echo> Building .jar file Complete! </echo>
+</target>
+
+<target name="execute" depends="compress">
+<java classname="HelloWorld" classpath="build/classes" />
+<echo> Execution file Complete! </echo>
+</target>
+
+<target name="init">
+<mkdir dir="build/classes" />
+<mkdir dir="dist" />
+</target>
+ 
+<target name="clean">
+<delete dir="build" />
+<delete dir="dist" />
+</target>
+
+</project>

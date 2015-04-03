@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <routes>
+         <route>
+            <pattern>/add</pattern>
+            <implicit-parameter name="p_p_lifecycle">0</implicit-parameter>
+            <implicit-parameter name="jspPage">/html/library/update.jsp</implicit-parameter>
+        </route>
+        <route>
+            <pattern>/{list}/view</pattern>
+            <implicit-parameter name="p_p_lifecycle">0</implicit-parameter>
+            <implicit-parameter name="jspPage">/html/library/list.jsp</implicit-parameter>
+        </route>
+        <route>
+            <pattern>/{book}</pattern>
+            <implicit-parameter name="p_p_lifecycle">0</implicit-parameter>
+            <implicit-parameter name="jspPage">/html/library/list.jsp</implicit-parameter>
+            
+        </route>
+</routes>

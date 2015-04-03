@@ -1,0 +1,17 @@
+<beans xmlns="http://xbean.org/schemas/spring/1.0"
+    xmlns:file="http://servicemix.apache.org/file/1.0"
+    xmlns:esb="http://esbinaction.com/helloworld">
+
+  <file:poller service="esb:filePoller" 
+      endpoint="simplePoller"
+      targetService="esb:fileSender"
+      targetEndpoint="simpleSender"
+      file="helloworld/in"
+      delay="5000"
+      period="2000" />
+
+  <file:sender service="esb:fileSender" 
+      endpoint="simpleSender"
+      directory="helloworld/out" />
+
+</beans>

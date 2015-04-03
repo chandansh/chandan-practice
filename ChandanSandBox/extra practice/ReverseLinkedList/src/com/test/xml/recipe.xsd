@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://cloud.xerox.com/services/qe" 
+	targetNamespace="http://cloud.xerox.com/services/qe"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+	<!-- Describes the header information for the Recipe -->
+	<xs:complexType name="headerType">
+    	<xs:sequence>
+      		<xs:element type="xs:string" name="category" minOccurs="1" maxOccurs="1"/>
+      		<xs:element type="xs:string" name="parentCategory" minOccurs="1" maxOccurs="1"/>
+      		<xs:element type="xs:string" name="identifier" minOccurs="1" maxOccurs="1"/>
+      		<xs:element type="xs:string" name="name" minOccurs="1" maxOccurs="1"/>
+      		<xs:element type="xs:string" name="description" minOccurs="1" maxOccurs="1"/>
+      		<xs:element type="xs:string" name="supplier" minOccurs="1" maxOccurs="1"/>
+      	</xs:sequence>
+  	</xs:complexType>
+  	
+  	<!--  Describes Core Structure type -->
+  	<xs:complexType name="coreStructureType">
+    	<xs:sequence>
+    		<xs:element type="xs:string" name="sku" minOccurs="1" maxOccurs="1"/>
+      		<xs:element type="xs:int" name="quantity"/>
+      		<xs:element type="xs:int" name="minAllowedQuantity" minOccurs="0" maxOccurs="1"/>
+      		<xs:element type="xs:int" name="maxAllowedQuantity" minOccurs="0" maxOccurs="1"/>
+      		<xs:element type="xs:double" name="price"/>
+      		<xs:element type="xs:date" name="createdDate"/>
+    	</xs:sequence>
+  	</xs:complexType>
+	
+	<!--  Describes ingredient-PtimesListQ Structure type -->				
+	<xs:complexType name="pTimesListQType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="label" minOccurs="1"/>
+			<xs:element type="coreStructureType" name="coreStructure" minOccurs="1" maxOccurs="unbounded"/>	
+			<xs:element type="ingredientListType" name="ingredientList" minOccurs="0" maxOccurs="unbounded"/>					
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!--  Describes ingredient-PtimesListQ Structure type -->				
+	<xs:complexType name="pTimesQType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="label" minOccurs="0"/>
+			<xs:element type="coreStructureType" name="coreStructure" minOccurs="1" maxOccurs="1"/>						
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!--  Describes ingredient-OptionList Structure type -->
+	<xs:complexType name="optionListType">
+		<xs:sequence>
+			<xs:element type="coreStructureType" name="coreStructure" minOccurs="1"/>
+			<xs:element type="xs:int" name="optionValue" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>	
+	
+	<!--  Describes ingredient-pTimesSumQItem Structure type -->
+	<xs:complexType name="pTimesSumQItemType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="label" minOccurs="0"/>
+			<xs:element type="xs:int" name="quantity"/>
+      		<xs:element type="xs:int" name="minAllowedQuantity" minOccurs="0" maxOccurs="1"/>
+      		<xs:element type="xs:int" name="maxAllowedQuantity" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>	
+	
+	<!--  Describes ingredient-pTimesSumQ Structure type -->
+	<xs:complexType name="pTimesSumQType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="label" minOccurs="0"/>
+			<xs:element type="coreStructureType" name="coreStructure" minOccurs="1"/>
+			<xs:element type="pTimesSumQItemType" name="pTimesSumQItem" minOccurs="1"  maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!--  Describes ingredient-checkbox Structure type -->
+	<xs:complexType name="checkBoxType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="label" minOccurs="0"/>
+			<xs:element type="optionBoxType" name="optionBox" minOccurs="0"  maxOccurs="unbounded"/>
+			<xs:element type="coreStructureType" name="coreStructure" minOccurs="0"  maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>	
+	
+	<!--  Describes ingredient-optionBox Structure type -->
+	<xs:complexType name="optionBoxType">
+		<xs:sequence>
+			<xs:element type="ingredientListType" name="ingredientList" minOccurs="1"  maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!--  Describes ingredient-tableTimesSumQ Structure type -->
+	<xs:complexType name="tableTimesSumQType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="label" minOccurs="0"/>
+			<xs:element type="skuLookupQuantityRangeType" name="skuLookupQuantityRange" minOccurs="1"  maxOccurs="unbounded"/>
+			<xs:element type="xs:int" name="quantity" minOccurs="1" maxOccurs="1"/>
+      		<xs:element type="xs:int" name="minAllowedQuantity" minOccurs="0" maxOccurs="1"/>
+      		<xs:element type="xs:int" name="maxAllowedQuantity" minOccurs="0" maxOccurs="1"/>
+      		<xs:element type="xs:double" name="price" minOccurs="1" maxOccurs="1"/>
+      		<xs:element type="xs:date" name="createdDate" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>		
+	
+	<!--  Describes ingredient-skuLookupQuantityRange Structure type -->
+	<xs:complexType name="skuLookupQuantityRangeType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="sku" minOccurs="1"/>
+			<xs:element type="xs:int" name="minQ" minOccurs="1" maxOccurs="1"/>
+			<xs:element type="xs:int" name="maxQ" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>	
+	
+	
+	<!--  Describes Base Recipe Type -->
+	<xs:complexType name="recipeType">
+    	<xs:sequence>
+      		<xs:element type="headerType" name="header"/>
+      		<xs:element type="ingredientListType" name="ingredientList" minOccurs="1" maxOccurs="unbounded"/>
+    	</xs:sequence>
+  	</xs:complexType>
+  	
+  	<!--  Describes Ingredient Type -->
+  	<xs:complexType name="ingredientListType">
+    	<xs:sequence>
+      		<xs:element type="pTimesListQType" name="pTimesListQ" minOccurs="0" maxOccurs="unbounded"/>
+      		<xs:element type="pTimesQType" name="pTimesQ" minOccurs="0" maxOccurs="unbounded"/>
+      		<xs:element type="optionListType" name="optionList" minOccurs="0" maxOccurs="unbounded"/>
+      		<xs:element type="pTimesSumQType" name="pTimesSumQ" minOccurs="0" maxOccurs="unbounded"/>
+      		<xs:element type="checkBoxType" name="checkBox" minOccurs="0" maxOccurs="unbounded"/>
+      		<xs:element type="tableTimesSumQType" name="tableTimesSumQ" minOccurs="0" maxOccurs="unbounded"/>
+    	</xs:sequence>
+    	<xs:attribute type="xs:string" name="dataCenter"/>
+  	</xs:complexType>
+  
+  	<!--  Describes Ingredient Type -->
+  	<xs:element name="recipe" type="recipeType"/>
+  	
+</xs:schema>

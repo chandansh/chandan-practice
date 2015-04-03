@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_0_0.dtd">
+<service-builder package-path="com.mpower.services" auto-namespace-tables="false">
+	
+	<author>Meenu</author>
+	<namespace>test</namespace>
+	<entity name="Book" local-service="true" remote-service="true">
+		<!-- PK fields -->
+		<column name="bookId" type="long" primary="true" id-type="increment" />
+		<column name="bookNumber" type="long" />
+		<column name="writerName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="firstName" type="String" />
+		<column name="lastName" type="String" />
+		<column name="quantity" type="int" />
+		<column name="totalCost" type="double" />
+		<column name="extWorkFlow" type="Collection" entity="ExtWorkFlow" mapping-key="resourcePrimKey" />
+ 		<column name="status" type="String"/>
+ 		
+		<!-- Finder methods -->
+		<finder name="bookNumber" return-type="Collection">
+			<finder-column name="bookNumber" />
+		</finder>
+		<reference package-path="com.liferay.portal" entity="User" />
+		<reference package-path="com.liferay.portal" entity="WorkflowInstanceLink"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetEntry" />
+		<reference package-path="com.liferay.portlet.ratings" entity="RatingsStats" />
+	</entity>
+	
+	
+	<entity name="ExtWorkFlow" local-service="true" remote-service="true">	
+	    <!--  workflow columns start -->
+	    <column name="extWorkflowId" type="long" primary="true" />
+		<column name="resourcePrimKey" type="long"    />
+        <column name="classNameId" type="long" />   
+        <column name="classPK" type="long" />			
+		<column name="parentResourcePrimKey" type="long"></column>
+		<column name="version" type="int"></column>
+		<column name="title" type="String"></column>
+		<column name="content" type="String"></column>
+		<column name="description" type="String"></column>
+		<column name="priority" type="int"></column>
+		<column name="status" type="int"></column>
+		<column name="statusByUserId" type="long"></column>
+		<column name="statusByUserName" type="String"></column>
+		<column name="statusDate" type="Date"></column>	
+
+		<finder name="R_S_ExtWorkflow" return-type="Collection">
+		     <finder-column name="resourcePrimKey"></finder-column>
+		     <finder-column name="status"></finder-column>
+        	<finder-column name="classNameId"></finder-column>    
+        	<finder-column name="classPK"></finder-column>	     
+		</finder>	
+		
+		<finder name="workFlowDetails" return-type="ExtWorkFlow">
+		     <finder-column name="resourcePrimKey"></finder-column>		     
+        	<finder-column name="classNameId"></finder-column>  
+        	<finder-column name="classPK"></finder-column>	     
+		</finder>	
+		
+	</entity>
+</service-builder>
+
+

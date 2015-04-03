@@ -1,0 +1,6 @@
+0    [main] WARN  admin.SampleAdmin  - Sample warn message
+0    [main] ERROR admin.SampleAdmin  - Sample error message
+0    [main] FATAL admin.SampleAdmin  - Sample fatal message
+0    [main] WARN  admin.SampleAdmin  - Sample warn message
+0    [main] ERROR admin.SampleAdmin  - Sample error message
+0    [main] FATAL admin.SampleAdmin  - Sample fatal message

@@ -1,0 +1,10 @@
+0    [main] DEBUG report.SampleReport  - Sample debug message
+0    [main] INFO  report.SampleReport  - Sample info message
+0    [main] WARN  report.SampleReport  - Sample warn message
+0    [main] ERROR report.SampleReport  - Sample error message
+0    [main] FATAL report.SampleReport  - Sample fatal message
+0    [main] DEBUG report.SampleReport  - Sample debug message
+0    [main] INFO  report.SampleReport  - Sample info message
+0    [main] WARN  report.SampleReport  - Sample warn message
+0    [main] ERROR report.SampleReport  - Sample error message
+0    [main] FATAL report.SampleReport  - Sample fatal message

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.slayer.model.ShoppingCartExt" />
+	<import class="com.slayer.model.ShoppingCategoryExt" />
+	<class name="com.slayer.model.impl.ShoppingCartExtImpl" table="hr_ShoppingCartExt">
+		<cache usage="read-write" />
+		<id name="recId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="cartId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="itemId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="amount" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.slayer.model.impl.ShoppingCategoryExtImpl" table="hr_ShoppingCategoryExt">
+		<cache usage="read-write" />
+		<id name="categoryId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="imageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="imageURL" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

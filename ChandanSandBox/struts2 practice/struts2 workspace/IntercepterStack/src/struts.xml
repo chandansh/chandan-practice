@@ -1,0 +1,80 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="default" extends="struts-default">
+		<interceptors>
+			<interceptor-stack name="my-stack">
+				<interceptor-ref name="exception" />
+				<interceptor-ref name="alias" />
+				<interceptor-ref name="servletConfig" />
+				<interceptor-ref name="prepare" />
+				<interceptor-ref name="i18n" />
+				<interceptor-ref name="chain" />
+				<interceptor-ref name="debugging" />
+				<interceptor-ref name="profiling" />
+				<interceptor-ref name="scopedModelDriven" />
+				<interceptor-ref name="modelDriven" />
+				<interceptor-ref name="fileUpload" />
+				<interceptor-ref name="checkbox" />
+				<interceptor-ref name="staticParams" />
+				<interceptor-ref name="actionMappingParams" />
+				<interceptor-ref name="params">
+					<param name="excludeParams"> dojo\..*,^struts\..*</param>
+				</interceptor-ref>
+				<interceptor-ref name="conversionError" />
+				<interceptor-ref name="validation">
+					<param name="excludeMethods">populate</param>
+				</interceptor-ref>
+				<interceptor-ref name="workflow">
+					<param name="excludeMethods"> input,back,cancel,browse</param>
+				</interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<action name="*Register" method="{1}" class="com.test.SampleAction">
+			<!--<interceptor-ref name="my-stack" /> this can also be done by <interceptor-ref 
+				name="defaultStack" > <param name="validation.excludeMethods"> populate</param> 
+				</interceptor-ref> -->
+			<interceptor-ref name="defaultStack">
+				<param name="validation.excludeMethods">populate</param>
+			</interceptor-ref>
+			<result name="populate">/success.jsp</result>
+			<result name="success">/success.jsp</result>
+		</action>
+
+		<action name="*User" method="{1}" class="com.test.DispatchAction">
+			<result name="success">/success.jsp</result>
+		</action>
+
+		<!-- you can also dynamic method invocation -->
+		<!-- <action name="addUser" method="add" class="com.test.DispatchAction"> -->
+		<!-- <result name="success">/success.jsp</result> -->
+		<!-- </action> -->
+
+		<!-- <action name="updateUser" method="update" class="com.test.DispatchAction"> -->
+		<!-- <result name="success">/success.jsp</result> -->
+		<!-- </action> -->
+
+		<!-- <action name="removeUser" method="remove" class="com.test.DispatchAction"> -->
+		<!-- <result name="success">/success.jsp</result> -->
+		<!-- </action> -->
+
+		<action name="Login" class="com.test.LoginAction">
+			<result name="input">/login.jsp</result>
+			<result name="relogin">/login.jsp</result>
+			<result name="success">/success.jsp</result>
+		</action>
+		
+		<action name="userAction" class="com.test.UserAction">
+			<result name="input">/user.jsp</result>
+			<result name="success">/result.jsp</result>
+		</action>
+		
+		<action name="fileUpload" class="com.test.FileUploadAction">
+			<result name="input">/fileUpload.jsp</result>
+			<result name="success">/fileUploadResult.jsp</result>
+		</action>
+
+	</package>
+</struts>
