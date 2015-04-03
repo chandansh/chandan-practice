@@ -1,0 +1,1 @@
+best practices for struts, hibernate, liferay, spring, gwt etc
